@@ -1,0 +1,100 @@
+[
+  {
+    "id": "pass",
+    "label": "PASS 시나리오",
+    "description": "기존 설정과 부합하는 무난한 퀘스트 대사",
+    "input_text": "카야가 낮은 목소리로 말했다. \"새벽 비탈은 이미 버려졌다. 남은 정착민들마저 떠날 채비를 하고 있지. 보이드가 이 땅을 잠식하기 전에, 뱅가드가 길을 열어야 한다.\" 주인공은 크로노텍터를 움켜쥐고 고개를 끄덕였다.",
+    "result": {
+      "verdict": "PASS",
+      "summary_ko": "검증 대상 텍스트는 지식베이스의 active 팩트와 충돌하는 항목이 없습니다. 새벽 비탈의 상황, 뱅가드·카야·주인공의 관계, 크로노텍터 소지, 보이드 잠식 묘사 모두 기존 설정과 일치합니다.",
+      "issues": []
+    },
+    "matched_entity_ids": [
+      "ENT-KAYA",
+      "ENT-PROTAGONIST",
+      "ENT-VANGUARD",
+      "ENT-SETTLERS",
+      "ENT-CHRONOTECTOR",
+      "ENT-VOID",
+      "ENT-DAWN-SLOPE"
+    ],
+    "computed_at": "2026-08-03T01:25:10.759Z"
+  },
+  {
+    "id": "fail",
+    "label": "FAIL 시나리오",
+    "description": "명백한 연표 충돌 — 회귀 폭이 1년이 아니라 10년으로 서술됨",
+    "input_text": "벨리아가 손을 뻗자 시간의 격류가 주인공을 감쌌다. \"10년 전으로 돌아가라. 그때라면 아직 늦지 않았다.\" 10년의 세월을 거슬러, 주인공은 보이드가 오기 전의 세테라에 눈을 떴다.",
+    "result": {
+      "verdict": "FAIL",
+      "summary_ko": "벨리아가 주인공을 '10년 전'으로 돌려보냈다는 서술은 '정확히 1년 전'으로 확정된 팩트와 직접 충돌한다. 해당 충돌은 연표 핵심 설정에 대한 명백한 위반이다.",
+      "issues": [
+        {
+          "check_type": "C1",
+          "severity": "critical",
+          "description_ko": "원고는 벨리아가 주인공을 '10년 전'으로 회귀시켰다고 서술하나, 지식베이스는 벨리아가 주인공을 '정확히 1년 전 과거'로 돌려보냈다고 confirmed 등급으로 확정하고 있다. 10년과 1년은 양립 불가능한 수치 충돌이다.",
+          "evidence_fact_ids": [
+            "FACT-0024"
+          ],
+          "suggestion_ko": "'10년 전으로 돌아가라'를 '1년 전으로 돌아가라'로 수정하고, 이후 '10년의 세월을 거슬러' 표현도 '1년의 세월을 거슬러'로 일치시킬 것."
+        }
+      ]
+    },
+    "matched_entity_ids": [
+      "ENT-SETERA",
+      "ENT-VELIA",
+      "ENT-PROTAGONIST",
+      "ENT-VOID"
+    ],
+    "computed_at": "2026-08-03T01:25:17.839Z"
+  },
+  {
+    "id": "warn",
+    "label": "WARN 시나리오",
+    "description": "다크 판타지 톤을 깨는 현대적 어휘가 섞인 대사",
+    "input_text": "베텔기우스가 씩 웃으며 말했다. \"오케이, 이번 작전은 내가 캐리한다. 보이드쯤은 레벨업 노가다로 충분하지. 파이팅!\" 그는 크로노텍터를 어깨에 걸쳤다.",
+    "result": {
+      "verdict": "WARN",
+      "summary_ko": "현대 인터넷 속어(캐리, 레벨업 노가다, 파이팅)가 중세 다크 판타지 어조를 심각하게 훼손합니다. 또한 베텔기우스가 보이드를 직접 깨운 장본인임에도 이를 가볍게 처리하는 서술은 설정과 충돌합니다.",
+      "issues": [
+        {
+          "check_type": "C4",
+          "severity": "critical",
+          "description_ko": "'캐리한다', '레벨업 노가다', '파이팅' 등은 현대 인터넷 게임 속어로, 공식 텍스트가 일관되게 유지하는 중세 다크 판타지 어조와 양립 불가능합니다.",
+          "evidence_fact_ids": [
+            "FACT-0080",
+            "FACT-0081"
+          ],
+          "suggestion_ko": "해당 표현을 세계관 어조에 맞는 중세 판타지풍 어휘로 교체하십시오. 예: '이번 전투는 내가 앞장서겠다. 보이드 따위, 내 힘으로 충분하다.'"
+        },
+        {
+          "check_type": "C2",
+          "severity": "warning",
+          "description_ko": "FACT-0018에 따르면 베텔기우스는 보이드를 직접 깨운 장본인입니다. 그럼에도 '보이드쯤은 레벨업 노가다로 충분하지'라는 경솔한 발언은 보이드를 이계의 침략자로 규정한 FACT-0020, 그리고 베텔기우스 자신이 보이드 창궐의 원인임을 고려할 때 캐릭터 설정 및 서사 맥락과 충돌할 가능성이 있습니다. 해석 여지가 있어 warning으로 처리합니다.",
+          "evidence_fact_ids": [
+            "FACT-0018",
+            "FACT-0020",
+            "FACT-0016"
+          ],
+          "suggestion_ko": "베텔기우스가 보이드에 대해 언급할 때는 분노·죄책감·복잡한 감정을 반영하는 어조를 사용하여 FACT-0018의 설정과 일관성을 유지하십시오."
+        },
+        {
+          "check_type": "C4",
+          "severity": "warning",
+          "description_ko": "톤 캐논 위반(외래 구어): 입력 텍스트에서 \"오케이\" 표현이 감지되었습니다. 세계관 텍스트는 중세 다크 판타지 어조를 유지해야 합니다.",
+          "evidence_fact_ids": [
+            "FACT-0080",
+            "FACT-0081"
+          ],
+          "suggestion_ko": "해당 표현을 세계관 어조에 맞는 어휘로 교체하세요."
+        }
+      ]
+    },
+    "matched_entity_ids": [
+      "ENT-BETELGEUSE",
+      "ENT-CHRONOTECTOR",
+      "ENT-VOID"
+    ],
+    "computed_at": "2026-08-03T01:25:31.985Z"
+  }
+]

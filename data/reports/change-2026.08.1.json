@@ -1,0 +1,29 @@
+{
+  "kb_version": "2026.08.1",
+  "previous_version": "2026.08",
+  "source": {
+    "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+    "label": "5차 개발자 노트 (인벤 보도)",
+    "tier": "dev-note"
+  },
+  "created_at": "2026-08-03T01:33:36.498Z",
+  "summary_ko": "5차 개발자 노트 (인벤 보도) 유입: 신규 6건, 변경 0건, 재확인 4건, 재부상 복선 1건. KB 2026.08.1.",
+  "new_fact_ids": [
+    "FACT-0127",
+    "FACT-0128",
+    "FACT-0129",
+    "FACT-0130",
+    "FACT-0131",
+    "FACT-0132"
+  ],
+  "changed": [],
+  "confirmed_fact_ids": [
+    "FACT-0009",
+    "FACT-0010",
+    "FACT-0011",
+    "FACT-0001"
+  ],
+  "resurfaced_foreshadowing_ids": [
+    "FS-006"
+  ]
+}

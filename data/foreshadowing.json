@@ -1,0 +1,226 @@
+[
+  {
+    "id": "FS-001",
+    "title_ko": "세테라의 고대 유적이 드러내는 비밀",
+    "summary_ko": "고대 유적들이 비밀을 드러내고 있다는 언급이 있으나, 그 비밀의 실체는 아직 공개 자료에서 회수되지 않았다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0079"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 공식 위키 세계관 소개 문구에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey"
+      }
+    ]
+  },
+  {
+    "id": "FS-002",
+    "title_ko": "보이드에 삼켜진 나머지 행성들의 행방",
+    "summary_ko": "12행성 가운데 세테라 외 행성들이 보이드 침공 후 어떤 상태인지 — 로디니아는 시간 정지, 나머지는 불명이다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0019",
+      "FACT-0026",
+      "FACT-0078"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 12행성 침공 서사에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Void"
+      }
+    ]
+  },
+  {
+    "id": "FS-003",
+    "title_ko": "벨리아가 주인공을 과거로 보낸 진짜 이유",
+    "summary_ko": "'미래가 바뀌었다'는 메시지와 1년 회귀의 전모 — 벨리아가 무엇을 보았고 왜 주인공이어야 했는지는 회수되지 않았다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0024",
+      "FACT-0025"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 프롤로그 서사에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Protagonist"
+      }
+    ]
+  },
+  {
+    "id": "FS-004",
+    "title_ko": "크로노스 교단과 가이아나의 예언",
+    "summary_ko": "'살아있는 성인' 가이아나를 둘러싼 교단의 예언 서사가 암시되어 있으나 구체적 내용은 공개되지 않았다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0051",
+      "FACT-0053"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 교단 인물 소개에서 추출",
+        "source_url": "https://chronoodyssey.wiki.fextralife.com/Factions"
+      }
+    ]
+  },
+  {
+    "id": "FS-005",
+    "title_ko": "월드 무버 3개 분파의 정체와 경쟁 구도",
+    "summary_ko": "세 분파로 갈라졌다는 사실만 공개되었을 뿐, 각 분파의 이름·노선·갈등 구도는 미공개다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0059"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 월드 무버 소개에서 추출",
+        "source_url": "https://chronoodyssey.online/the-world-movers/"
+      }
+    ]
+  },
+  {
+    "id": "FS-006",
+    "title_ko": "매트릭스 — 센티넬 힘의 근원의 실체",
+    "summary_ko": "벨리아가 밝히는 매트릭스의 정체와, 그것이 성장 시스템으로 이어지는 서사적 연결이 아직 완전히 공개되지 않았다.",
+    "status": "resurfaced",
+    "linked_fact_ids": [
+      "FACT-0028",
+      "FACT-0009"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 벨리아 서사에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Velia"
+      },
+      {
+        "date": "2026-08-03",
+        "event": "재부상 — 5차 개발자 노트(2026-05-07)에서 매트릭스 시스템 공개",
+        "source_url": "https://zdnet.co.kr/view/?no=20260507152807"
+      },
+      {
+        "date": "2026-08-03",
+        "event": "재부상 — 5차 개발자 노트 (인벤 보도): 5차 개발자 노트에서 '매트릭스 시스템'이 노드 기반 성장 구조로 구체적으로 소개되었다. FS-006은 벨리아가 밝히는 매트릭스의 정체와 그것이 성장 시스템으로 이어지는 서사적 연결이 미회수 상태임을 기록하고 있는데, 신규 소스는 매트릭스 시스템의 게임플레이 메커니즘(스탯·패시브 스킬·장비 옵션 선택, 전투 스타일 특화 능력치 획득)을 상세히 설명함으로써 성장 시스템 측면을 진전시켰다. 다만 벨리아와의 서사적 연결 및 센티넬 힘의 근원으로서의 세계관적 실체는 여전히 미회수 상태로, 복선이 부분적으로 재부상하였다.",
+        "source_url": "https://www.inven.co.kr/webzine/news/?news=316180"
+      }
+    ]
+  },
+  {
+    "id": "FS-007",
+    "title_ko": "베텔기우스의 분노 — 무엇에 대한 복수인가",
+    "summary_ko": "베텔기우스가 보이드를 깨운 동기인 '복수'의 대상과 원인이 공개 자료에서 밝혀지지 않았다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0018"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 메인 서사에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey"
+      }
+    ]
+  },
+  {
+    "id": "FS-008",
+    "title_ko": "시간이 정지된 로디니아의 운명",
+    "summary_ko": "벨리아가 정지시킨 로디니아의 시간이 언제, 어떻게 다시 흐르게 될지는 미회수 상태다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0026"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 벨리아 서사에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Velia"
+      }
+    ]
+  },
+  {
+    "id": "FS-009",
+    "title_ko": "가디언의 정체와 통찰의 눈의 목적",
+    "summary_ko": "센티넬을 위해 통찰의 눈을 만들었다는 가디언들이 누구이며 왜 만들었는지는 밝혀지지 않았다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0070",
+      "FACT-0071"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 통찰의 눈 소개에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Guardians"
+      }
+    ]
+  },
+  {
+    "id": "FS-010",
+    "title_ko": "에덴 — 시간선 밖 공간의 정체",
+    "summary_ko": "기존 시간선 바깥에 존재한다는 에덴이 세계관 안에서 어떤 기원과 의미를 갖는지 서사적 설명이 없다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0072"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 엔드게임 콘텐츠 소개에서 추출",
+        "source_url": "https://massivelyop.com/2025/06/12/chrono-odyssey-addresses-endgame-gear-and-monetization-and-previews-gameplay-features/"
+      }
+    ]
+  },
+  {
+    "id": "FS-011",
+    "title_ko": "'미래가 바뀌었다' — 바뀐 미래의 내용",
+    "summary_ko": "회귀와 함께 전해진 경고가 가리키는 '바뀐 미래'가 구체적으로 무엇인지는 공개되지 않았다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0025"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 프롤로그 서사에서 추출",
+        "source_url": "https://chrono-odyssey.fandom.com/wiki/Protagonist"
+      }
+    ]
+  },
+  {
+    "id": "FS-012",
+    "title_ko": "데스리스 사제들이 추구하는 '합일'의 종착점",
+    "summary_ko": "의식을 유지한 채 보이드와 하나가 되려는 시도가 성공하면 무엇이 되는지 — 그 결말이 미공개다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0050"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 데스리스 소개에서 추출",
+        "source_url": "https://chronoodyssey.wiki.fextralife.com/Factions"
+      }
+    ]
+  },
+  {
+    "id": "FS-013",
+    "title_ko": "알렉시오스 파문의 내막",
+    "summary_ko": "알렉시오스가 크로노스 교단에서 파문당한 이유와 그 사건이 현재 서사에 남긴 영향이 밝혀지지 않았다.",
+    "status": "unresolved",
+    "linked_fact_ids": [
+      "FACT-0056"
+    ],
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "최초 등록 — 인물 소개에서 추출",
+        "source_url": "https://chronoodyssey.wiki.fextralife.com/Factions"
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "kb_version": "2026.08.1",
+  "updated_at": "2026-08-03",
+  "source_registry": [
+    {
+      "id": "kakao-official",
+      "label": "크로노 오디세이 공식 사이트 (카카오게임즈)",
+      "url": "https://chronoodyssey.kakaogames.com/",
+      "tier": "official-site",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "steam",
+      "label": "스팀 상점 페이지 (한/영)",
+      "url": "https://store.steampowered.com/app/1738810/Chrono_Odyssey/",
+      "tier": "steam-official",
+      "registered_at": "2026-07-31"
+    },
+    {
+      "id": "fandom-official",
+      "label": "크로노 오디세이 공식 Fandom 위키",
+      "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+      "tier": "official-wiki",
+      "registered_at": "2026-07-31"
+    },
+    {
+      "id": "fextralife",
+      "label": "Fextralife 크로노 오디세이 위키",
+      "url": "https://chronoodyssey.wiki.fextralife.com/",
+      "tier": "community-wiki",
+      "registered_at": "2026-07-31"
+    },
+    {
+      "id": "chronoodyssey-online",
+      "label": "chronoodyssey.online 팬 위키",
+      "url": "https://chronoodyssey.online/",
+      "tier": "community-wiki",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "devnote5-zdnet",
+      "label": "5차 개발자 노트 보도 (ZDNet, 2026-05-07)",
+      "url": "https://zdnet.co.kr/view/?no=20260507152807",
+      "tier": "dev-note",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "devnote5-inven",
+      "label": "5차 개발자 노트 보도 (인벤, 2026-05)",
+      "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+      "tier": "dev-note",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "ruliweb-2020",
+      "label": "2020년 공개 트레일러 보도 (루리웹)",
+      "url": "https://bbs.ruliweb.com/news/read/181576",
+      "tier": "press",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "thisisgame-2020",
+      "label": "2020년 개발사 소개 기사 (디스이즈게임)",
+      "url": "https://www.thisisgame.com/webzine/nboard/263/?n=170038",
+      "tier": "press",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "gamemeca-publishing",
+      "label": "카카오게임즈 퍼블리싱 계약 보도 (게임메카)",
+      "url": "https://www.gamemeca.com/view.php?gid=1746912",
+      "tier": "press",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "koreaproductpost",
+      "label": "KoreaProductPost 종합 가이드",
+      "url": "https://koreaproductpost.com/chrono-odyssey-mmorpg-database-guide/",
+      "tier": "press",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "pcgamesn",
+      "label": "PCGamesN 가이드",
+      "url": "https://www.pcgamesn.com/chrono-odyssey/guide",
+      "tier": "press",
+      "registered_at": "2026-08-03"
+    },
+    {
+      "id": "massivelyop",
+      "label": "MassivelyOP 엔드게임 소개 기사",
+      "url": "https://massivelyop.com/2025/06/12/chrono-odyssey-addresses-endgame-gear-and-monetization-and-previews-gameplay-features/",
+      "tier": "press",
+      "registered_at": "2026-08-03"
+    }
+  ]
+}

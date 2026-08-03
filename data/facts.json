@@ -1,0 +1,2905 @@
+[
+  {
+    "id": "FACT-0001",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "크로노 오디세이는 크로노스튜디오가 개발하고 카카오게임즈가 퍼블리싱하는 시공간 판타지 MMORPG다.",
+    "statement_en": "Chrono Odyssey is a spacetime fantasy MMORPG developed by Chrono Studio and published by Kakao Games.",
+    "sources": [
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://www.gamemeca.com/view.php?gid=1746912",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "confirmed",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0002",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY",
+      "ENT-IDRIGIN"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "2020년 12월 공개 당시, 크로노 오디세이는 특수 조직 이드리긴의 일원들이 12명의 신에 대항해 싸우는 이야기로 소개되었다.",
+    "statement_en": "At its December 2020 reveal, Chrono Odyssey was described as the story of the Idrigin, a special organization waging war against twelve gods.",
+    "sources": [
+      {
+        "url": "https://bbs.ruliweb.com/news/read/181576",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "superseded",
+    "superseded_by": "FACT-0003",
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Superseded-chain evidence case #2: early narrative replaced by the current Void narrative."
+  },
+  {
+    "id": "FACT-0003",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY",
+      "ENT-VOID",
+      "ENT-SETERA"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "현행 공식 소개에서 크로노 오디세이의 중심 서사는 보이드의 침공에 맞서는 세테라와 센티넬들의 이야기다.",
+    "statement_en": "In current official material, the central narrative is Setera and its Sentinels standing against the Void invasion.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/About_Chrono_Odyssey",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0004",
+    "entity_ids": [
+      "ENT-IDRIGIN"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'이드리긴'이라는 조직명은 현행 공식 자료 어디에서도 더 이상 등장하지 않는다.",
+    "statement_en": "The organization name 'Idrigin' no longer appears in any current official material.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "deprecated",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Absence verified against the current official wiki; term only exists in 2020-2021 press."
+  },
+  {
+    "id": "FACT-0005",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "2020년 보도에서 크로노 오디세이의 개발은 엔픽셀의 배봉건·정현호 공동대표가 총괄하는 것으로 소개되었다.",
+    "statement_en": "2020 press coverage credited NPIXEL co-CEOs Bae Bong-geon and Jung Hyun-ho as leading development.",
+    "sources": [
+      {
+        "url": "https://www.thisisgame.com/webzine/nboard/263/?n=170038",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "superseded",
+    "superseded_by": "FACT-0006",
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Superseded-chain evidence case #3: development leadership changed over time."
+  },
+  {
+    "id": "FACT-0006",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "현행 자료 기준 크로노 오디세이의 개발 총괄은 윤상태이며, 개발사는 크로노스튜디오다.",
+    "statement_en": "Per current material, development of Chrono Odyssey is led by Yoon Sang-tae at Chrono Studio.",
+    "sources": [
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0007",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "크로노 오디세이는 2019년 개발에 착수했다.",
+    "statement_en": "Development of Chrono Odyssey began in 2019.",
+    "sources": [
+      {
+        "url": "https://www.thisisgame.com/webzine/nboard/263/?n=170038",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0008",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "카카오게임즈는 크로노 오디세이의 글로벌 퍼블리싱 계약을 체결했다.",
+    "statement_en": "Kakao Games signed on as the global publisher of Chrono Odyssey.",
+    "sources": [
+      {
+        "url": "https://www.gamemeca.com/view.php?gid=1746912",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0009",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY",
+      "ENT-MATRIX"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "2026년 5월 7일 공개된 5차 개발자 노트에서 노드 기반 성장 구조인 매트릭스 시스템이 소개되었다.",
+    "statement_en": "The fifth developer note (May 7, 2026) introduced the Matrix, a node-based character growth system.",
+    "sources": [
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "confirmed",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0010",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "5차 개발자 노트에서 난이도 급상승 구간을 완화하기 위해 NPC가 동행하는 '조력자 시스템' 도입이 발표되었다.",
+    "statement_en": "The fifth developer note announced a companion system where NPCs accompany players through difficulty spikes.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0011",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "5차 개발자 노트에서 처치한 몬스터의 외형과 특성을 반영한 장비를 얻는 '몬스터 장비' 시스템이 공개되었다.",
+    "statement_en": "The fifth developer note revealed a monster-gear system yielding equipment shaped by defeated monsters' traits.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0012",
+    "entity_ids": [
+      "ENT-SENTINEL",
+      "ENT-CHRONOTECTOR"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "센티넬은 크로노텍터를 통해 각 행성의 운명과 결속된 반신적 존재다.",
+    "statement_en": "Sentinels are semi-divine beings bound to each planet's fate through the Chronotector.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0013",
+    "entity_ids": [
+      "ENT-SENTINEL"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "센티넬들은 오랜 세월 특정 문명이나 세력에 깊이 개입하지 않으며 각 세계의 균형을 지켜 왔다.",
+    "statement_en": "For ages, Sentinels upheld each world's balance while refraining from deep intervention in any civilization.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0014",
+    "entity_ids": [
+      "ENT-SENTINEL",
+      "ENT-CHRONOTECTOR"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "각 센티넬은 시간을 다루는 힘을 부여하는 유물 크로노텍터를 지닌다.",
+    "statement_en": "Each Sentinel wields a Chronotector, an artifact granting mastery over time.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chronotector",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0015",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-RODINIA"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "벨리아는 로디니아의 센티넬이다.",
+    "statement_en": "Velia is the Sentinel of Rodinia.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "confirmed",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0016",
+    "entity_ids": [
+      "ENT-BETELGEUSE",
+      "ENT-MAGELLAN"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "베텔기우스는 마젤란의 센티넬이다.",
+    "statement_en": "Betelgeuse is the Sentinel of Magellan.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0017",
+    "entity_ids": [
+      "ENT-LEVIONA",
+      "ENT-IZAR"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "레비오나는 이자르의 센티넬로 알려져 있다.",
+    "statement_en": "Leviona is known as the Sentinel of Izar.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0018",
+    "entity_ids": [
+      "ENT-BETELGEUSE",
+      "ENT-VOID",
+      "ENT-VOID-OUTBREAK"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "베텔기우스는 격렬한 분노에 사로잡혀 복수를 위해 보이드를 깨웠다.",
+    "statement_en": "Consumed by seething wrath, Betelgeuse sought vengeance and awakened the Void.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0019",
+    "entity_ids": [
+      "ENT-VOID",
+      "ENT-TEMPORAL-RIFT",
+      "ENT-TWELVE-WORLDS"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "보이드는 시간의 균열에서 풀려나 12행성에 퍼졌다.",
+    "statement_en": "The Void was released from the Temporal Rift and spread across the twelve worlds.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Void",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0020",
+    "entity_ids": [
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "보이드는 생명을 오염시키고 잠식하는 이계의 침략자다.",
+    "statement_en": "The Void are otherworldly invaders that corrupt and consume life.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Void",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0021",
+    "entity_ids": [
+      "ENT-VOID",
+      "ENT-BROKEN"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "보이드에 쓰러진 자들은 브로큰이라 불리는 흉측한 존재로 되살아난다.",
+    "statement_en": "Those felled by the Void rise again as hideous beings called the Broken.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0022",
+    "entity_ids": [
+      "ENT-VOID-OUTBREAK",
+      "ENT-SETERA"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "보이드의 창궐로 세테라는 멸망 직전까지 내몰렸다.",
+    "statement_en": "The Void outbreak pushed Setera to the brink of destruction.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0023",
+    "entity_ids": [
+      "ENT-PROTAGONIST",
+      "ENT-RUINS-OF-TIME",
+      "ENT-CHRONOTECTOR"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "세테라 함락 직전, 주인공은 시간의 유적에서 크로노텍터를 손에 넣고 센티넬의 자리에 올랐다.",
+    "statement_en": "On the brink of Setera's fall, the protagonist claimed the Chronotector in the Ruins of Time and rose to Sentinel.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0024",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-PROTAGONIST",
+      "ENT-ONE-YEAR-REGRESSION"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "벨리아는 주인공을 정확히 1년 전 과거로 돌려보냈다.",
+    "statement_en": "Velia sent the protagonist exactly one year into the past.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "confirmed",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Key timeline anchor — gate demo FAIL scenario contradicts this ('ten years')."
+  },
+  {
+    "id": "FACT-0025",
+    "entity_ids": [
+      "ENT-PROTAGONIST",
+      "ENT-VELIA",
+      "ENT-ONE-YEAR-REGRESSION"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "과거로 회귀한 주인공에게 전해진 핵심 메시지는 '미래가 바뀌었다'는 것이었다.",
+    "statement_en": "The vital message carried back with the regression was that the future has changed.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0026",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-RODINIA",
+      "ENT-RODINIA-TIME-FREEZE",
+      "ENT-CHRONOTECTOR"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "벨리아는 로디니아가 보이드에 함락되기 직전, 크로노텍터의 힘으로 행성의 시간을 정지시켰다.",
+    "statement_en": "Just before Rodinia fell to the Void, Velia froze her planet's time with the Chronotector's power.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0027",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-PROTAGONIST",
+      "ENT-CHRONOTECTOR"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "벨리아는 주인공이 크로노텍터의 새로운 능력을 여는 과정을 인도한다.",
+    "statement_en": "Velia guides the protagonist in unlocking new Chronotector abilities.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0028",
+    "entity_ids": [
+      "ENT-MATRIX",
+      "ENT-SENTINEL",
+      "ENT-VELIA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "매트릭스는 센티넬이 지닌 힘의 원천이며, 벨리아가 그 실체를 밝힌다.",
+    "statement_en": "The Matrix is the source of the Sentinels' power, unveiled by Velia.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0029",
+    "entity_ids": [
+      "ENT-VOID-SPADA",
+      "ENT-RUINS-OF-TIME"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "프롤로그에서 보이드 스파다가 유적을 급습한다.",
+    "statement_en": "In the prologue, a Void Spada breaches the ruins.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0030",
+    "entity_ids": [
+      "ENT-ETHELDRENA",
+      "ENT-VOID-SPADA"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "에셀드레나는 프롤로그에서 보이드 스파다의 습격으로 전사한다.",
+    "statement_en": "Etheldrena falls to the Void Spada's assault during the prologue.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Occurs in the pre-regression timeline; useful anchor for C1 timeline checks."
+  },
+  {
+    "id": "FACT-0031",
+    "entity_ids": [
+      "ENT-CHRONO-GATE",
+      "ENT-VOID-APOSTLE"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "크로노 게이트에서는 보이드 사도와의 1대1 결전이 벌어진다.",
+    "statement_en": "Chrono Gates host one-on-one showdowns against Void Apostles.",
+    "sources": [
+      {
+        "url": "https://www.pcgamesn.com/chrono-odyssey/guide",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0032",
+    "entity_ids": [
+      "ENT-VOID-NEXUS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "보이드 넥서스는 보이드 적과 오염된 대지를 품은 돔형 지대다.",
+    "statement_en": "A Void Nexus is a dome holding Void enemies and corrupted land.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0033",
+    "entity_ids": [
+      "ENT-VOID-NEXUS",
+      "ENT-VOID-CORE"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "보이드 넥서스 오염의 근원은 보이드 코어라 불리는 고치 형태의 물체다.",
+    "statement_en": "The source of a Nexus's corruption is a cocoon-like object called a Void Core.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0034",
+    "entity_ids": [
+      "ENT-VOID-CORE",
+      "ENT-SETERA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "보이드 코어를 파괴하면 해당 지역이 정화되어 세테라가 보이드에서 벗어나는 데 한 걸음 가까워진다.",
+    "statement_en": "Destroying a Void Core purifies the area, bringing Setera closer to freedom from the Void.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0035",
+    "entity_ids": [
+      "ENT-FRONTIER",
+      "ENT-SETERA",
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "프론티어는 보이드 세력에 맞서는 세테라의 최전선 방어 조직이다.",
+    "statement_en": "The Frontier is Setera's first line of defense against the forces of the Void.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0036",
+    "entity_ids": [
+      "ENT-IOBIS",
+      "ENT-FRONTIER"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "프론티어는 전설적인 전사 이오비스가 창설했으며, 그가 이끌고 있다.",
+    "statement_en": "The Frontier was founded and is led by the legendary warrior Iobis.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0037",
+    "entity_ids": [
+      "ENT-VANGUARD",
+      "ENT-FRONTIER"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "뱅가드는 프론티어 소속의 정예 특수 부대다.",
+    "statement_en": "The Vanguard is an elite special unit within the Frontier.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Vanguard",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0038",
+    "entity_ids": [
+      "ENT-ALEXIOS",
+      "ENT-VANGUARD"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "알렉시오스는 뱅가드의 일원이다.",
+    "statement_en": "Alexios is a member of the Vanguard.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0039",
+    "entity_ids": [
+      "ENT-BALDUR",
+      "ENT-VANGUARD"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "발두르는 뱅가드의 일원이다.",
+    "statement_en": "Baldur is a member of the Vanguard.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0040",
+    "entity_ids": [
+      "ENT-KAYA",
+      "ENT-VANGUARD"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "카야는 뱅가드의 일원이다.",
+    "statement_en": "Kaya is a member of the Vanguard.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0041",
+    "entity_ids": [
+      "ENT-ETHELDRENA",
+      "ENT-VANGUARD"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "에셀드레나는 뱅가드의 지휘관이다.",
+    "statement_en": "Etheldrena serves as a captain of the Vanguard.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0042",
+    "entity_ids": [
+      "ENT-PROTAGONIST",
+      "ENT-VANGUARD"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "주인공 역시 뱅가드의 일원으로 싸운다.",
+    "statement_en": "The protagonist also fights as a member of the Vanguard.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0043",
+    "entity_ids": [
+      "ENT-ETHELDRENA",
+      "ENT-IOBIS"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "에셀드레나는 이오비스의 전폭적인 신뢰와 지원을 받는다.",
+    "statement_en": "Etheldrena has earned Iobis's full trust and support.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0044",
+    "entity_ids": [
+      "ENT-ETHELDRENA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "에셀드레나는 엄격하고 차가워 보이지만 부하들을 깊이 아끼고 신뢰한다.",
+    "statement_en": "Though she may seem strict and cold, Etheldrena deeply cares for and trusts her subordinates.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0045",
+    "entity_ids": [
+      "ENT-ETHELDRENA",
+      "ENT-PROTAGONIST",
+      "ENT-BALDUR",
+      "ENT-KAYA"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "에셀드레나는 주인공·발두르·카야와 함께 생사를 넘나드는 수많은 작전을 이끌었다.",
+    "statement_en": "Etheldrena led countless life-threatening operations alongside the protagonist, Baldur, and Kaya.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0046",
+    "entity_ids": [
+      "ENT-SETTLERS",
+      "ENT-SETERA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "정착민은 오염되지 않은 땅을 찾아 세테라를 떠도는 반유목 생활을 한다.",
+    "statement_en": "Settlers live semi-nomadically, wandering Setera in search of untainted places.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0047",
+    "entity_ids": [
+      "ENT-SETTLERS",
+      "ENT-BROKEN",
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "정착민은 보이드에 잠식당하면 브로큰이 될 위험에 놓여 있다.",
+    "statement_en": "Settlers risk becoming Broken if corrupted by the Void.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0048",
+    "entity_ids": [
+      "ENT-BROKEN",
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "브로큰은 보이드에 죽었거나 스스로 그 힘에 굴복한 인간이 변한, 보이드를 섬기는 무지성의 존재다.",
+    "statement_en": "The Broken are humans slain by or surrendered to the Void, transformed into mindless servants of it.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0049",
+    "entity_ids": [
+      "ENT-DEATHLESS",
+      "ENT-BROKEN",
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "데스리스는 브로큰, 그리고 사제·복사로 구성된 보이드의 수족이다.",
+    "statement_en": "The Deathless are minions of the Void, composed of the Broken plus priests and acolytes.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0050",
+    "entity_ids": [
+      "ENT-DEATHLESS",
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "데스리스의 사제들은 의식을 유지한 채 보이드와 하나가 되기를 추구한다.",
+    "statement_en": "Deathless priests seek to become one with the Void while retaining their consciousness.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0051",
+    "entity_ids": [
+      "ENT-CHRONOS-ORDER",
+      "ENT-CHRONOS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "크로노스 교단은 시간의 신 크로노스를 섬기는 종교 조직이다.",
+    "statement_en": "The Chronos Order is a religious organization devoted to Chronos, the time deity.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chronos",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0052",
+    "entity_ids": [
+      "ENT-THEOPHANES-V",
+      "ENT-CHRONOS-ORDER"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "크로노스 교단은 교황 테오파네스 5세가 이끈다.",
+    "statement_en": "The Chronos Order is led by Pope Theophanes V.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0053",
+    "entity_ids": [
+      "ENT-GAIANA",
+      "ENT-CHRONOS-ORDER"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "가이아나는 '살아있는 성인'으로 불리는 크로노스 교단의 인물이다.",
+    "statement_en": "Gaiana is a figure of the Chronos Order known as a living saint.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0054",
+    "entity_ids": [
+      "ENT-ROMEK",
+      "ENT-CHRONOS-ORDER"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "로멕은 크로노스 교단의 방랑 사제다.",
+    "statement_en": "Romek is a wandering priest of the Chronos Order.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0055",
+    "entity_ids": [
+      "ENT-KNIGHTS-TEMPLAR",
+      "ENT-CHRONOS-ORDER",
+      "ENT-MICHAEL"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "기사단은 크로노스 교단의 무력 분파이며, 미카엘이 이끈다.",
+    "statement_en": "The Knights Templar are the Order's martial branch, led by Michael.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0056",
+    "entity_ids": [
+      "ENT-ALEXIOS",
+      "ENT-CHRONOS-ORDER"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "알렉시오스는 크로노스 교단에서 파문당한 전력이 있다.",
+    "statement_en": "Alexios was once excommunicated from the Chronos Order.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0057",
+    "entity_ids": [
+      "ENT-WORLD-MOVERS",
+      "ENT-VOID",
+      "ENT-SETERA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "월드 무버는 보이드에 고향 세계를 잃고 세테라로 피신한 생존자 집단이다.",
+    "statement_en": "The World Movers survived the Void's destruction of their home world and escaped to Setera.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.online/the-world-movers/",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0058",
+    "entity_ids": [
+      "ENT-WORLD-MOVERS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "월드 무버들은 남다른 힘이나 운을 지녀 수많은 시련과 강적을 넘어섰다고 전해진다.",
+    "statement_en": "World Movers are said to bear extraordinary strength or luck that carried them past countless trials.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.online/the-world-movers/",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0059",
+    "entity_ids": [
+      "ENT-WORLD-MOVERS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "월드 무버는 세 개의 분파로 갈라져 있으며, 생존과 번영이라는 공동 목표 아래 협력한다.",
+    "statement_en": "The World Movers split into three factions that still cooperate toward shared survival and prosperity.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.online/the-world-movers/",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0060",
+    "entity_ids": [
+      "ENT-OUTCASTS",
+      "ENT-WORLD-MOVERS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "아웃캐스트는 분파 간 갈등이나 비행으로 추방된 월드 무버들이 결성한 무장 집단이다.",
+    "statement_en": "The Outcasts are an armed band of World Movers ousted over conflicts or immoral acts.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.online/the-world-movers/",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0061",
+    "entity_ids": [
+      "ENT-OUTCASTS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "아웃캐스트는 여행자·상인·모험가를 습격하는 범죄 행위를 일삼는다.",
+    "statement_en": "The Outcasts routinely commit crimes, attacking travelers, merchants, and adventurers.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0062",
+    "entity_ids": [
+      "ENT-SABIO",
+      "ENT-SETERA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "사비오는 세테라의 경제와 행정을 총괄하는 재상 격 인물이다.",
+    "statement_en": "Sabio serves as a chancellor-like figure overseeing Setera's economy and governance.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sabio",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0063",
+    "entity_ids": [
+      "ENT-SABIO",
+      "ENT-COMMERCE-GUILD"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "사비오는 보이드 침공 이전 유력 상인 길드를 이끌었고, 이후 프론티어의 재상으로 올라섰다.",
+    "statement_en": "Before the Void invasion Sabio led a powerful merchant guild, later rising to Frontier chancellor.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sabio",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0064",
+    "entity_ids": [
+      "ENT-FRONTIER",
+      "ENT-CHRONOS-ORDER",
+      "ENT-COMMERCE-GUILD",
+      "ENT-SABIO"
+    ],
+    "claim_type": "relation",
+    "statement_ko": "프론티어는 크로노스 교단, 그리고 사비오 중심의 상인 길드와 굳건한 동맹을 유지한다.",
+    "statement_en": "The Frontier maintains a strong alliance with the Chronos Order and Sabio's commerce guild.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sabio",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0065",
+    "entity_ids": [
+      "ENT-ARCHE",
+      "ENT-TWELVE-WORLDS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "아르케는 자연과 생명의 순환을 지탱하는 근원 에너지로, 12행성의 문명들이 두루 활용해 왔다.",
+    "statement_en": "Arche is a fundamental energy sustaining nature's cycle, harnessed by civilizations across the twelve worlds.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Arche",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0066",
+    "entity_ids": [
+      "ENT-ARCHE"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "아르케가 풍부한 지역에서는 작물과 야생이 번성하고, 상처가 빨리 아물며 수명이 늘어난다.",
+    "statement_en": "Where Arche is abundant, crops and wildlife flourish, wounds heal faster, and lifespans extend.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Arche",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0067",
+    "entity_ids": [
+      "ENT-ARCHE"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "어떤 문명은 아르케를 마법과 비전의 원천으로 삼고, 다른 문명은 룬과 장치를 통해 기술적으로 활용한다.",
+    "statement_en": "Some civilizations tap Arche as magic and arcana; others channel it through runes and devices as technology.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Arche",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0068",
+    "entity_ids": [
+      "ENT-ARCHE"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "노련한 전사들은 아르케의 힘으로 자신의 한계를 넘어서는 힘을 발휘한다.",
+    "statement_en": "Experienced warriors draw on Arche to surpass their limits with immense power.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Arche",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0069",
+    "entity_ids": [
+      "ENT-EYE-OF-INSIGHT"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "통찰의 눈은 지역의 지도를 밝히고 숨은 유물을 추적하는 고대 장치다.",
+    "statement_en": "The Eye of Insight is an ancient device that unveils regional maps and tracks hidden relics.",
+    "sources": [
+      {
+        "url": "https://koreaproductpost.com/chrono-odyssey-mmorpg-database-guide/",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0070",
+    "entity_ids": [
+      "ENT-EYE-OF-INSIGHT",
+      "ENT-GUARDIANS",
+      "ENT-SENTINEL"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "통찰의 눈은 가디언들이 센티넬을 위해 만들었다고 전해진다.",
+    "statement_en": "The Eye of Insight is said to have been built by the Guardians for the Sentinels.",
+    "sources": [
+      {
+        "url": "https://koreaproductpost.com/chrono-odyssey-mmorpg-database-guide/",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0071",
+    "entity_ids": [
+      "ENT-GUARDIANS"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "가디언은 고대에 활동한 수수께끼의 존재들로, 그 정체가 온전히 밝혀지지 않았다.",
+    "statement_en": "The Guardians are enigmatic ancient beings whose true nature remains unrevealed.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Guardians",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0072",
+    "entity_ids": [
+      "ENT-EDEN"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "에덴은 기존 시간선 바깥에 존재하는 공간으로, 시간·위험·대가라는 세계관의 주제를 압축한 영역이다.",
+    "statement_en": "Eden exists outside the traditional timeline, condensing the setting's themes of time, risk, and consequence.",
+    "sources": [
+      {
+        "url": "https://massivelyop.com/2025/06/12/chrono-odyssey-addresses-endgame-gear-and-monetization-and-previews-gameplay-features/",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0073",
+    "entity_ids": [
+      "ENT-DAWN-SLOPE",
+      "ENT-FIRST-BREATH-HILL"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "새벽 비탈은 한때 퍼스트 브레스 힐의 중심지였던 마을이다.",
+    "statement_en": "Dawn Slope was once the heart of First Breath Hill.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Dawn_Slope_Settlement",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0074",
+    "entity_ids": [
+      "ENT-DAWN-SLOPE",
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "새벽 비탈은 보이드 침공으로 주민 대부분이 떠나 거의 버려졌고, 남은 이들도 떠날 채비를 하고 있다.",
+    "statement_en": "Dawn Slope stands nearly abandoned after the Void invasion, its last residents preparing to leave.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Dawn_Slope_Settlement",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0075",
+    "entity_ids": [
+      "ENT-SOROMA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "소로마 요새는 안개에 덮여 있으며, 도사린 위험이 수시로 변하는 수수께끼의 요새다.",
+    "statement_en": "Soroma Stronghold is a mysterious fog-covered fortress with ever-shifting dangers.",
+    "sources": [
+      {
+        "url": "https://koreaproductpost.com/chrono-odyssey-mmorpg-database-guide/",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0076",
+    "entity_ids": [
+      "ENT-RUINS-OF-TIME",
+      "ENT-CHRONOTECTOR"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "시간의 유적은 크로노텍터가 잠들어 있던 고대 유적이다.",
+    "statement_en": "The Ruins of Time are the ancient ruins where the Chronotector lay dormant.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0077",
+    "entity_ids": [
+      "ENT-TEMPORAL-RIFT",
+      "ENT-VOID"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "시간의 균열은 보이드가 세계로 풀려난 통로다.",
+    "statement_en": "The Temporal Rift is the passage through which the Void was released into the world.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Void",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0078",
+    "entity_ids": [
+      "ENT-TWELVE-WORLDS",
+      "ENT-SETERA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "세테라를 비롯한 12개의 행성이 세계관의 우주를 구성한다.",
+    "statement_en": "Twelve worlds, Setera among them, make up the setting's universe.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0079",
+    "entity_ids": [
+      "ENT-SETERA"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "세테라 곳곳의 고대 유적들이 그 비밀을 드러내고 있다.",
+    "statement_en": "Across Setera, ancient ruins are revealing their secrets.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Foreshadowing seed — the nature of these secrets is unresolved."
+  },
+  {
+    "id": "FACT-0080",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "tone-canon",
+    "statement_ko": "공식 텍스트는 상실·붕괴·시간의 무게를 다루는 중세 다크 판타지 어조를 일관되게 유지한다.",
+    "statement_en": "Official text consistently keeps a medieval dark-fantasy register dealing with loss, collapse, and the weight of time.",
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/app/1738810/Chrono_Odyssey/",
+        "source_tier": "steam-official",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Tone canon baseline for C4 checks."
+  },
+  {
+    "id": "FACT-0081",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "tone-canon",
+    "statement_ko": "세계관 문서에는 현대 속어·인터넷 밈·현대 기술 용어가 등장하지 않는다.",
+    "statement_en": "Worldbuilding text contains no modern slang, internet memes, or contemporary tech vocabulary.",
+    "sources": [
+      {
+        "url": "https://store.steampowered.com/app/1738810/Chrono_Odyssey/",
+        "source_tier": "steam-official",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Tone canon baseline for C4 checks."
+  },
+  {
+    "id": "FACT-0082",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "tone-canon",
+    "statement_ko": "고유명사는 그리스·중세 유럽풍 어감(크로노스, 아르케, 테오파네스 등)을 따른다.",
+    "statement_en": "Proper nouns follow Greek and medieval-European phonology (Chronos, Arche, Theophanes, etc.).",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Tone canon baseline for C4 checks."
+  },
+  {
+    "id": "FACT-0083",
+    "entity_ids": [
+      "ENT-SETERA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'세테라'의 영문 표기는 Setera다.",
+    "statement_en": "The English name of 세테라 is Setera.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0084",
+    "entity_ids": [
+      "ENT-RODINIA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'로디니아'의 영문 표기는 Rodinia다.",
+    "statement_en": "The English name of 로디니아 is Rodinia.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0085",
+    "entity_ids": [
+      "ENT-MAGELLAN"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'마젤란'의 영문 표기는 Magellan이다.",
+    "statement_en": "The English name of 마젤란 is Magellan.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0086",
+    "entity_ids": [
+      "ENT-IZAR"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'이자르'의 영문 표기는 Izar다.",
+    "statement_en": "The English name of 이자르 is Izar.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0087",
+    "entity_ids": [
+      "ENT-CHRONOS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'크로노스'의 영문 표기는 Chronos다.",
+    "statement_en": "The English name of 크로노스 is Chronos.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chronos",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0088",
+    "entity_ids": [
+      "ENT-VELIA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'벨리아'의 영문 표기는 Velia다.",
+    "statement_en": "The English name of 벨리아 is Velia.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0089",
+    "entity_ids": [
+      "ENT-BETELGEUSE"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'베텔기우스'의 영문 표기는 Betelgeuse다.",
+    "statement_en": "The English name of 베텔기우스 is Betelgeuse.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0090",
+    "entity_ids": [
+      "ENT-LEVIONA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'레비오나'의 영문 표기는 Leviona다.",
+    "statement_en": "The English name of 레비오나 is Leviona.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0091",
+    "entity_ids": [
+      "ENT-IOBIS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'이오비스'의 영문 표기는 Iobis다.",
+    "statement_en": "The English name of 이오비스 is Iobis.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0092",
+    "entity_ids": [
+      "ENT-ALEXIOS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'알렉시오스'의 영문 표기는 Alexios다.",
+    "statement_en": "The English name of 알렉시오스 is Alexios.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0093",
+    "entity_ids": [
+      "ENT-BALDUR"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'발두르'의 영문 표기는 Baldur다.",
+    "statement_en": "The English name of 발두르 is Baldur.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0094",
+    "entity_ids": [
+      "ENT-KAYA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'카야'의 영문 표기는 Kaya다.",
+    "statement_en": "The English name of 카야 is Kaya.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0095",
+    "entity_ids": [
+      "ENT-THEOPHANES-V"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'테오파네스 5세'의 영문 표기는 Theophanes V다.",
+    "statement_en": "The English name of 테오파네스 5세 is Theophanes V.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0096",
+    "entity_ids": [
+      "ENT-SABIO"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'사비오'의 영문 표기는 Sabio다.",
+    "statement_en": "The English name of 사비오 is Sabio.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sabio",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0097",
+    "entity_ids": [
+      "ENT-ROMEK"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'로멕'의 영문 표기는 Romek이다.",
+    "statement_en": "The English name of 로멕 is Romek.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0098",
+    "entity_ids": [
+      "ENT-GAIANA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'가이아나'의 영문 표기는 Gaiana다.",
+    "statement_en": "The English name of 가이아나 is Gaiana.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0099",
+    "entity_ids": [
+      "ENT-MICHAEL"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'미카엘'의 영문 표기는 Michael이다.",
+    "statement_en": "The English name of 미카엘 is Michael.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0100",
+    "entity_ids": [
+      "ENT-ETHELDRENA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "공식 위키(Fandom)는 뱅가드 지휘관의 이름을 Etheldreda로 표기한다.",
+    "statement_en": "The official Fandom wiki spells the Vanguard captain's name Etheldreda.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "conflicted",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Naming-conflict evidence case #1 (pairs with FACT-0101). Tier rule favors this spelling."
+  },
+  {
+    "id": "FACT-0101",
+    "entity_ids": [
+      "ENT-ETHELDRENA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "Fextralife 위키는 같은 인물의 이름을 Etheldrena로 표기한다.",
+    "statement_en": "The Fextralife wiki spells the same character's name Etheldrena.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Etheldrena",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "conflicted",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": "Naming-conflict evidence case #1 (pairs with FACT-0100)."
+  },
+  {
+    "id": "FACT-0102",
+    "entity_ids": [
+      "ENT-FRONTIER"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'프론티어'의 영문 표기는 Frontier다.",
+    "statement_en": "The English name of 프론티어 is Frontier.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0103",
+    "entity_ids": [
+      "ENT-VANGUARD"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'뱅가드'의 영문 표기는 Vanguard다.",
+    "statement_en": "The English name of 뱅가드 is Vanguard.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Vanguard",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0104",
+    "entity_ids": [
+      "ENT-SETTLERS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'정착민'의 영문 표기는 Settlers다.",
+    "statement_en": "The English name of 정착민 is Settlers.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0105",
+    "entity_ids": [
+      "ENT-DEATHLESS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'데스리스'의 영문 표기는 Deathless다.",
+    "statement_en": "The English name of 데스리스 is Deathless.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0106",
+    "entity_ids": [
+      "ENT-BROKEN"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'브로큰'의 영문 표기는 Broken이다.",
+    "statement_en": "The English name of 브로큰 is Broken.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0107",
+    "entity_ids": [
+      "ENT-WORLD-MOVERS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'월드 무버'의 영문 표기는 World Movers다.",
+    "statement_en": "The English name of 월드 무버 is World Movers.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.online/the-world-movers/",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0108",
+    "entity_ids": [
+      "ENT-CHRONOS-ORDER"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'크로노스 교단'의 영문 표기는 Chronos Order다.",
+    "statement_en": "The English name of 크로노스 교단 is Chronos Order.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0109",
+    "entity_ids": [
+      "ENT-OUTCASTS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'아웃캐스트'의 영문 표기는 Outcasts다.",
+    "statement_en": "The English name of 아웃캐스트 is Outcasts.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0110",
+    "entity_ids": [
+      "ENT-CHRONOTECTOR"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'크로노텍터'의 영문 표기는 Chronotector다.",
+    "statement_en": "The English name of 크로노텍터 is Chronotector.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chronotector",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0111",
+    "entity_ids": [
+      "ENT-RUINS-OF-TIME"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'시간의 유적'의 영문 표기는 Ruins of Time이다.",
+    "statement_en": "The English name of 시간의 유적 is Ruins of Time.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0112",
+    "entity_ids": [
+      "ENT-TEMPORAL-RIFT"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'시간의 균열'의 영문 표기는 Temporal Rift다.",
+    "statement_en": "The English name of 시간의 균열 is Temporal Rift.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Void",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0113",
+    "entity_ids": [
+      "ENT-EYE-OF-INSIGHT"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'통찰의 눈'의 영문 표기는 Eye of Insight다.",
+    "statement_en": "The English name of 통찰의 눈 is Eye of Insight.",
+    "sources": [
+      {
+        "url": "https://koreaproductpost.com/chrono-odyssey-mmorpg-database-guide/",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0114",
+    "entity_ids": [
+      "ENT-ARCHE"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'아르케'의 영문 표기는 Arche다.",
+    "statement_en": "The English name of 아르케 is Arche.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Arche",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0115",
+    "entity_ids": [
+      "ENT-VOID"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'보이드'의 영문 표기는 Void다.",
+    "statement_en": "The English name of 보이드 is Void.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Void",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0116",
+    "entity_ids": [
+      "ENT-SENTINEL"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'센티넬'의 영문 표기는 Sentinel이다.",
+    "statement_en": "The English name of 센티넬 is Sentinel.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0117",
+    "entity_ids": [
+      "ENT-CHRONO-GATE"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'크로노 게이트'의 영문 표기는 Chrono Gate다.",
+    "statement_en": "The English name of 크로노 게이트 is Chrono Gate.",
+    "sources": [
+      {
+        "url": "https://www.pcgamesn.com/chrono-odyssey/guide",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0118",
+    "entity_ids": [
+      "ENT-VOID-NEXUS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'보이드 넥서스'의 영문 표기는 Void Nexus다.",
+    "statement_en": "The English name of 보이드 넥서스 is Void Nexus.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0119",
+    "entity_ids": [
+      "ENT-EDEN"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'에덴'의 영문 표기는 Eden이다.",
+    "statement_en": "The English name of 에덴 is Eden.",
+    "sources": [
+      {
+        "url": "https://massivelyop.com/2025/06/12/chrono-odyssey-addresses-endgame-gear-and-monetization-and-previews-gameplay-features/",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0120",
+    "entity_ids": [
+      "ENT-MATRIX"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'매트릭스'의 영문 표기는 Matrix다.",
+    "statement_en": "The English name of 매트릭스 is Matrix.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0121",
+    "entity_ids": [
+      "ENT-DAWN-SLOPE"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'새벽 비탈'의 영문 표기는 Dawn Slope다.",
+    "statement_en": "The English name of 새벽 비탈 is Dawn Slope.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Dawn_Slope_Settlement",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0122",
+    "entity_ids": [
+      "ENT-SOROMA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'소로마 요새'의 영문 표기는 Soroma Stronghold다.",
+    "statement_en": "The English name of 소로마 요새 is Soroma Stronghold.",
+    "sources": [
+      {
+        "url": "https://koreaproductpost.com/chrono-odyssey-mmorpg-database-guide/",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0123",
+    "entity_ids": [
+      "ENT-GUARDIANS"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'가디언'의 영문 표기는 Guardians다.",
+    "statement_en": "The English name of 가디언 is Guardians.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Guardians",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0124",
+    "entity_ids": [
+      "ENT-VOID-SPADA"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'보이드 스파다'의 영문 표기는 Void Spada다.",
+    "statement_en": "The English name of 보이드 스파다 is Void Spada.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0125",
+    "entity_ids": [
+      "ENT-VOID-APOSTLE"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'보이드 사도'의 영문 표기는 Void Apostle이다.",
+    "statement_en": "The English name of 보이드 사도 is Void Apostle.",
+    "sources": [
+      {
+        "url": "https://www.pcgamesn.com/chrono-odyssey/guide",
+        "source_tier": "press",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0126",
+    "entity_ids": [
+      "ENT-VOID-CORE"
+    ],
+    "claim_type": "naming",
+    "statement_ko": "'보이드 코어'의 영문 표기는 Void Core다.",
+    "statement_en": "The English name of 보이드 코어 is Void Core.",
+    "sources": [
+      {
+        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "source_tier": "community-wiki",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "speculative",
+    "first_seen_kb_version": "2026.08",
+    "notes": ""
+  },
+  {
+    "id": "FACT-0127",
+    "entity_ids": [
+      "ENT-MATRIX"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "매트릭스 시스템은 동일한 클래스와 무기를 사용하더라도 선택한 스탯·패시브 스킬·장비 옵션에 따라 이용자별로 차별화된 전투 양상이 나타나도록 설계되었다.",
+    "statement_en": "The Matrix System is designed so that even players using the same class and weapon can experience differentiated combat styles depending on their chosen stats, passive skills, and equipment options.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.1",
+    "notes": "Ingested 2026-08-03: FACT-0009는 매트릭스 시스템의 존재만 언급하며, 클래스·무기 동일 조건에서도 스탯·패시브·장비 선택에 따라 전투 양상이 달라진다는 세부 설계 내용은 기존 팩트에 없음."
+  },
+  {
+    "id": "FACT-0128",
+    "entity_ids": [
+      "ENT-MATRIX"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "매트릭스 시스템에서 특정 성장 조건을 충족하면 전투 스타일에 특화된 추가 능력치를 획득하며, 이에 따라 스킬 운용 방식과 전투 리듬도 변화한다.",
+    "statement_en": "In the Matrix System, fulfilling specific growth conditions grants additional combat-style-specialized stats, which in turn alter skill usage patterns and combat rhythm.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.1",
+    "notes": "Ingested 2026-08-03: 성장 조건 충족 시 특화 능력치 획득 및 스킬·전투 리듬 변화라는 구체적 메커니즘은 기존 팩트에 기술되지 않은 신규 정보."
+  },
+  {
+    "id": "FACT-0129",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "몬스터 장비 시스템에서 장비는 단순한 성능 지표를 넘어 세계관과 전투 경험을 연결하는 역할을 수행하며, 제작·보스 공략·퀘스트 완료 등 다양한 콘텐츠 참여가 캐릭터 외형 변화와 직결된다.",
+    "statement_en": "In the Monster Equipment System, gear serves as a bridge between the game's lore and combat experience beyond mere performance metrics, with crafting, boss raids, and quest completion directly tied to character appearance changes.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.1",
+    "notes": "Ingested 2026-08-03: FACT-0011은 몬스터 외형·특성 반영 장비 획득만 언급하며, 장비가 세계관·전투 경험 연결 역할을 하고 제작·보스·퀘스트 등 다양한 콘텐츠가 외형 변화와 직결된다는 내용은 신규 정보."
+  },
+  {
+    "id": "FACT-0130",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "5차 개발자 노트에서 하나의 서버 내 복수 채널 운영 구조 도입이 발표되어 안정적인 플레이 환경을 지원할 예정이다.",
+    "statement_en": "The 5th developer note announced the introduction of a multi-channel structure within a single server to support a stable play environment.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.1",
+    "notes": "Ingested 2026-08-03: 서버 내 복수 채널 운영 구조 도입은 기존 팩트 목록에 없는 신규 게임 시스템 정보."
+  },
+  {
+    "id": "FACT-0131",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "5차 개발자 노트에서 월드맵 퀘스트 마커 노출, 던전 아이콘 상태 표시 구분, 나침반 내 지형 높낮이 정보 추가 등 공간 파악 관련 UI 편의성 개선이 발표되었다.",
+    "statement_en": "The 5th developer note announced UI convenience improvements for spatial awareness, including world map quest marker display, dungeon icon status differentiation, and terrain elevation information added to the compass.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.1",
+    "notes": "Ingested 2026-08-03: 월드맵 퀘스트 마커, 던전 아이콘 상태 구분, 나침반 지형 높낮이 정보 등 구체적 UI 개선 사항은 기존 팩트에 기록되지 않은 신규 정보."
+  },
+  {
+    "id": "FACT-0132",
+    "entity_ids": [
+      "ENT-CHRONO-ODYSSEY"
+    ],
+    "claim_type": "attribute",
+    "statement_ko": "크로노 오디세이는 PC 및 콘솔 기반의 AAA급 오픈월드 액션 MMORPG로 개발되고 있다.",
+    "statement_en": "Chrono Odyssey is being developed as a PC and console-based AAA open-world action MMORPG.",
+    "sources": [
+      {
+        "url": "https://www.inven.co.kr/webzine/news/?news=316180",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-03"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.1",
+    "notes": "Ingested 2026-08-03: FACT-0001은 장르를 '시공간 판타지 MMORPG'로만 기술하며, PC·콘솔 기반 AAA급 오픈월드 액션 MMORPG라는 플랫폼 및 규모 정보는 기존 팩트에 명시되지 않아 신규로 분류."
+  }
+]

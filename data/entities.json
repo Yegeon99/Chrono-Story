@@ -1,0 +1,479 @@
+[
+  {
+    "id": "ENT-SETERA",
+    "type": "planet",
+    "name_ko": "세테라",
+    "name_en": "Setera",
+    "aliases": [],
+    "summary_ko": "주인공이 센티넬로 활동하는 행성이자 이야기의 주 무대. 보이드의 침공으로 멸망 직전까지 몰렸다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-RODINIA",
+    "type": "planet",
+    "name_ko": "로디니아",
+    "name_en": "Rodinia",
+    "aliases": [],
+    "summary_ko": "벨리아가 수호하는 행성. 함락 직전 벨리아가 크로노텍터로 행성 전체의 시간을 정지시켰다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-MAGELLAN",
+    "type": "planet",
+    "name_ko": "마젤란",
+    "name_en": "Magellan",
+    "aliases": [],
+    "summary_ko": "베텔기우스가 센티넬로서 수호하던 행성.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-IZAR",
+    "type": "planet",
+    "name_ko": "이자르",
+    "name_en": "Izar",
+    "aliases": [],
+    "summary_ko": "레비오나가 센티넬로서 수호하는 행성.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-TWELVE-WORLDS",
+    "type": "concept",
+    "name_ko": "12행성",
+    "name_en": "The Twelve Worlds",
+    "aliases": ["twelve planets"],
+    "summary_ko": "세계관의 우주를 구성하는 12개의 행성. 각 행성마다 센티넬이 존재한다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-CHRONOS",
+    "type": "character",
+    "name_ko": "크로노스",
+    "name_en": "Chronos",
+    "aliases": [],
+    "summary_ko": "시간을 관장하는 신격. 크로노스 교단이 섬기는 대상이며 세계관 명칭의 어원이다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VELIA",
+    "type": "character",
+    "name_ko": "벨리아",
+    "name_en": "Velia",
+    "aliases": [],
+    "summary_ko": "로디니아의 센티넬. 주인공을 1년 전 과거로 보내고 크로노텍터의 힘을 인도하는 안내자다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-BETELGEUSE",
+    "type": "character",
+    "name_ko": "베텔기우스",
+    "name_en": "Betelgeuse",
+    "aliases": [],
+    "summary_ko": "마젤란의 센티넬. 분노에 사로잡혀 보이드를 깨워 12행성에 풀어놓은 장본인이다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-LEVIONA",
+    "type": "character",
+    "name_ko": "레비오나",
+    "name_en": "Leviona",
+    "aliases": [],
+    "summary_ko": "이자르의 센티넬로 알려진 인물.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-IOBIS",
+    "type": "character",
+    "name_ko": "이오비스",
+    "name_en": "Iobis",
+    "aliases": [],
+    "summary_ko": "전설적인 전사이자 프론티어의 창설자·지도자.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-ALEXIOS",
+    "type": "character",
+    "name_ko": "알렉시오스",
+    "name_en": "Alexios",
+    "aliases": [],
+    "summary_ko": "뱅가드의 일원. 크로노스 교단에서 파문당한 전력이 있다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-BALDUR",
+    "type": "character",
+    "name_ko": "발두르",
+    "name_en": "Baldur",
+    "aliases": [],
+    "summary_ko": "뱅가드의 일원으로 주인공과 함께 작전을 수행한다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-ETHELDRENA",
+    "type": "character",
+    "name_ko": "에셀드레나",
+    "name_en": "Etheldrena",
+    "aliases": ["Etheldreda"],
+    "summary_ko": "뱅가드의 지휘관. 소스에 따라 영문 표기가 Etheldrena와 Etheldreda로 갈리는 표기 충돌 상태다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-KAYA",
+    "type": "character",
+    "name_ko": "카야",
+    "name_en": "Kaya",
+    "aliases": [],
+    "summary_ko": "뱅가드의 일원으로 주인공·에셀드레나와 함께 작전을 수행한다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-THEOPHANES-V",
+    "type": "character",
+    "name_ko": "테오파네스 5세",
+    "name_en": "Theophanes V",
+    "aliases": [],
+    "summary_ko": "크로노스 교단을 이끄는 교황.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-SABIO",
+    "type": "character",
+    "name_ko": "사비오",
+    "name_en": "Sabio",
+    "aliases": [],
+    "summary_ko": "세테라의 경제·행정을 총괄하는 재상 격 인물. 보이드 침공 전에는 유력 상인 길드를 이끌었다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-ROMEK",
+    "type": "character",
+    "name_ko": "로멕",
+    "name_en": "Romek",
+    "aliases": [],
+    "summary_ko": "크로노스 교단의 방랑 사제.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-GAIANA",
+    "type": "character",
+    "name_ko": "가이아나",
+    "name_en": "Gaiana",
+    "aliases": [],
+    "summary_ko": "'살아있는 성인'으로 불리는 크로노스 교단의 인물.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-MICHAEL",
+    "type": "character",
+    "name_ko": "미카엘",
+    "name_en": "Michael",
+    "aliases": [],
+    "summary_ko": "크로노스 교단의 무력 분파인 기사단을 이끄는 인물.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-PROTAGONIST",
+    "type": "character",
+    "name_ko": "주인공",
+    "name_en": "The Protagonist",
+    "aliases": ["플레이어"],
+    "summary_ko": "세테라 함락 직전 시간의 유적에서 크로노텍터를 얻어 센티넬이 된 인물. 벨리아에 의해 1년 전 과거로 회귀했다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-FRONTIER",
+    "type": "faction",
+    "name_ko": "프론티어",
+    "name_en": "Frontier",
+    "aliases": [],
+    "summary_ko": "보이드에 맞서는 세테라의 최전선 방어 조직. 이오비스가 창설하고 이끈다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VANGUARD",
+    "type": "faction",
+    "name_ko": "뱅가드",
+    "name_en": "Vanguard",
+    "aliases": [],
+    "summary_ko": "프론티어 소속의 정예 특수 부대. 주인공과 알렉시오스·발두르·에셀드레나·카야가 소속돼 있다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-SETTLERS",
+    "type": "faction",
+    "name_ko": "정착민",
+    "name_en": "Settlers",
+    "aliases": [],
+    "summary_ko": "오염되지 않은 땅을 찾아 세테라를 떠도는 반유목 생활의 보통 사람들.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-DEATHLESS",
+    "type": "faction",
+    "name_ko": "데스리스",
+    "name_en": "Deathless",
+    "aliases": [],
+    "summary_ko": "브로큰과 사제·복사로 구성된 보이드의 수족. 의식을 유지한 채 보이드와의 합일을 추구하는 자들이 있다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-BROKEN",
+    "type": "faction",
+    "name_ko": "브로큰",
+    "name_en": "Broken",
+    "aliases": [],
+    "summary_ko": "보이드에 죽었거나 스스로 굴복한 인간이 변한, 보이드를 섬기는 무지성의 존재들.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-WORLD-MOVERS",
+    "type": "faction",
+    "name_ko": "월드 무버",
+    "name_en": "World Movers",
+    "aliases": [],
+    "summary_ko": "보이드에 고향 행성을 잃고 세테라로 피신한 생존자 집단. 세 개의 분파로 갈라져 있다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-CHRONOS-ORDER",
+    "type": "faction",
+    "name_ko": "크로노스 교단",
+    "name_en": "Chronos Order",
+    "aliases": [],
+    "summary_ko": "시간의 신 크로노스를 섬기는 종교 조직. 교황 테오파네스 5세가 이끈다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-KNIGHTS-TEMPLAR",
+    "type": "faction",
+    "name_ko": "기사단",
+    "name_en": "Knights Templar",
+    "aliases": [],
+    "summary_ko": "크로노스 교단의 무력 분파. 미카엘이 이끈다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-OUTCASTS",
+    "type": "faction",
+    "name_ko": "아웃캐스트",
+    "name_en": "Outcasts",
+    "aliases": [],
+    "summary_ko": "추방된 월드 무버들이 결성한 무장 범죄 집단. 여행자와 상인을 습격한다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-COMMERCE-GUILD",
+    "type": "faction",
+    "name_ko": "상인 길드",
+    "name_en": "Commerce Guild",
+    "aliases": [],
+    "summary_ko": "사비오를 중심으로 한 상업 조직. 프론티어와 동맹 관계다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-GUARDIANS",
+    "type": "faction",
+    "name_ko": "가디언",
+    "name_en": "Guardians",
+    "aliases": [],
+    "summary_ko": "고대에 활동한 수수께끼의 존재들. 센티넬을 위해 통찰의 눈을 만들었다고 전해진다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-IDRIGIN",
+    "type": "faction",
+    "name_ko": "이드리긴",
+    "name_en": "Idrigin",
+    "aliases": [],
+    "summary_ko": "2020년 초기 보도에서 '12명의 신에 대항하는 특수 조직'으로 소개되었으나 현행 공식 자료에서 사라진 조직명. 설정 개편의 실증 사례다.",
+    "status": "deprecated"
+  },
+  {
+    "id": "ENT-CHRONOTECTOR",
+    "type": "artifact",
+    "name_ko": "크로노텍터",
+    "name_en": "Chronotector",
+    "aliases": [],
+    "summary_ko": "센티넬에게 시간을 다루는 힘을 부여하는 유물. 센티넬과 행성의 운명을 결속시킨다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-EYE-OF-INSIGHT",
+    "type": "artifact",
+    "name_ko": "통찰의 눈",
+    "name_en": "Eye of Insight",
+    "aliases": [],
+    "summary_ko": "지역의 지도를 밝히고 숨은 유물을 추적하는 고대 장치. 가디언들이 만들었다고 전해진다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VOID-CORE",
+    "type": "artifact",
+    "name_ko": "보이드 코어",
+    "name_en": "Void Core",
+    "aliases": [],
+    "summary_ko": "보이드 넥서스 오염의 근원인 고치 형태의 물체. 파괴하면 지역이 정화된다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VOID",
+    "type": "concept",
+    "name_ko": "보이드",
+    "name_en": "Void",
+    "aliases": [],
+    "summary_ko": "생명을 오염시키고 잠식하는 이계의 침략자. 시간의 균열에서 풀려나 12행성에 퍼졌다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-SENTINEL",
+    "type": "concept",
+    "name_ko": "센티넬",
+    "name_en": "Sentinel",
+    "aliases": [],
+    "summary_ko": "크로노텍터를 통해 행성의 운명과 결속된 반신적 수호자. 12행성마다 존재한다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-ARCHE",
+    "type": "concept",
+    "name_ko": "아르케",
+    "name_en": "Arche",
+    "aliases": [],
+    "summary_ko": "자연과 생명의 순환을 지탱하는 근원 에너지. 문명에 따라 마법 또는 기술의 원천으로 활용된다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-TEMPORAL-RIFT",
+    "type": "concept",
+    "name_ko": "시간의 균열",
+    "name_en": "Temporal Rift",
+    "aliases": [],
+    "summary_ko": "보이드가 세계로 풀려난 통로.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-CHRONO-GATE",
+    "type": "concept",
+    "name_ko": "크로노 게이트",
+    "name_en": "Chrono Gate",
+    "aliases": [],
+    "summary_ko": "보이드 사도와의 1대1 결전이 벌어지는 관문.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VOID-NEXUS",
+    "type": "concept",
+    "name_ko": "보이드 넥서스",
+    "name_en": "Void Nexus",
+    "aliases": [],
+    "summary_ko": "보이드 적과 오염된 대지를 품은 돔형 지대. 중심에 보이드 코어가 있다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-EDEN",
+    "type": "concept",
+    "name_ko": "에덴",
+    "name_en": "Eden",
+    "aliases": [],
+    "summary_ko": "기존 시간선 바깥에 존재하는 공간. 시간·위험·대가라는 세계관의 주제를 압축한 영역이다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-MATRIX",
+    "type": "concept",
+    "name_ko": "매트릭스",
+    "name_en": "Matrix",
+    "aliases": [],
+    "summary_ko": "센티넬이 지닌 힘의 원천. 벨리아가 그 실체를 밝히며, 5차 개발자 노트에서 성장 시스템으로 공개되었다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-CHRONO-ODYSSEY",
+    "type": "concept",
+    "name_ko": "크로노 오디세이 (작품)",
+    "name_en": "Chrono Odyssey (Work)",
+    "aliases": [],
+    "summary_ko": "크로노스튜디오가 개발하고 카카오게임즈가 퍼블리싱하는 시공간 판타지 MMORPG. 작품 자체에 대한 메타 정보를 담는 엔티티다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-RUINS-OF-TIME",
+    "type": "location",
+    "name_ko": "시간의 유적",
+    "name_en": "Ruins of Time",
+    "aliases": [],
+    "summary_ko": "크로노텍터가 잠들어 있던 고대 유적. 주인공이 이곳에서 센티넬이 되었다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-DAWN-SLOPE",
+    "type": "location",
+    "name_ko": "새벽 비탈",
+    "name_en": "Dawn Slope",
+    "aliases": ["Dawn Slope Settlement"],
+    "summary_ko": "한때 퍼스트 브레스 힐의 중심지였으나 보이드 침공으로 거의 버려진 마을.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-SOROMA",
+    "type": "location",
+    "name_ko": "소로마 요새",
+    "name_en": "Soroma Stronghold",
+    "aliases": [],
+    "summary_ko": "안개에 덮여 있으며 위험이 수시로 변하는 수수께끼의 요새.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-FIRST-BREATH-HILL",
+    "type": "location",
+    "name_ko": "퍼스트 브레스 힐",
+    "name_en": "First Breath Hill",
+    "aliases": [],
+    "summary_ko": "새벽 비탈이 중심지로 있던 세테라의 지역.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VOID-SPADA",
+    "type": "creature",
+    "name_ko": "보이드 스파다",
+    "name_en": "Void Spada",
+    "aliases": [],
+    "summary_ko": "프롤로그에서 유적을 급습해 에셀드레나를 쓰러뜨린 보이드 괴물.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VOID-APOSTLE",
+    "type": "creature",
+    "name_ko": "보이드 사도",
+    "name_en": "Void Apostle",
+    "aliases": [],
+    "summary_ko": "크로노 게이트에서 맞서게 되는 보이드의 강력한 존재.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-VOID-OUTBREAK",
+    "type": "event",
+    "name_ko": "보이드 창궐",
+    "name_en": "The Void Outbreak",
+    "aliases": [],
+    "summary_ko": "베텔기우스가 깨운 보이드가 12행성에 퍼져 세테라를 멸망 직전까지 몰아넣은 사건.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-ONE-YEAR-REGRESSION",
+    "type": "event",
+    "name_ko": "1년 회귀",
+    "name_en": "One-Year Regression",
+    "aliases": [],
+    "summary_ko": "벨리아가 주인공을 1년 전 과거로 돌려보낸 사건. '미래가 바뀌었다'는 메시지가 함께 전해졌다.",
+    "status": "active"
+  },
+  {
+    "id": "ENT-RODINIA-TIME-FREEZE",
+    "type": "event",
+    "name_ko": "로디니아 시간 정지",
+    "name_en": "Freezing of Rodinia",
+    "aliases": [],
+    "summary_ko": "벨리아가 함락 직전의 로디니아에서 크로노텍터로 행성의 시간을 정지시킨 사건.",
+    "status": "active"
+  }
+]

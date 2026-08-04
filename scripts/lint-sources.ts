@@ -22,7 +22,9 @@ const registryTierByHost = new Map<string, string>(
 );
 
 const errors: string[] = [];
-const today = new Date().toISOString().slice(0, 10);
+// Local calendar date — toISOString() is UTC and flags same-day KST captures.
+const now = new Date();
+const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
 
 for (const fact of facts) {
   const seenUrls = new Set<string>();

@@ -3131,5 +3131,261 @@
     "confidence": "probable",
     "first_seen_kb_version": "2026.08.1",
     "notes": "Ingested 2026-08-03: FACT-0001은 장르를 '시공간 판타지 MMORPG'로만 기술하며, PC·콘솔 기반 AAA급 오픈월드 액션 MMORPG라는 플랫폼 및 규모 정보는 기존 팩트에 명시되지 않아 신규로 분류."
+  },
+  {
+    "id": "FACT-0133",
+    "entity_ids": [
+      "ENT-VANGUARD",
+      "ENT-RUINS-OF-TIME",
+      "ENT-VOID"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "보이드 침공이 절정에 달했을 때, 뱅가드는 시간을 되돌릴 힘이 있다고 전해지는 유물을 확보하기 위해 시간의 유적으로 출정했다.",
+    "statement_en": "At the peak of the Void invasion, the Vanguard set out for the Ruins of Time to claim a relic said to hold the power to reverse time.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0134",
+    "entity_ids": [
+      "ENT-KAYA",
+      "ENT-BALDUR",
+      "ENT-PROTAGONIST",
+      "ENT-RUINS-OF-TIME"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "유적 공략에서 카야와 발두르가 전선을 지탱하는 동안, 주인공은 대열을 이탈해 유적 심부로 내달렸다.",
+    "statement_en": "During the assault on the ruins, Kaya and Baldur held the line while the protagonist broke away toward the heart of the ruins.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0135",
+    "entity_ids": [
+      "ENT-PROTAGONIST",
+      "ENT-ETHELDRENA",
+      "ENT-RUINS-OF-TIME",
+      "ENT-VANGUARD"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "유적 심부에서 주인공은 격전 끝에 뱅가드 지휘관 에셀드레나와 재회했고, 두 사람은 함께 유물을 향해 나아갔다.",
+    "statement_en": "Deep in the ruins the protagonist reunited with Vanguard commander Etheldreda after a fierce struggle, and together they pushed on toward the relic.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0136",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-VOID-SPADA",
+      "ENT-PROTAGONIST"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "스파다의 마지막 일격이 주인공에게 닿기 직전 시간이 얼어붙었고, 로디니아의 센티넬 벨리아가 나타나 스파다를 손쉽게 제압했다.",
+    "statement_en": "Just before the Spada's final strike landed, time froze and Velia, Sentinel of Rodinia, stepped forth and subdued it with ease.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0137",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-CHRONOTECTOR",
+      "ENT-PROTAGONIST",
+      "ENT-RUINS-OF-TIME"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "벨리아는 주인공이 쥔 유물을 각성시켜, 그것의 진정한 형태인 크로노텍터를 드러나게 했다.",
+    "statement_en": "Velia awakened the relic in the protagonist's grasp, revealing its true form as the Chronotector.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0138",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-PROTAGONIST",
+      "ENT-ONE-YEAR-REGRESSION"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "주인공을 과거로 보내며 벨리아는 과거에서 자신을 찾아와 미래가 바뀌었다는 소식을 전하라고 당부했다.",
+    "statement_en": "As she sent the protagonist into the past, Velia asked to be found there and told that the future had changed.",
+    "quote_en": "Find me there. Bring word that the future has changed.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0139",
+    "entity_ids": [
+      "ENT-VELIA",
+      "ENT-PROTAGONIST",
+      "ENT-CHRONOTECTOR",
+      "ENT-MATRIX"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "과거 시점에서 벨리아는 주인공과 재회해 크로노텍터의 새로운 능력을 열어 주고, 매트릭스의 실체를 하나씩 밝혀 간다.",
+    "statement_en": "In the past, Velia reunites with the protagonist, guiding them to unlock new Chronotector abilities and unveiling the Matrix.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0140",
+    "entity_ids": [
+      "ENT-VOID",
+      "ENT-TEMPORAL-RIFT",
+      "ENT-BETELGEUSE",
+      "ENT-TWELVE-WORLDS"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "보이드는 본래 시간의 균열 깊은 곳에 봉인되어 있었으나, 베텔기우스가 크로노텍터의 조율 능력으로 깨워 열두 세계에 풀어놓았다.",
+    "statement_en": "The Void lay sealed deep within the Temporal Rift until Betelgeuse woke it with his Chronotector's tuning power and unleashed it upon the twelve worlds.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Void",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0141",
+    "entity_ids": [
+      "ENT-MAGELLAN",
+      "ENT-VOID",
+      "ENT-BETELGEUSE"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "베텔기우스가 보이드를 깨운 이후, 마젤란은 보이드의 넥서스가 되었다.",
+    "statement_en": "After Betelgeuse's awakening of the Void, Magellan became the Void's nexus.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Magellan",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0142",
+    "entity_ids": [
+      "ENT-IOBIS",
+      "ENT-VOID",
+      "ENT-FRONTIER"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "보이드 침공 초기 다른 조직들이 무너지는 동안, 이오비스는 최전선에서 보이드를 홀로 격퇴하며 전쟁의 중심 인물로 자리 잡았다.",
+    "statement_en": "In the early days of the invasion, while other organizations crumbled, Iobis single-handedly repelled the Void at the first line of defense and became the war's central figure.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Iobis",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
   }
 ]

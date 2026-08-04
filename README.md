@@ -9,6 +9,10 @@
 > **비공식 고지** — 본 프로젝트는 크로노스튜디오·카카오게임즈와 무관한 비공식 팬
 > 포트폴리오이며, 크로노 오디세이의 모든 권리는 해당 권리자에게 있습니다.
 
+| 연대기 — 용어 팝오버 | 검증 게이트 — FAIL 인장 | QA 대시보드 — 출처 정직성·변경 감지 |
+|---|---|---|
+| ![연대기에서 용어 정의 팝오버가 열린 화면](docs/screenshots/chronicle-popover.png) | ![검증 게이트가 FAIL 인장을 찍고 근거 팩트를 인용한 화면](docs/screenshots/gate-fail-seal.png) | ![QA 대시보드의 신뢰도 분포와 변경 감지 요약](docs/screenshots/dashboard-change.png) |
+
 ## 무엇을 하는가
 
 | 기능 | 설명 |

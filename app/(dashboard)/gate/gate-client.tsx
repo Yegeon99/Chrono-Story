@@ -124,7 +124,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
                 type="button"
                 onClick={() => loadDemo(d)}
                 title={d.description}
-                className="inline-flex items-center gap-1.5 rounded-full border border-ink-700 px-3 py-1 text-xs text-parchment-dim transition-colors hover:border-gilt/50 hover:text-parchment"
+                className="chip"
               >
                 <span
                   className={`inline-block h-1.5 w-1.5 rounded-full ${dot}`}
@@ -141,14 +141,14 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
           rows={12}
           placeholder="신규 퀘스트 대사, NPC 대화 등 검증할 텍스트를 붙여넣으세요."
           aria-label="검증할 텍스트"
-          className="w-full resize-y rounded-md border border-ink-700 bg-ink-900 px-4 py-3 text-sm leading-relaxed placeholder:text-parchment-dim/60"
+          className="field resize-y"
         />
         <div className="mt-3 flex items-center gap-3">
           <button
             type="button"
             onClick={runLive}
             disabled={running || text.trim().length < 5}
-            className="rounded-md bg-gilt px-5 py-2 text-sm font-semibold text-ink-950 transition-colors hover:bg-[#d9b544] disabled:cursor-not-allowed disabled:opacity-40"
+            className="btn-gilt"
           >
             {running ? "판정 중…" : precomputed && result ? "실시간 재판정" : "판정 실행"}
           </button>
@@ -169,8 +169,13 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
 
       <section aria-label="판정 결과" aria-live="polite">
         {!result && !running && (
-          <div className="flex min-h-[280px] items-center justify-center rounded-md border border-dashed border-ink-700 text-sm text-parchment-dim">
-            판정 결과가 여기에 표시됩니다.
+          <div className="flex min-h-[320px] flex-col items-center justify-center gap-3 rounded-md border border-dashed border-ink-700 px-6 text-center">
+            <span className="seal-ghost" aria-hidden>
+              ?
+            </span>
+            <p className="text-sm text-parchment-dim">
+              판정 결과가 여기에 인장으로 찍힙니다.
+            </p>
           </div>
         )}
         {running && (

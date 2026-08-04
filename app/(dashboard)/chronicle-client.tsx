@@ -60,15 +60,10 @@ export function ChronicleClient({
           <article key={ch.id} className="mb-14 last:mb-4">
             <header className="mb-5">
               <p className="eyebrow mb-2 flex items-center gap-3">
-                <span className="text-gilt/80">제{ch.num}장</span>
-                <span
-                  className="h-px flex-1 bg-gradient-to-r from-ink-700 to-transparent"
-                  aria-hidden
-                />
+                <span className="text-gilt">제{ch.num}장</span>
+                <span className="rule-fade flex-1" aria-hidden />
               </p>
-              <h2 className="font-display text-xl font-black tracking-tight">
-                {ch.title}
-              </h2>
+              <h2 className="font-display text-xl font-bold">{ch.title}</h2>
             </header>
 
             {image && (
@@ -106,7 +101,7 @@ export function ChronicleClient({
                   {chapterQa.foreshadow > 0 && (
                     <Link
                       href="/ledger"
-                      className="rounded-full border border-rift-teal/50 bg-ink-900 px-3 py-1 text-xs text-rift-teal transition-colors hover:bg-ink-800"
+                      className="chip border-rift-teal/50 text-rift-teal hover:border-rift-teal hover:text-rift-teal"
                     >
                       이 대목의 미해소 복선 {chapterQa.foreshadow}건 →
                     </Link>
@@ -114,7 +109,7 @@ export function ChronicleClient({
                   {chapterQa.conflicts > 0 && (
                     <Link
                       href="/reports"
-                      className="rounded-full border border-ember/50 bg-ink-900 px-3 py-1 text-xs text-ember transition-colors hover:bg-ink-800"
+                      className="chip border-ember/50 text-ember hover:border-ember hover:text-ember"
                     >
                       이 대목의 충돌 팩트 {chapterQa.conflicts}건 →
                     </Link>
@@ -124,8 +119,10 @@ export function ChronicleClient({
             </div>
 
             {ci < chapters.length - 1 && (
-              <div className="mt-12 text-center text-gilt/50" aria-hidden>
-                ✦
+              <div className="mt-14 flex items-center gap-4" aria-hidden>
+                <span className="h-px flex-1 bg-gradient-to-r from-transparent to-ink-700" />
+                <span className="text-[0.6rem] text-gilt/60">◆</span>
+                <span className="h-px flex-1 bg-gradient-to-l from-transparent to-ink-700" />
               </div>
             )}
           </article>

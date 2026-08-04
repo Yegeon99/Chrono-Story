@@ -1,37 +1,117 @@
 import Link from "next/link";
+import {
+  loadFacts,
+  loadForeshadowing,
+  loadKbMeta,
+  loadReports,
+} from "@/lib/kb";
 import { Nav } from "./nav";
+import { Topbar } from "./topbar";
+
+/** The wordmark sigil: a lozenge (the archive seal) enclosing an hourglass
+ *  (the time motif). Drawn inline so it inherits gilt on hover. */
+function Sigil() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="22"
+      height="22"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      strokeLinejoin="round"
+      className="shrink-0 text-gilt"
+      aria-hidden
+    >
+      <path d="M12 1.6 22.4 12 12 22.4 1.6 12Z" />
+      <path d="M8.6 7.2h6.8M8.6 16.8h6.8" />
+      <path d="M9.3 7.2v1.4c0 1.2 2.7 2.2 2.7 3.4s-2.7 2.2-2.7 3.4v1.4" />
+      <path d="M14.7 7.2v1.4c0 1.2-2.7 2.2-2.7 3.4s2.7 2.2 2.7 3.4v1.4" />
+    </svg>
+  );
+}
 
 export default function DashboardLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const meta = loadKbMeta();
+  const facts = loadFacts();
+  const foreshadowing = loadForeshadowing();
+  const reports = loadReports();
+
+  const conflicts = facts.filter((f) => f.status === "conflicted").length;
+  const unresolved = foreshadowing.filter(
+    (f) => f.status === "unresolved" || f.status === "resurfaced"
+  ).length;
+
+  // Live readings surfaced on the nav itself — the sidebar doubles as the
+  // instrument panel (DIRECTIVE §5 concept).
+  const counts = {
+    "/knowledge": conflicts,
+    "/reports": reports.length,
+    "/ledger": unresolved,
+  };
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <div className="flex flex-1 flex-col md:flex-row">
-        <aside className="w-full shrink-0 border-b border-ink-700 bg-ink-900/30 md:sticky md:top-0 md:h-screen md:w-60 md:self-start md:overflow-y-auto md:border-b-0 md:border-r">
-          <div className="px-5 pb-4 pt-6">
-            <Link href="/" className="group block">
-              <span className="font-display text-lg font-bold tracking-tight text-parchment transition-colors group-hover:text-gilt">
+    <div className="flex min-h-screen flex-col md:flex-row">
+      <aside className="w-full shrink-0 border-b border-ink-700 bg-ink-900/40 md:sticky md:top-0 md:flex md:h-screen md:w-64 md:flex-col md:border-b-0 md:border-r">
+        <div className="px-5 pb-4 pt-5 md:pt-6">
+          <Link href="/" className="group block">
+            <span className="flex items-center gap-2.5">
+              <Sigil />
+              <span className="font-display text-lg font-bold text-parchment transition-colors group-hover:text-gilt">
                 Lore Guard
               </span>
-              <span className="eyebrow mt-1 block whitespace-nowrap text-[10px]">
-                CHRONO ODYSSEY · 내러티브 CI
-              </span>
-            </Link>
-            <div
-              className="mt-5 hidden h-px bg-gradient-to-r from-ink-700 to-transparent md:block"
-              aria-hidden
-            />
-          </div>
-          <Nav />
-        </aside>
-        <main className="flex-1 px-5 py-8 md:px-10 md:py-10">{children}</main>
+            </span>
+            <span className="eyebrow mt-1.5 block whitespace-nowrap text-[9px] leading-tight tracking-[0.08em]">
+              CHRONO ODYSSEY · 내러티브 CI
+            </span>
+          </Link>
+          <div className="rule-double mt-4 hidden md:block" aria-hidden />
+        </div>
+
+        <div className="md:min-h-0 md:flex-1 md:overflow-y-auto">
+          <Nav counts={counts} />
+        </div>
+
+        {/* Status dock — pinned to the foot of the drawer. */}
+        <div className="hidden shrink-0 border-t border-ink-700/70 px-5 py-4 md:block">
+          <p className="eyebrow flex items-baseline justify-between gap-2">
+            <span>KB VERSION</span>
+            <span className="text-gilt">{meta.kb_version}</span>
+          </p>
+          <p
+            className={`eyebrow mt-2 flex items-center gap-2 ${
+              conflicts > 0 ? "text-amber-warn" : "text-verdant"
+            }`}
+          >
+            <span className="status-dot" aria-hidden />
+            <span>
+              {conflicts > 0 ? `충돌 ${conflicts}건 감시 중` : "정합성 정상"}
+            </span>
+          </p>
+          <p className="eyebrow mt-1.5 text-[10px] text-parchment-faint">
+            갱신 {meta.updated_at}
+          </p>
+        </div>
+      </aside>
+
+      <div className="flex min-w-0 flex-1 flex-col">
+        <Topbar
+          kbVersion={meta.kb_version}
+          updatedAt={meta.updated_at}
+          conflicts={conflicts}
+        />
+        <main className="flex-1 px-5 py-9 md:px-10 md:py-12">{children}</main>
+        <footer className="border-t border-ink-700/70 bg-ink-950/70 px-5 py-5 md:px-10">
+          <div className="rule-fade mb-3.5 max-w-24" aria-hidden />
+          <p className="max-w-3xl text-xs leading-relaxed text-parchment-dim">
+            본 프로젝트는 크로노스튜디오·카카오게임즈와 무관한 비공식 팬
+            포트폴리오이며, 크로노 오디세이의 모든 권리는 해당 권리자에게
+            있습니다.
+          </p>
+        </footer>
       </div>
-      <footer className="border-t border-ink-700 bg-ink-950/60 px-5 py-4 md:px-10">
-        <p className="text-xs leading-relaxed text-parchment-dim">
-          본 프로젝트는 크로노스튜디오·카카오게임즈와 무관한 비공식 팬 포트폴리오이며,
-          크로노 오디세이의 모든 권리는 해당 권리자에게 있습니다.
-        </p>
-      </footer>
     </div>
   );
 }

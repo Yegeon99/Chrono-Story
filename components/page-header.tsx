@@ -1,4 +1,4 @@
-// Shared page header: eyebrow / serif title / gilt hairline / lede.
+// Shared page header: gilt tick / mono eyebrow / display title / rule / lede.
 // Keeps the seven dashboard screens typographically identical.
 export function PageHeader({
   eyebrow,
@@ -17,9 +17,19 @@ export function PageHeader({
 }) {
   return (
     <header className={`${center ? "text-center" : ""} ${className}`}>
-      <p className="eyebrow mb-2.5">{eyebrow}</p>
+      <p
+        className={`eyebrow mb-3 flex items-center gap-2 ${
+          center ? "justify-center" : ""
+        }`}
+      >
+        <span
+          className="inline-block h-2.5 w-px shrink-0 bg-gilt"
+          aria-hidden
+        />
+        <span className="min-w-0">{eyebrow}</span>
+      </p>
       <h1
-        className={`font-display font-black tracking-tight ${
+        className={`font-display font-bold ${
           size === "lg" ? "text-3xl" : "text-2xl"
         }`}
       >
@@ -31,7 +41,7 @@ export function PageHeader({
       />
       {lede && (
         <p
-          className={`mt-4 max-w-xl text-sm leading-relaxed text-parchment-dim ${
+          className={`mt-4 max-w-xl text-sm leading-[1.85] text-parchment-dim ${
             center ? "mx-auto" : ""
           }`}
         >

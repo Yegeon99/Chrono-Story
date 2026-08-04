@@ -1,18 +1,37 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------------
-   Lore Guard design tokens — "고문서 보관소의 계기판"
+   Lore Guard design system — "고문서 보관소의 계기판"
    Dark-only by design (DIRECTIVE §5). No light mode.
+
+   The palette in §5 is fixed; this file deepens it rather than replacing it —
+   intermediate ink steps, two gilt derivatives, and a set of primitives
+   (rules, corner marks, grain, plates) that give the archive physical weight
+   while the data surfaces stay instrument-clear.
+
+   Everything below lives in @layer base / @layer components on purpose: it
+   keeps Tailwind utilities winning at the call site, so `.panel border-gilt/40`
+   or `.nav-en hidden md:block` behave the way they read.
 --------------------------------------------------------------------------- */
 
 @theme {
+  /* Surfaces — DIRECTIVE §5 values, plus intermediate steps for layering */
   --color-ink-950: #0c0e13;
   --color-ink-900: #12151d;
+  --color-ink-850: #161a24;
   --color-ink-800: #1a1e2a;
   --color-ink-700: #232838;
+  --color-ink-600: #313950;
+
+  /* Text */
   --color-parchment: #e8e2d4;
   --color-parchment-dim: #9a958a;
+  --color-parchment-faint: #6b6860;
+
+  /* Accents */
   --color-gilt: #c9a227;
+  --color-gilt-bright: #e3c366;
+  --color-gilt-deep: #7d651a;
   --color-verdant: #4c8f6e;
   --color-ember: #b8452f;
   --color-amber-warn: #c97f2e;
@@ -20,7 +39,9 @@
 
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Segoe UI",
     "Malgun Gothic", sans-serif;
-  --font-display: var(--font-noto-serif), "Noto Serif KR", serif;
+  /* next/font bakes the fallback chain (…, Batang, serif) into --font-gowun —
+     see the `fallback` option in app/layout.tsx. */
+  --font-display: var(--font-gowun);
   --font-mono: var(--font-jbmono), "JetBrains Mono", ui-monospace, monospace;
 
   --text-xs: 0.75rem; /* 12 */
@@ -32,127 +53,573 @@
   --text-3xl: 3rem; /* 48 */
 }
 
-html {
-  color-scheme: dark;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-ink-700) transparent;
+@layer base {
+  /* Shared grain plate — one fractal-noise tile reused by every paper surface.
+     Held in a variable so the encoded SVG appears exactly once. */
+  :root {
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.55'/%3E%3C/svg%3E");
+  }
+
+  html {
+    color-scheme: dark;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-ink-700) transparent;
+  }
+
+  /* Thin archive-toned scrollbars (WebKit) */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-ink-700);
+    border: 3px solid var(--color-ink-950);
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-ink-600);
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body {
+    background: var(--color-ink-950);
+    color: var(--color-parchment);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    /* Korean typography: never break inside a 어절; still wrap long URLs/IDs. */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* Latin-heavy surfaces opt back out of keep-all */
+  .eyebrow,
+  code,
+  pre,
+  .allow-break {
+    word-break: normal;
+  }
+
+  /* Focus visibility — gilt ring, keyboard-first (DIRECTIVE §5 품질 플로어) */
+  :focus-visible {
+    outline: 2px solid var(--color-gilt);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-gilt) 30%, transparent);
+  }
 }
 
-/* Thin archive-toned scrollbars (WebKit) */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-ink-700);
-  border: 3px solid var(--color-ink-950);
-  border-radius: 8px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2e3448;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+@layer components {
+  /* -----------------------------------------------------------------------
+     Archive backdrop — deep ink, two distant light sources, and a paper grain
+     so empty regions read as a surface rather than a void.
+  ----------------------------------------------------------------------- */
+  .bg-archive {
+    background-color: var(--color-ink-950);
+    background-image: radial-gradient(
+        ellipse 60% 45% at 18% -5%,
+        rgba(201, 162, 39, 0.07),
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 55% 50% at 92% 104%,
+        rgba(62, 124, 138, 0.07),
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 70% 60% at 50% 45%,
+        rgba(232, 226, 212, 0.016),
+        transparent 75%
+      );
+    background-attachment: fixed;
+  }
 
-body {
-  background: var(--color-ink-950);
-  color: var(--color-parchment);
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
+  /* Grain film over the whole shell. Kept under 2% — at archive scale it should
+     register as surface, never as noise. pointer-events:none keeps it inert. */
+  .bg-archive::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    background-image: var(--grain);
+    background-size: 180px 180px;
+    opacity: 0.017;
+  }
 
-/* Focus visibility — gilt ring, keyboard-first (DIRECTIVE §5 품질 플로어) */
-:focus-visible {
-  outline: 2px solid var(--color-gilt);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-::selection {
-  background: color-mix(in srgb, var(--color-gilt) 30%, transparent);
-}
-
-/* Subtle archive glow on the deepest background */
-.bg-archive {
-  background-color: var(--color-ink-950);
-  background-image: radial-gradient(
-      circle at 20% 0%,
-      rgba(201, 162, 39, 0.05),
+  /* -----------------------------------------------------------------------
+     Panel — the standard card surface. Parchment sheen along the top edge,
+     a hairline inner highlight, and a faint grain so cards feel like plates
+     pinned to the archive wall rather than flat rectangles.
+  ----------------------------------------------------------------------- */
+  .panel {
+    position: relative;
+    border: 1px solid var(--color-ink-700);
+    border-radius: 0.375rem;
+    background-color: var(--color-ink-900);
+    background-image: linear-gradient(
+      180deg,
+      rgba(232, 226, 212, 0.03),
       transparent 45%
-    ),
-    radial-gradient(circle at 90% 100%, rgba(62, 124, 138, 0.06), transparent 50%),
-    radial-gradient(circle at 55% 45%, rgba(232, 226, 212, 0.015), transparent 60%);
+    );
+    box-shadow:
+      0 1px 0 rgba(232, 226, 212, 0.035) inset,
+      0 10px 30px -22px rgba(0, 0, 0, 0.9);
+  }
+
+  /* Grain on panels, clipped to the rounded corners. */
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: var(--grain);
+    background-size: 180px 180px;
+    opacity: 0.012;
+  }
+
+  /* Interactive panels lift and warm on hover. */
+  .panel-hover {
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+  .panel-hover:hover {
+    border-color: color-mix(
+      in srgb,
+      var(--color-gilt) 38%,
+      var(--color-ink-700)
+    );
+    box-shadow:
+      0 1px 0 rgba(232, 226, 212, 0.05) inset,
+      0 14px 34px -20px rgba(0, 0, 0, 0.95);
+    transform: translateY(-1px);
+  }
+
+  /* Feature plates get gilt corner ticks — the archivist's registration marks. */
+  .plate-marks::after {
+    content: "";
+    position: absolute;
+    inset: 0.4rem;
+    border-radius: 0.125rem;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--color-gilt), var(--color-gilt)) left top / 9px 1px
+        no-repeat,
+      linear-gradient(var(--color-gilt), var(--color-gilt)) left top / 1px 9px
+        no-repeat,
+      linear-gradient(var(--color-gilt), var(--color-gilt)) right top / 9px 1px
+        no-repeat,
+      linear-gradient(var(--color-gilt), var(--color-gilt)) right top / 1px 9px
+        no-repeat,
+      linear-gradient(var(--color-gilt), var(--color-gilt)) left bottom / 9px 1px
+        no-repeat,
+      linear-gradient(var(--color-gilt), var(--color-gilt)) left bottom / 1px 9px
+        no-repeat,
+      linear-gradient(var(--color-gilt), var(--color-gilt)) right bottom / 9px
+        1px no-repeat,
+      linear-gradient(var(--color-gilt), var(--color-gilt)) right bottom / 1px
+        9px no-repeat;
+    opacity: 0.32;
+    transition: opacity 180ms ease;
+  }
+  .plate-marks:hover::after {
+    opacity: 0.7;
+  }
+
+  /* -----------------------------------------------------------------------
+     Rules — the archive's structural grammar.
+  ----------------------------------------------------------------------- */
+
+  /* Short gilt hairline used under page titles */
+  .title-rule {
+    height: 2px;
+    width: 2.25rem;
+    background: linear-gradient(
+      90deg,
+      var(--color-gilt),
+      color-mix(in srgb, var(--color-gilt) 20%, transparent)
+    );
+  }
+  .title-rule-center {
+    margin-inline: auto;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-gilt),
+      transparent
+    );
+    width: 3.5rem;
+  }
+
+  /* A hairline that fades to nothing — used to close section headings. */
+  .rule-fade {
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-ink-600), transparent);
+  }
+
+  /* Double rule under the wordmark — a bound-volume cue. */
+  .rule-double {
+    height: 3px;
+    background:
+      linear-gradient(var(--color-gilt-deep), var(--color-gilt-deep)) top /
+        100% 1px no-repeat,
+      linear-gradient(var(--color-ink-700), var(--color-ink-700)) bottom /
+        100% 1px no-repeat;
+    opacity: 0.75;
+  }
+
+  /* -----------------------------------------------------------------------
+     Typography primitives
+  ----------------------------------------------------------------------- */
+
+  /* Monospace eyebrow: `FACT-0017 · timeline · confirmed` — data's identity. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.06em;
+    color: var(--color-parchment-dim);
+  }
+
+  /* Display headings need optical tightening at large sizes. */
+  .font-display {
+    letter-spacing: -0.015em;
+    line-height: 1.28;
+  }
+
+  /* Numeric readouts on the instrument panel — tabular so columns don't jitter. */
+  .readout {
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  /* -----------------------------------------------------------------------
+     Sidebar navigation — the archive's index card drawer.
+  ----------------------------------------------------------------------- */
+  .nav-group-head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .nav-numeral {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-gilt);
+    opacity: 0.85;
+  }
+  .nav-group-label {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--color-parchment);
+  }
+
+  .nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.4375rem 0.75rem 0.4375rem 0.875rem;
+    border-radius: 0.25rem;
+    color: var(--color-parchment-dim);
+    transition:
+      background-color 160ms ease,
+      color 160ms ease;
+  }
+  .nav-item:hover {
+    background-color: var(--color-ink-850);
+    color: var(--color-parchment);
+  }
+  /* The gilt rail: the single strongest active signal in the shell. */
+  .nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 3px;
+    height: 0;
+    border-radius: 0 2px 2px 0;
+    background: var(--color-gilt);
+    transform: translateY(-50%);
+    transition:
+      height 200ms cubic-bezier(0.2, 0.9, 0.3, 1),
+      opacity 200ms ease;
+    opacity: 0;
+  }
+  .nav-item[aria-current="page"] {
+    color: var(--color-gilt-bright);
+    background-color: var(--color-ink-850);
+    background-image: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-gilt) 13%, transparent),
+      transparent 72%
+    );
+  }
+  .nav-item[aria-current="page"]::before {
+    height: 62%;
+    opacity: 1;
+  }
+  .nav-item[aria-current="page"] .nav-en {
+    color: color-mix(in srgb, var(--color-gilt) 62%, transparent);
+  }
+
+  .nav-ko {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .nav-en {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    color: var(--color-parchment-faint);
+    transition: color 160ms ease;
+  }
+  .nav-item:hover .nav-en {
+    color: var(--color-parchment-dim);
+  }
+
+  /* Count badge — the instrument reading attached to each drawer. */
+  .nav-badge {
+    margin-left: auto;
+    min-width: 1.375rem;
+    padding: 0.0625rem 0.3125rem;
+    border: 1px solid currentColor;
+    border-radius: 0.1875rem;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.35;
+    text-align: center;
+    opacity: 0.75;
+  }
+
+  /* -----------------------------------------------------------------------
+     Chips, buttons, fields
+  ----------------------------------------------------------------------- */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border: 1px solid var(--color-ink-700);
+    border-radius: 9999px;
+    padding: 0.1875rem 0.6875rem;
+    font-size: var(--text-xs);
+    color: var(--color-parchment-dim);
+    transition:
+      border-color 160ms ease,
+      color 160ms ease,
+      background-color 160ms ease;
+  }
+  .chip:hover {
+    border-color: color-mix(in srgb, var(--color-gilt) 50%, transparent);
+    color: var(--color-parchment);
+    background-color: var(--color-ink-850);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    border: 1px solid var(--color-ink-700);
+    border-radius: 0.25rem;
+    padding: 0.3125rem 0.75rem;
+    font-size: var(--text-xs);
+    color: var(--color-parchment-dim);
+    transition:
+      border-color 160ms ease,
+      background-color 160ms ease,
+      color 160ms ease;
+  }
+  .btn-ghost:hover:not(:disabled) {
+    border-color: color-mix(in srgb, var(--color-gilt) 45%, transparent);
+    background-color: var(--color-ink-850);
+    color: var(--color-parchment);
+  }
+  .btn-ghost:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+  }
+
+  .btn-gilt {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.25rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-ink-950);
+    background-image: linear-gradient(
+      180deg,
+      var(--color-gilt-bright),
+      var(--color-gilt)
+    );
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.25) inset,
+      0 6px 18px -10px rgba(201, 162, 39, 0.7);
+    transition:
+      filter 160ms ease,
+      box-shadow 160ms ease;
+  }
+  .btn-gilt:hover:not(:disabled) {
+    filter: brightness(1.08);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.3) inset,
+      0 8px 22px -10px rgba(201, 162, 39, 0.85);
+  }
+  .btn-gilt:disabled {
+    cursor: not-allowed;
+    filter: grayscale(0.5);
+    opacity: 0.35;
+    box-shadow: none;
+  }
+
+  .field {
+    width: 100%;
+    border: 1px solid var(--color-ink-700);
+    border-radius: 0.375rem;
+    background-color: var(--color-ink-900);
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25),
+      transparent 12%
+    );
+    padding: 0.75rem 1rem;
+    font-size: var(--text-sm);
+    line-height: 1.75;
+    color: var(--color-parchment);
+    transition:
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+  }
+  .field::placeholder {
+    color: color-mix(in srgb, var(--color-parchment-dim) 65%, transparent);
+  }
+  .field:focus {
+    border-color: color-mix(in srgb, var(--color-gilt) 55%, transparent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-gilt) 12%, transparent);
+  }
+  /* Single-line variant for filter/search inputs. */
+  .field-sm {
+    padding: 0.4375rem 0.75rem;
+    line-height: 1.5;
+  }
+
+  /* Status dot with a soft halo — used in the sidebar dock and topbar. */
+  .status-dot {
+    display: inline-block;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 9999px;
+    background: currentColor;
+    box-shadow: 0 0 0 3px color-mix(in srgb, currentColor 18%, transparent);
+  }
+
+  .page-fade {
+    animation: page-fade 340ms cubic-bezier(0.22, 0.9, 0.3, 1) both;
+  }
+
+  /* ---------------------------------------------------------------------
+     Signature moment (DIRECTIVE §5): the verdict seal — stamped, not
+     rendered. scale 1.6 -> 1.0 with a brief ink-bleed ring, 350ms.
+     prefers-reduced-motion collapses it to a fade via the override below.
+  --------------------------------------------------------------------- */
+  .seal {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 3px solid currentColor;
+    border-radius: 9999px;
+    box-shadow:
+      inset 0 0 0 1.5px color-mix(in srgb, currentColor 55%, transparent),
+      inset 0 0 26px -6px color-mix(in srgb, currentColor 45%, transparent);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    transform: rotate(-6deg);
+    animation: seal-stamp 350ms cubic-bezier(0.2, 1.4, 0.4, 1) both;
+  }
+
+  /* Grain inside the seal so the ink reads as pressed, not printed. */
+  .seal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: var(--grain);
+    background-size: 180px 180px;
+    opacity: 0.14;
+    mix-blend-mode: overlay;
+  }
+
+  .seal::after {
+    content: "";
+    position: absolute;
+    inset: -0.75rem;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle,
+      color-mix(in srgb, currentColor 35%, transparent) 0%,
+      transparent 70%
+    );
+    animation: seal-ink 350ms ease-out both;
+    pointer-events: none;
+  }
+
+  /* The waiting seal: same geometry, no ink, no animation — an empty stamp bed. */
+  .seal-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+    height: 7.5rem;
+    border: 2px dashed var(--color-ink-700);
+    border-radius: 9999px;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--color-ink-600);
+    transform: rotate(-6deg);
+  }
 }
 
 /* -------------------------------------------------------------------------
-   Panel — the standard card surface. A faint parchment sheen along the top
-   edge gives cards physical depth without leaving the ink palette.
+   Motion — restrained per DIRECTIVE §5 budget.
 ------------------------------------------------------------------------- */
-.panel {
-  border: 1px solid var(--color-ink-700);
-  border-radius: 0.375rem;
-  background-color: var(--color-ink-900);
-  background-image: linear-gradient(
-    180deg,
-    rgba(232, 226, 212, 0.025),
-    transparent 42%
-  );
-  box-shadow: 0 1px 0 rgba(232, 226, 212, 0.03) inset, 0 8px 24px -18px rgba(0, 0, 0, 0.8);
-}
-
-/* Short gilt hairline used under page titles */
-.title-rule {
-  height: 1px;
-  width: 3rem;
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--color-gilt) 85%, transparent),
-    transparent
-  );
-}
-.title-rule-center {
-  width: 5rem;
-  margin-inline: auto;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(in srgb, var(--color-gilt) 85%, transparent),
-    transparent
-  );
-}
-
-/* Page transition — a restrained fade+rise, per DIRECTIVE §5 motion budget.
-   Collapsed by the global prefers-reduced-motion override below. */
 @keyframes page-fade {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
     transform: none;
   }
 }
-.page-fade {
-  animation: page-fade 320ms ease-out both;
-}
 
-/* Monospace eyebrow used on fact cards: `FACT-0017 · timeline · confirmed` */
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-  color: var(--color-parchment-dim);
-}
-
-/* -------------------------------------------------------------------------
-   Signature moment (DIRECTIVE §5): the verdict seal — stamped, not rendered.
-   scale 1.15+ -> 1.0 with a brief ink-bleed ring, 350ms.
-   prefers-reduced-motion collapses it to a fade via the global override below.
-------------------------------------------------------------------------- */
 @keyframes seal-stamp {
   0% {
     transform: scale(1.6) rotate(-10deg);
@@ -177,38 +644,6 @@ body {
     transform: scale(1.5);
     opacity: 0;
   }
-}
-
-.seal {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 7.5rem;
-  height: 7.5rem;
-  border: 3px solid currentColor;
-  border-radius: 9999px;
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, currentColor 55%, transparent);
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.55rem;
-  letter-spacing: 0.08em;
-  transform: rotate(-6deg);
-  animation: seal-stamp 350ms cubic-bezier(0.2, 1.4, 0.4, 1) both;
-}
-
-.seal::after {
-  content: "";
-  position: absolute;
-  inset: -0.75rem;
-  border-radius: 9999px;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, currentColor 35%, transparent) 0%,
-    transparent 70%
-  );
-  animation: seal-ink 350ms ease-out both;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

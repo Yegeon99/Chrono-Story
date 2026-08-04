@@ -165,7 +165,7 @@ export function KnowledgeExplorer({
               type="button"
               disabled={introStep === 0}
               onClick={() => setIntroStep(introStep - 1)}
-              className="rounded-md border border-ink-700 px-3 py-1 text-xs text-parchment-dim transition-colors hover:text-parchment disabled:opacity-40"
+              className="btn-ghost"
             >
               ← 이전
             </button>
@@ -224,7 +224,7 @@ export function KnowledgeExplorer({
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="이름·영문·별칭 검색"
                   aria-label="엔티티 검색"
-                  className="w-full rounded-md border border-ink-700 bg-ink-900 px-3 py-2 text-sm placeholder:text-parchment-dim/60"
+                  className="field field-sm"
                 />
                 <div className="flex flex-wrap gap-1.5">
                   <FilterChip
@@ -356,7 +356,7 @@ function EntityDetail({
                   <button
                     type="button"
                     onClick={() => other && onSelect(other.id)}
-                    className="rounded-full border border-ink-700 bg-ink-900 px-3 py-1 text-xs transition-colors hover:border-gilt/50"
+                    className="chip"
                   >
                     <span className="text-rift-teal">
                       {RELATION_TYPE_LABELS[r.type]}

@@ -9,6 +9,7 @@ import {
   loadReports,
 } from "@/lib/kb";
 import { PageHeader } from "@/components/page-header";
+import { SectionHeading } from "@/components/section-heading";
 
 export const metadata = { title: "QA 대시보드" };
 
@@ -50,7 +51,7 @@ export default function DashboardPage() {
         <div className="grid gap-4 md:grid-cols-2">
           <Link
             href="/gate"
-            className="panel group border-gilt/40 p-6 transition-colors hover:border-gilt"
+            className="panel panel-hover plate-marks group border-gilt/40 p-6"
           >
             <p className="eyebrow mb-2">NARRATIVE CI · 라이브 데모</p>
             <h2 className="font-display text-xl font-bold text-gilt">
@@ -64,10 +65,7 @@ export default function DashboardPage() {
               판정하러 가기 →
             </p>
           </Link>
-          <Link
-            href="/reports"
-            className="panel group p-6 transition-colors hover:border-amber-warn/60"
-          >
+          <Link href="/reports" className="panel panel-hover group p-6">
             <p className="eyebrow mb-2">C1~C5 · 5종 정합성 검사</p>
             <h2 className="font-display text-xl font-bold">검사 리포트</h2>
             <p className="mt-2 text-sm text-parchment-dim">
@@ -86,16 +84,13 @@ export default function DashboardPage() {
       <section aria-label="지식베이스 통계" className="mb-10">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {stats.map((s) => (
-            <div
-              key={s.label}
-              className="panel px-4 py-5 transition-colors hover:border-gilt/30"
-            >
+            <div key={s.label} className="panel panel-hover px-4 py-5">
               <div
-                className={`font-display text-2xl font-bold ${s.accent ?? "text-parchment"}`}
+                className={`readout text-2xl font-bold ${s.accent ?? "text-parchment"}`}
               >
                 {s.value}
               </div>
-              <div className="mt-1 text-xs text-parchment-dim">{s.label}</div>
+              <div className="mt-1.5 text-xs text-parchment-dim">{s.label}</div>
             </div>
           ))}
         </div>
@@ -103,8 +98,12 @@ export default function DashboardPage() {
 
       {latestChange && (
         <section aria-label="최근 변경 감지" className="mb-10">
-          <h2 className="font-display text-lg font-bold">최근 변경 감지</h2>
-          <div className="panel mt-3 px-5 py-4">
+          <SectionHeading
+            aside={`KB ${latestChange.previous_version} → ${latestChange.kb_version}`}
+          >
+            최근 변경 감지
+          </SectionHeading>
+          <div className="panel px-5 py-4">
             <p className="eyebrow mb-1">
               KB {latestChange.previous_version} → {latestChange.kb_version} ·{" "}
               {latestChange.created_at.slice(0, 10)}
@@ -144,15 +143,15 @@ export default function DashboardPage() {
 
       {resurfaced.length > 0 && (
         <section aria-label="재부상한 복선" className="mb-10">
-          <h2 className="font-display text-lg font-bold">
-            <span className="text-rift-teal">재부상한 복선</span>
-          </h2>
-          <ul className="mt-3 flex flex-col gap-2">
+          <SectionHeading accent="text-rift-teal" aside={`${resurfaced.length}건`}>
+            재부상한 복선
+          </SectionHeading>
+          <ul className="flex flex-col gap-2">
             {resurfaced.map((f) => (
               <li key={f.id}>
                 <Link
                   href="/ledger"
-                  className="panel block border-rift-teal/40 px-4 py-3 transition-colors hover:border-rift-teal"
+                  className="panel panel-hover block border-rift-teal/40 px-4 py-3"
                 >
                   <span className="eyebrow">{f.id}</span>
                   <span className="mt-0.5 block text-sm">{f.title_ko}</span>
@@ -167,8 +166,10 @@ export default function DashboardPage() {
       )}
 
       <section aria-label="등록된 소스">
-        <h2 className="font-display text-lg font-bold">소스 레지스트리</h2>
-        <ul className="panel mt-3 divide-y divide-ink-700">
+        <SectionHeading aside={`${meta.source_registry.length}개 등록`}>
+          소스 레지스트리
+        </SectionHeading>
+        <ul className="panel divide-y divide-ink-700">
           {meta.source_registry.map((s) => (
             <li
               key={s.id}

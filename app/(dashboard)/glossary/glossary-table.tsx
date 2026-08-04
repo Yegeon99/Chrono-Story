@@ -92,20 +92,20 @@ export function GlossaryTable({ entries }: { entries: GlossaryEntry[] }) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="한글·영문·초성 검색 (예: ㅋㄹㄴㅅ)"
             aria-label="용어 검색"
-            className="w-full max-w-xs rounded-md border border-ink-700 bg-ink-900 px-3 py-2 text-sm placeholder:text-parchment-dim/60"
+            className="field field-sm max-w-xs"
           />
           <div className="ml-auto flex gap-2">
             <button
               type="button"
               onClick={exportCsv}
-              className="rounded-md border border-gilt/50 px-3 py-1.5 text-xs text-gilt transition-colors hover:bg-ink-800"
+              className="btn-ghost border-gilt/50 text-gilt"
             >
               CSV 내보내기
             </button>
             <button
               type="button"
               onClick={exportJson}
-              className="rounded-md border border-ink-700 px-3 py-1.5 text-xs text-parchment-dim transition-colors hover:bg-ink-800 hover:text-parchment"
+              className="btn-ghost"
             >
               JSON 내보내기
             </button>

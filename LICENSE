@@ -1,0 +1,38 @@
+MIT License
+
+Copyright (c) 2026 Yegeon99
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Exception — the `data/` directory
+
+The MIT license above covers the source code of this repository only. The
+contents of the `data/` directory are NOT licensed under MIT and are excluded
+from the grant above. They consist of restated factual summaries about the
+world-setting of Chrono Odyssey; all rights to the underlying setting and
+lore belong to their original rights holders (Chrono Studio / Kakao Games),
+and this repository holds only source references (links) to publicly
+available material.
+
+예외 — `data/` 디렉터리: 위 MIT 라이선스는 이 저장소의 코드에만 적용됩니다.
+`data/` 디렉터리의 내용은 MIT 적용 대상에서 제외되며, 세계관 관련 사실의
+권리는 원 권리자(크로노스튜디오·카카오게임즈)에게 있고 본 저장소는 공개
+자료에 대한 출처 참조만 보유합니다.

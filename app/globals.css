@@ -395,19 +395,46 @@
     color: var(--color-parchment-dim);
   }
 
-  /* Count badge — the instrument reading attached to each drawer. */
-  .nav-badge {
-    margin-left: auto;
-    min-width: 1.375rem;
-    padding: 0.0625rem 0.3125rem;
-    border: 1px solid currentColor;
+  /* -----------------------------------------------------------------------
+     Gauge readouts — the sidebar's instrument panel. A bare number in a nav
+     reads as an unread count; these are measurements, so each one carries its
+     own label and a ledger leader line to its value.
+  ----------------------------------------------------------------------- */
+  .gauge-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.25rem 0.375rem;
+    margin-inline: -0.375rem;
     border-radius: 0.1875rem;
+    transition: background-color 160ms ease;
+  }
+  .gauge-row:hover {
+    background-color: var(--color-ink-850);
+  }
+  .gauge-label {
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    color: var(--color-parchment-dim);
+    transition: color 160ms ease;
+  }
+  .gauge-row:hover .gauge-label {
+    color: var(--color-parchment);
+  }
+  /* Dotted leader, as in a printed index. */
+  .gauge-leader {
+    flex: 1;
+    align-self: center;
+    height: 0;
+    border-bottom: 1px dotted var(--color-ink-600);
+  }
+  .gauge-value {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 700;
     font-variant-numeric: tabular-nums;
-    line-height: 1.35;
-    text-align: center;
-    opacity: 0.75;
+    line-height: 1.4;
   }
 
   /* -----------------------------------------------------------------------

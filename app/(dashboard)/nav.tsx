@@ -4,16 +4,11 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-/** Per-item counts read from the KB by the layout (server) and passed down. */
-export type NavCounts = Partial<Record<string, number>>;
-
 type NavItem = {
   href: string;
   label: string;
   en: string;
   icon: React.ReactNode;
-  /** Which accent the count badge takes when present. */
-  tone?: "gilt" | "amber" | "ember" | "teal";
 };
 
 // 16px stroke glyphs, drawn inline — the project bans heavy UI dependencies
@@ -105,7 +100,6 @@ export const NAV_GROUPS: {
         label: "지식베이스",
         en: "KNOWLEDGE",
         icon: S.graph,
-        tone: "ember",
       },
     ],
   },
@@ -120,37 +114,18 @@ export const NAV_GROUPS: {
         icon: S.gauge,
       },
       { href: "/gate", label: "검증 게이트", en: "GATE", icon: S.seal },
-      {
-        href: "/reports",
-        label: "검사 리포트",
-        en: "REPORTS",
-        icon: S.doc,
-        tone: "amber",
-      },
+      { href: "/reports", label: "검사 리포트", en: "REPORTS", icon: S.doc },
       { href: "/glossary", label: "용어집", en: "GLOSSARY", icon: S.book },
-      {
-        href: "/ledger",
-        label: "복선 원장",
-        en: "LEDGER",
-        icon: S.hourglass,
-        tone: "teal",
-      },
+      { href: "/ledger", label: "복선 원장", en: "LEDGER", icon: S.hourglass },
     ],
   },
 ];
-
-const TONE: Record<NonNullable<NavItem["tone"]>, string> = {
-  gilt: "text-gilt",
-  amber: "text-amber-warn",
-  ember: "text-ember",
-  teal: "text-rift-teal",
-};
 
 export function isActive(pathname: string, href: string): boolean {
   return href === "/" ? pathname === "/" : pathname.startsWith(href);
 }
 
-export function Nav({ counts = {} }: { counts?: NavCounts }) {
+export function Nav() {
   const pathname = usePathname();
   const scrollerRef = useRef<HTMLDivElement>(null);
   const activeRef = useRef<HTMLAnchorElement>(null);
@@ -182,7 +157,6 @@ export function Nav({ counts = {} }: { counts?: NavCounts }) {
             <ul className="flex gap-1 md:flex-col md:gap-0.5">
               {group.items.map((item) => {
                 const active = isActive(pathname, item.href);
-                const count = counts[item.href];
                 return (
                   <li key={item.href}>
                     <Link
@@ -198,14 +172,6 @@ export function Nav({ counts = {} }: { counts?: NavCounts }) {
                           {item.en}
                         </span>
                       </span>
-                      {count !== undefined && count > 0 && (
-                        <span
-                          className={`nav-badge ${TONE[item.tone ?? "gilt"]}`}
-                          title={`${item.label} ${count}건`}
-                        >
-                          {count}
-                        </span>
-                      )}
                     </Link>
                   </li>
                 );

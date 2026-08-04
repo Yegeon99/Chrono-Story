@@ -44,13 +44,31 @@ export default function DashboardLayout({
     (f) => f.status === "unresolved" || f.status === "resurfaced"
   ).length;
 
-  // Live readings surfaced on the nav itself — the sidebar doubles as the
-  // instrument panel (DIRECTIVE §5 concept).
-  const counts = {
-    "/knowledge": conflicts,
-    "/reports": reports.length,
-    "/ledger": unresolved,
-  };
+  // Live readings for the sidebar's instrument panel (DIRECTIVE §5 concept).
+  // These deliberately do NOT ride on the nav items: three differently-scoped
+  // measurements rendered as bare badges read as unread counts and tell you
+  // nothing about what is being measured. Each gets its own label instead, and
+  // links to the screen that explains it.
+  const gauges = [
+    {
+      href: "/knowledge",
+      label: "표기·설정 충돌",
+      value: conflicts,
+      tone: "text-ember",
+    },
+    {
+      href: "/reports",
+      label: "검사 발견",
+      value: reports.length,
+      tone: "text-amber-warn",
+    },
+    {
+      href: "/ledger",
+      label: "미해소 복선",
+      value: unresolved,
+      tone: "text-rift-teal",
+    },
+  ];
 
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
@@ -71,27 +89,33 @@ export default function DashboardLayout({
         </div>
 
         <div className="md:min-h-0 md:flex-1 md:overflow-y-auto">
-          <Nav counts={counts} />
+          <Nav />
         </div>
 
-        {/* Status dock — pinned to the foot of the drawer. */}
+        {/* Instrument dock — pinned to the foot of the drawer. */}
         <div className="hidden shrink-0 border-t border-ink-700/70 px-5 py-4 md:block">
-          <p className="eyebrow flex items-baseline justify-between gap-2">
-            <span>KB VERSION</span>
-            <span className="text-gilt">{meta.kb_version}</span>
+          <p className="eyebrow mb-2 flex items-center gap-2">
+            <span className="inline-block h-2 w-px shrink-0 bg-gilt" aria-hidden />
+            감시 지표
           </p>
-          <p
-            className={`eyebrow mt-2 flex items-center gap-2 ${
-              conflicts > 0 ? "text-amber-warn" : "text-verdant"
-            }`}
-          >
-            <span className="status-dot" aria-hidden />
-            <span>
-              {conflicts > 0 ? `충돌 ${conflicts}건 감시 중` : "정합성 정상"}
-            </span>
-          </p>
-          <p className="eyebrow mt-1.5 text-[10px] text-parchment-faint">
-            갱신 {meta.updated_at}
+          <ul>
+            {gauges.map((g) => (
+              <li key={g.href}>
+                <Link
+                  href={g.href}
+                  className="gauge-row"
+                  title={`${g.label} ${g.value}건 — 자세히 보기`}
+                >
+                  <span className="gauge-label">{g.label}</span>
+                  <span className="gauge-leader" aria-hidden />
+                  <span className={`gauge-value ${g.tone}`}>{g.value}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="eyebrow mt-3 border-t border-ink-700/60 pt-2.5 text-[10px] text-parchment-faint">
+            KB <span className="text-gilt">{meta.kb_version}</span> · 갱신{" "}
+            {meta.updated_at}
           </p>
         </div>
       </aside>

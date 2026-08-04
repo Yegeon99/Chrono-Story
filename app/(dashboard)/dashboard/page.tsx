@@ -29,6 +29,36 @@ export default function DashboardPage() {
   const resurfaced = foreshadowing.filter((f) => f.status === "resurfaced");
   const latestChange = changeReports[0];
 
+  // Source-honesty gauge: the KB shows how much of itself is actually
+  // cross-confirmed instead of hiding the uncertain tail. "confirmed" is
+  // enforced by scripts/lint-sources.ts (>=2 distinct official-family URLs).
+  const confidence = [
+    {
+      key: "confirmed",
+      label: "확정",
+      desc: "공식 계열 소스 2개 이상 교차 확인",
+      value: facts.filter((f) => f.confidence === "confirmed").length,
+      text: "text-verdant",
+      bar: "bg-verdant",
+    },
+    {
+      key: "probable",
+      label: "유력",
+      desc: "공식 계열 소스 1개 확보",
+      value: facts.filter((f) => f.confidence === "probable").length,
+      text: "text-gilt",
+      bar: "bg-gilt",
+    },
+    {
+      key: "speculative",
+      label: "추정",
+      desc: "커뮤니티·보도 소스만 존재",
+      value: facts.filter((f) => f.confidence === "speculative").length,
+      text: "text-parchment-dim",
+      bar: "bg-ink-600",
+    },
+  ];
+
   const stats = [
     { label: "엔티티", value: entities.length },
     { label: "팩트", value: facts.length },
@@ -93,6 +123,44 @@ export default function DashboardPage() {
               <div className="mt-1.5 text-xs text-parchment-dim">{s.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section aria-label="출처 정직성 지표" className="mb-10">
+        <SectionHeading aside={`팩트 ${facts.length}건 기준`}>
+          출처 정직성 지표
+        </SectionHeading>
+        <div className="panel px-5 py-4">
+          <p className="mb-3 text-xs leading-relaxed text-parchment-dim">
+            신뢰도 분포를 숨기지 않고 그대로 보여줍니다 — 확정으로 승급하려면
+            서로 다른 공식 계열 출처 2개의 교차 확인이 필요하며, 이 규칙은
+            린트로 강제됩니다.
+          </p>
+          <div
+            className="flex h-2.5 overflow-hidden rounded-full"
+            role="img"
+            aria-label={confidence
+              .map((c) => `${c.label} ${c.value}건`)
+              .join(", ")}
+          >
+            {confidence.map((c) => (
+              <span
+                key={c.key}
+                className={c.bar}
+                style={{ width: `${(c.value / facts.length) * 100}%` }}
+              />
+            ))}
+          </div>
+          <dl className="mt-3 grid gap-x-5 gap-y-1 text-xs sm:grid-cols-3">
+            {confidence.map((c) => (
+              <div key={c.key} className="flex items-baseline gap-2">
+                <dt className={`readout font-bold ${c.text}`}>
+                  {c.label} {c.value}
+                </dt>
+                <dd className="text-parchment-faint">{c.desc}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

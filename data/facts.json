@@ -204,13 +204,18 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
     "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0010",
@@ -225,13 +230,23 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0011",
@@ -246,13 +261,23 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0012",
@@ -338,13 +363,18 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chronotector",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
     "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0016",
@@ -360,13 +390,18 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Betelgeuse",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0017",
@@ -382,13 +417,18 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "speculative",
+    "confidence": "probable",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0018",
@@ -405,13 +445,23 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Betelgeuse",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Void",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0019",
@@ -428,13 +478,18 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Void",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0020",
@@ -493,13 +548,23 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Setera",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0023",
@@ -516,13 +581,23 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0024",
@@ -544,13 +619,23 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
     "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": "Key timeline anchor — gate demo FAIL scenario contradicts this ('ten years')."
+    "notes": "Key timeline anchor — gate demo FAIL scenario contradicts this ('ten years'). Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0025",
@@ -567,13 +652,23 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0026",
@@ -591,13 +686,18 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Velia",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chronotector",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0027",
@@ -823,13 +923,18 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Iobis",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0037",
@@ -850,13 +955,23 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0038",
@@ -872,13 +987,23 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Vanguard",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Alexios",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "speculative",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0039",
@@ -894,13 +1019,23 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Vanguard",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Baldur",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "speculative",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0040",
@@ -916,13 +1051,23 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Vanguard",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Kaya",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "speculative",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0041",
@@ -938,13 +1083,18 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0042",
@@ -960,13 +1110,23 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Vanguard",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "speculative",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0043",
@@ -1193,13 +1353,18 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "speculative",
+    "confidence": "probable",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0053",
@@ -1282,13 +1447,18 @@
         "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Alexios",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "speculative",
+    "confidence": "probable",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0057",
@@ -1458,13 +1628,18 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Sabio",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0065",
@@ -1716,13 +1891,23 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Protagonist",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Prologue",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0077",
@@ -1760,13 +1945,18 @@
         "url": "https://chrono-odyssey.fandom.com/wiki/Chrono_Odyssey",
         "source_tier": "official-wiki",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Sentinels",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0079",
@@ -1799,7 +1989,7 @@
     "statement_en": "Official text consistently keeps a medieval dark-fantasy register dealing with loss, collapse, and the weight of time.",
     "sources": [
       {
-        "url": "https://store.steampowered.com/app/1738810/Chrono_Odyssey/",
+        "url": "https://store.steampowered.com/app/2873440/Chrono_Odyssey/",
         "source_tier": "steam-official",
         "captured_at": "2026-08-03"
       }
@@ -1820,7 +2010,7 @@
     "statement_en": "Worldbuilding text contains no modern slang, internet memes, or contemporary tech vocabulary.",
     "sources": [
       {
-        "url": "https://store.steampowered.com/app/1738810/Chrono_Odyssey/",
+        "url": "https://store.steampowered.com/app/2873440/Chrono_Odyssey/",
         "source_tier": "steam-official",
         "captured_at": "2026-08-03"
       }
@@ -2789,13 +2979,23 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08.1",
-    "notes": "Ingested 2026-08-03: FACT-0009는 매트릭스 시스템의 존재만 언급하며, 클래스·무기 동일 조건에서도 스탯·패시브·장비 선택에 따라 전투 양상이 달라진다는 세부 설계 내용은 기존 팩트에 없음."
+    "notes": "Ingested 2026-08-03: FACT-0009는 매트릭스 시스템의 존재만 언급하며, 클래스·무기 동일 조건에서도 스탯·패시브·장비 선택에 따라 전투 양상이 달라진다는 세부 설계 내용은 기존 팩트에 없음. Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0128",
@@ -2810,13 +3010,18 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08.1",
-    "notes": "Ingested 2026-08-03: 성장 조건 충족 시 특화 능력치 획득 및 스킬·전투 리듬 변화라는 구체적 메커니즘은 기존 팩트에 기술되지 않은 신규 정보."
+    "notes": "Ingested 2026-08-03: 성장 조건 충족 시 특화 능력치 획득 및 스킬·전투 리듬 변화라는 구체적 메커니즘은 기존 팩트에 기술되지 않은 신규 정보. Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0129",
@@ -2831,13 +3036,23 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08.1",
-    "notes": "Ingested 2026-08-03: FACT-0011은 몬스터 외형·특성 반영 장비 획득만 언급하며, 장비가 세계관·전투 경험 연결 역할을 하고 제작·보스·퀘스트 등 다양한 콘텐츠가 외형 변화와 직결된다는 내용은 신규 정보."
+    "notes": "Ingested 2026-08-03: FACT-0011은 몬스터 외형·특성 반영 장비 획득만 언급하며, 장비가 세계관·전투 경험 연결 역할을 하고 제작·보스·퀘스트 등 다양한 콘텐츠가 외형 변화와 직결된다는 내용은 신규 정보. Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0130",
@@ -2852,13 +3067,23 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://zdnet.co.kr/view/?no=20260507152807",
+        "source_tier": "dev-note",
+        "captured_at": "2026-08-05"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08.1",
-    "notes": "Ingested 2026-08-03: 서버 내 복수 채널 운영 구조 도입은 기존 팩트 목록에 없는 신규 게임 시스템 정보."
+    "notes": "Ingested 2026-08-03: 서버 내 복수 채널 운영 구조 도입은 기존 팩트 목록에 없는 신규 게임 시스템 정보. Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0131",
@@ -2873,13 +3098,18 @@
         "url": "https://www.inven.co.kr/webzine/news/?news=316180",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://chronoodyssey.kakaogames.com/",
+        "source_tier": "official-site",
+        "captured_at": "2026-08-05"
       }
     ],
     "status": "active",
     "superseded_by": null,
-    "confidence": "probable",
+    "confidence": "confirmed",
     "first_seen_kb_version": "2026.08.1",
-    "notes": "Ingested 2026-08-03: 월드맵 퀘스트 마커, 던전 아이콘 상태 구분, 나침반 지형 높낮이 정보 등 구체적 UI 개선 사항은 기존 팩트에 기록되지 않은 신규 정보."
+    "notes": "Ingested 2026-08-03: 월드맵 퀘스트 마커, 던전 아이콘 상태 구분, 나침반 지형 높낮이 정보 등 구체적 UI 개선 사항은 기존 팩트에 기록되지 않은 신규 정보. Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0132",

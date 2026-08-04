@@ -2,7 +2,8 @@
 // Enforces the honesty contract behind confidence levels:
 //   - every source URL is https and its host is registered in kb-meta.json
 //   - the tier stamped on a fact source matches the registry tier for that host
-//   - "confirmed" requires >=2 official-family sources from distinct hosts
+//   - "confirmed" requires >=2 official-family sources with distinct URLs
+//     (same contract as the ingest CONFIRMED path in scripts/ingest.ts)
 // Non-zero exit on any violation.
 import { loadFacts, loadKbMeta } from "../lib/kb";
 
@@ -55,15 +56,15 @@ for (const fact of facts) {
   }
 
   if (fact.confidence === "confirmed") {
-    const officialHosts = new Set(
+    const officialUrls = new Set(
       fact.sources
         .filter((s) => OFFICIAL_TIERS.has(s.source_tier))
-        .map((s) => new URL(s.url).hostname)
+        .map((s) => s.url)
     );
-    if (officialHosts.size < 2) {
+    if (officialUrls.size < 2) {
       errors.push(
-        `${fact.id}: confidence "confirmed" requires >=2 official-family sources ` +
-          `from distinct hosts (found ${officialHosts.size})`
+        `${fact.id}: confidence "confirmed" requires >=2 distinct official-family ` +
+          `source URLs (found ${officialUrls.size})`
       );
     }
   }

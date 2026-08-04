@@ -1,5 +1,7 @@
 # Lore Guard — 세계관 정합성 QA 에이전트 (내러티브 CI)
 
+[![CI](https://github.com/Yegeon99/Chrono-Story/actions/workflows/ci.yml/badge.svg)](https://github.com/Yegeon99/Chrono-Story/actions/workflows/ci.yml)
+
 크로노 오디세이(Chrono Odyssey)의 공개 세계관 자료를 **엔티티–팩트–관계–출처** 4층 구조의
 지식베이스로 구조화하고, 그 위에서 **표기 불일치·연표 충돌·설정 모순·톤 위반·미해소 복선**을
 자동 탐지하는 QA 도구입니다. 코드에 CI가 있듯, 내러티브에 CI를 답니다.

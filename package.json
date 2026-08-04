@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "validate": "tsx scripts/validate.ts",
+    "lint-sources": "tsx scripts/lint-sources.ts",
     "check": "tsx scripts/check.ts",
     "ingest": "tsx scripts/ingest.ts",
     "test:e2e": "playwright test"

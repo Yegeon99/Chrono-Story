@@ -1,0 +1,47 @@
+# Narrative CI — the repository guards its own knowledge base.
+# LLM-backed checks (C1-C5, gate judgments) are intentionally excluded here:
+# they cost API tokens and their outputs are cached in data/reports/.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate KB (zod schemas + referential integrity)
+        run: pnpm validate
+
+      - name: Glossary drift check (derived file must match its inputs)
+        run: |
+          pnpm build-glossary
+          git diff --exit-code -- data/glossary.json
+
+      - name: Lint fact sources (registry, tiers, confidence honesty)
+        run: pnpm lint-sources
+
+      - name: Build
+        run: pnpm build
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: E2E (Playwright)
+        run: pnpm test:e2e

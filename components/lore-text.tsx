@@ -4,7 +4,7 @@
 // aliases — nothing hardcoded) and turns matches into clickable terms with a
 // definition popover. First occurrence per chapter is linked; visited terms are
 // visually distinguished and persisted in localStorage.
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 import Link from "next/link";
 import type { Entity } from "@/lib/schema";
 import { ENTITY_TYPE_LABELS } from "@/lib/labels";
@@ -59,30 +59,50 @@ export function segmentText(
   return segments;
 }
 
-export function useVisitedTerms() {
-  const [visited, setVisited] = useState<Set<string>>(new Set());
+// Visited terms live in a tiny module store bridged via useSyncExternalStore:
+// the server snapshot is empty (hydration-safe) and the client snapshot is
+// lazily seeded from localStorage on first read.
+const EMPTY_VISITED = new Set<string>();
+let visitedCache: Set<string> | null = null;
+const visitedListeners = new Set<() => void>();
 
-  useEffect(() => {
+function readVisited(): Set<string> {
+  if (!visitedCache) {
+    visitedCache = new Set();
     try {
       const raw = localStorage.getItem(VISITED_KEY);
-      if (raw) setVisited(new Set(JSON.parse(raw)));
+      if (raw) visitedCache = new Set(JSON.parse(raw));
     } catch {
       // ignore corrupt storage
     }
-  }, []);
+  }
+  return visitedCache;
+}
+
+function subscribeVisited(listener: () => void) {
+  visitedListeners.add(listener);
+  return () => visitedListeners.delete(listener);
+}
+
+export function useVisitedTerms() {
+  const visited = useSyncExternalStore(
+    subscribeVisited,
+    readVisited,
+    () => EMPTY_VISITED
+  );
 
   const markVisited = (id: string) => {
-    setVisited((prev) => {
-      if (prev.has(id)) return prev;
-      const next = new Set(prev);
-      next.add(id);
-      try {
-        localStorage.setItem(VISITED_KEY, JSON.stringify([...next]));
-      } catch {
-        // storage full/blocked — visual state still works for the session
-      }
-      return next;
-    });
+    const current = readVisited();
+    if (current.has(id)) return;
+    const next = new Set(current);
+    next.add(id);
+    visitedCache = next;
+    try {
+      localStorage.setItem(VISITED_KEY, JSON.stringify([...next]));
+    } catch {
+      // storage full/blocked — visual state still works for the session
+    }
+    visitedListeners.forEach((l) => l());
   };
 
   return { visited, markVisited };

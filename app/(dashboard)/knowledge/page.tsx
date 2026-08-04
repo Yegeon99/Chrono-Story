@@ -1,4 +1,5 @@
 import { loadEntities, loadFacts, loadRelations } from "@/lib/kb";
+import { PageHeader } from "@/components/page-header";
 import { KnowledgeExplorer } from "./explorer";
 
 export const metadata = { title: "지식베이스" };
@@ -17,18 +18,12 @@ export default async function KnowledgePage({
 
   return (
     <div className="mx-auto max-w-6xl">
-      <header className="mb-8">
-        <p className="eyebrow mb-2">
-          엔티티 {entities.length} · 팩트 {facts.length} · 관계 {relations.length}
-        </p>
-        <h1 className="font-display text-2xl font-black tracking-tight">
-          지식베이스 탐색
-        </h1>
-        <p className="mt-3 max-w-xl text-sm text-parchment-dim">
-          공개 소스에서 추출·재기술한 세계관 팩트를 엔티티 단위로 탐색합니다.
-          충돌 상태의 팩트는 붉은 테두리로 표시됩니다.
-        </p>
-      </header>
+      <PageHeader
+        className="mb-8"
+        eyebrow={`엔티티 ${entities.length} · 팩트 ${facts.length} · 관계 ${relations.length}`}
+        title="지식베이스 탐색"
+        lede="공개 소스에서 추출·재기술한 세계관 팩트를 엔티티 단위로 탐색합니다. 충돌 상태의 팩트는 붉은 테두리로 표시됩니다."
+      />
       <KnowledgeExplorer
         entities={entities}
         facts={facts}

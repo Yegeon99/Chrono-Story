@@ -110,17 +110,30 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
     <div className="grid gap-8 lg:grid-cols-2">
       <section aria-label="입력">
         <div className="mb-3 flex flex-wrap gap-1.5">
-          {demos.map((d) => (
-            <button
-              key={d.id}
-              type="button"
-              onClick={() => loadDemo(d)}
-              title={d.description}
-              className="rounded-full border border-ink-700 px-3 py-1 text-xs text-parchment-dim transition-colors hover:border-gilt/50 hover:text-parchment"
-            >
-              {d.label}
-            </button>
-          ))}
+          {demos.map((d) => {
+            const dot = d.label.includes("PASS")
+              ? "bg-verdant"
+              : d.label.includes("FAIL")
+                ? "bg-ember"
+                : d.label.includes("WARN")
+                  ? "bg-amber-warn"
+                  : "bg-parchment-dim";
+            return (
+              <button
+                key={d.id}
+                type="button"
+                onClick={() => loadDemo(d)}
+                title={d.description}
+                className="inline-flex items-center gap-1.5 rounded-full border border-ink-700 px-3 py-1 text-xs text-parchment-dim transition-colors hover:border-gilt/50 hover:text-parchment"
+              >
+                <span
+                  className={`inline-block h-1.5 w-1.5 rounded-full ${dot}`}
+                  aria-hidden
+                />
+                {d.label}
+              </button>
+            );
+          })}
         </div>
         <textarea
           value={text}
@@ -135,7 +148,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
             type="button"
             onClick={runLive}
             disabled={running || text.trim().length < 5}
-            className="rounded-md border border-gilt/60 bg-ink-800 px-5 py-2 text-sm font-medium text-gilt transition-colors hover:bg-ink-700 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-md bg-gilt px-5 py-2 text-sm font-semibold text-ink-950 transition-colors hover:bg-[#d9b544] disabled:cursor-not-allowed disabled:opacity-40"
           >
             {running ? "판정 중…" : precomputed && result ? "실시간 재판정" : "판정 실행"}
           </button>
@@ -161,7 +174,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
           </div>
         )}
         {running && (
-          <div className="flex min-h-[280px] flex-col items-center justify-center gap-3 rounded-md border border-ink-700 bg-ink-900">
+          <div className="panel flex min-h-[280px] flex-col items-center justify-center gap-3">
             <div className="h-10 w-10 animate-spin rounded-full border-2 border-ink-700 border-t-gilt" />
             <p className="text-sm text-parchment-dim">
               {stage === "extract" ? "텍스트에서 엔티티를 추출하는 중…" : "지식베이스와 대조하여 판정하는 중…"}
@@ -169,7 +182,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
           </div>
         )}
         {result && stage === "done" && (
-          <div className="rounded-md border border-ink-700 bg-ink-900 p-6">
+          <div className="panel p-6">
             <div className="mb-5 flex items-start gap-6">
               <span key={sealKey} className={`seal shrink-0 ${VERDICT_META[result.verdict].color}`}>
                 {result.verdict}

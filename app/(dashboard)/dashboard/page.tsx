@@ -8,6 +8,7 @@ import {
   loadChangeReports,
   loadReports,
 } from "@/lib/kb";
+import { PageHeader } from "@/components/page-header";
 
 export const metadata = { title: "QA 대시보드" };
 
@@ -38,24 +39,18 @@ export default function DashboardPage() {
 
   return (
     <div className="mx-auto max-w-5xl">
-      <header className="mb-10">
-        <p className="eyebrow mb-2">
-          KB {meta.kb_version} · 갱신 {meta.updated_at}
-        </p>
-        <h1 className="font-display text-2xl font-black tracking-tight">
-          QA 대시보드
-        </h1>
-        <p className="mt-3 max-w-xl text-sm text-parchment-dim">
-          지식베이스의 정합성 현황입니다. 모든 팩트는 출처 링크와 신뢰도를
-          보유하며, 모든 변경은 git 이력으로 남습니다.
-        </p>
-      </header>
+      <PageHeader
+        className="mb-10"
+        eyebrow={`KB ${meta.kb_version} · 갱신 ${meta.updated_at}`}
+        title="QA 대시보드"
+        lede="지식베이스의 정합성 현황입니다. 모든 팩트는 출처 링크와 신뢰도를 보유하며, 모든 변경은 git 이력으로 남습니다."
+      />
 
       <section aria-label="핵심 기능" className="mb-10">
         <div className="grid gap-4 md:grid-cols-2">
           <Link
             href="/gate"
-            className="group rounded-md border border-gilt/40 bg-ink-900 p-6 transition-colors hover:border-gilt"
+            className="panel group border-gilt/40 p-6 transition-colors hover:border-gilt"
           >
             <p className="eyebrow mb-2">NARRATIVE CI · 라이브 데모</p>
             <h2 className="font-display text-xl font-bold text-gilt">
@@ -65,13 +60,13 @@ export default function DashboardPage() {
               신규 대사를 붙여넣으면 지식베이스와 대조해 30초 내
               PASS / WARN / FAIL 인장을 찍습니다. 데모 시나리오 3종 제공.
             </p>
-            <p className="mt-3 text-xs text-gilt opacity-0 transition-opacity group-hover:opacity-100">
+            <p className="mt-3 text-xs text-gilt opacity-70 transition-opacity group-hover:opacity-100">
               판정하러 가기 →
             </p>
           </Link>
           <Link
             href="/reports"
-            className="group rounded-md border border-ink-700 bg-ink-900 p-6 transition-colors hover:border-amber-warn/60"
+            className="panel group p-6 transition-colors hover:border-amber-warn/60"
           >
             <p className="eyebrow mb-2">C1~C5 · 5종 정합성 검사</p>
             <h2 className="font-display text-xl font-bold">검사 리포트</h2>
@@ -81,7 +76,7 @@ export default function DashboardPage() {
               — 실존 표기 충돌과 설정 개편 이력이 근거 팩트와 함께 기록되어
               있습니다.
             </p>
-            <p className="mt-3 text-xs text-amber-warn opacity-0 transition-opacity group-hover:opacity-100">
+            <p className="mt-3 text-xs text-amber-warn opacity-70 transition-opacity group-hover:opacity-100">
               리포트 보기 →
             </p>
           </Link>
@@ -93,7 +88,7 @@ export default function DashboardPage() {
           {stats.map((s) => (
             <div
               key={s.label}
-              className="rounded-md border border-ink-700 bg-ink-900 px-4 py-5"
+              className="panel px-4 py-5 transition-colors hover:border-gilt/30"
             >
               <div
                 className={`font-display text-2xl font-bold ${s.accent ?? "text-parchment"}`}
@@ -109,7 +104,7 @@ export default function DashboardPage() {
       {latestChange && (
         <section aria-label="최근 변경 감지" className="mb-10">
           <h2 className="font-display text-lg font-bold">최근 변경 감지</h2>
-          <div className="mt-3 rounded-md border border-ink-700 bg-ink-900 px-5 py-4">
+          <div className="panel mt-3 px-5 py-4">
             <p className="eyebrow mb-1">
               KB {latestChange.previous_version} → {latestChange.kb_version} ·{" "}
               {latestChange.created_at.slice(0, 10)}
@@ -157,7 +152,7 @@ export default function DashboardPage() {
               <li key={f.id}>
                 <Link
                   href="/ledger"
-                  className="block rounded-md border border-rift-teal/40 bg-ink-900 px-4 py-3 transition-colors hover:border-rift-teal"
+                  className="panel block border-rift-teal/40 px-4 py-3 transition-colors hover:border-rift-teal"
                 >
                   <span className="eyebrow">{f.id}</span>
                   <span className="mt-0.5 block text-sm">{f.title_ko}</span>
@@ -173,11 +168,11 @@ export default function DashboardPage() {
 
       <section aria-label="등록된 소스">
         <h2 className="font-display text-lg font-bold">소스 레지스트리</h2>
-        <ul className="mt-3 divide-y divide-ink-700 rounded-md border border-ink-700 bg-ink-900">
+        <ul className="panel mt-3 divide-y divide-ink-700">
           {meta.source_registry.map((s) => (
             <li
               key={s.id}
-              className="flex flex-wrap items-center justify-between gap-2 px-4 py-3"
+              className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 transition-colors hover:bg-ink-800/40"
             >
               <a
                 href={s.url}

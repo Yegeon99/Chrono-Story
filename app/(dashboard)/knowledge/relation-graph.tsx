@@ -2,7 +2,7 @@
 
 // Relation graph — self-rendered SVG + d3-force for layout only (DIRECTIVE §1).
 // ~53 nodes: no heavy graph library needed. Falls back to list view on mobile.
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import {
   forceCenter,
   forceCollide,
@@ -48,9 +48,9 @@ export function RelationGraph({
   selectedId: string | null;
   onSelect: (id: string | null) => void;
 }) {
-  const [positioned, setPositioned] = useState<{ nodes: Node[]; links: Link[] } | null>(null);
-
-  const graph = useMemo(() => {
+  // Layout computed once per data change. d3-force is fully deterministic here
+  // (no user-driven randomness), so this is safe in render and SSR-consistent.
+  const positioned = useMemo(() => {
     const degree = new Map<string, number>();
     for (const r of relations) {
       degree.set(r.from, (degree.get(r.from) ?? 0) + 1);
@@ -66,13 +66,6 @@ export function RelationGraph({
     const links: Link[] = relations
       .filter((r) => ids.has(r.from) && ids.has(r.to))
       .map((r) => ({ source: r.from, target: r.to, relType: r.type }));
-    return { nodes, links };
-  }, [entities, relations]);
-
-  useEffect(() => {
-    // Layout computed synchronously once — the graph stays still afterwards.
-    const nodes = graph.nodes.map((n) => ({ ...n }));
-    const links = graph.links.map((l) => ({ ...l }));
     const sim = forceSimulation<Node>(nodes)
       .force(
         "link",
@@ -86,18 +79,16 @@ export function RelationGraph({
       .force("collide", forceCollide<Node>().radius((d) => nodeRadius(d) + 14))
       .stop();
     for (let i = 0; i < 300; i++) sim.tick();
-    setPositioned({ nodes, links });
-  }, [graph]);
+    // Round positions so server- and client-rendered SVG attribute strings are
+    // byte-identical — raw floats can differ in the last bits across V8
+    // versions and would trip React hydration.
+    for (const n of nodes) {
+      n.x = Math.round((n.x ?? 0) * 10) / 10;
+      n.y = Math.round((n.y ?? 0) * 10) / 10;
+    }
+    return { nodes, links };
+  }, [entities, relations]);
 
-  if (!positioned) {
-    return (
-      <div className="flex h-[420px] items-center justify-center rounded-md border border-ink-700 bg-ink-900 text-sm text-parchment-dim">
-        관계망을 배치하는 중…
-      </div>
-    );
-  }
-
-  const nodeById = new Map(positioned.nodes.map((n) => [n.id, n]));
   const neighborIds = new Set<string>();
   if (selectedId) {
     neighborIds.add(selectedId);
@@ -110,7 +101,7 @@ export function RelationGraph({
   }
 
   return (
-    <div className="rounded-md border border-ink-700 bg-ink-900">
+    <div className="panel overflow-hidden">
       <svg
         viewBox={`0 0 ${W} ${H}`}
         role="img"
@@ -118,6 +109,16 @@ export function RelationGraph({
         className="h-auto w-full"
         onClick={() => onSelect(null)}
       >
+        <defs>
+          <radialGradient id="graph-vignette" cx="50%" cy="42%" r="75%">
+            <stop offset="0%" stopColor="#161a24" />
+            <stop offset="100%" stopColor="#0e1118" />
+          </radialGradient>
+          <filter id="node-glow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="6" />
+          </filter>
+        </defs>
+        <rect width={W} height={H} fill="url(#graph-vignette)" />
         {positioned.links.map((l, i) => {
           const s = l.source as Node;
           const t = l.target as Node;
@@ -134,9 +135,7 @@ export function RelationGraph({
               strokeWidth={active ? 1.6 : 1}
               strokeOpacity={selectedId && !active ? 0.35 : 1}
             >
-              <title>
-                {s.name} —{RELATION_TYPE_LABELS[l.relType] ?? l.relType}→ {t.name}
-              </title>
+              <title>{`${s.name} — ${RELATION_TYPE_LABELS[l.relType] ?? l.relType} → ${t.name}`}</title>
             </line>
           );
         })}
@@ -154,6 +153,15 @@ export function RelationGraph({
                 onSelect(n.id === selectedId ? null : n.id);
               }}
             >
+              {n.id === selectedId && (
+                <circle
+                  r={r + 7}
+                  fill={TYPE_COLORS[n.type]}
+                  opacity={0.45}
+                  filter="url(#node-glow)"
+                  aria-hidden
+                />
+              )}
               <circle
                 r={r}
                 fill={TYPE_COLORS[n.type]}
@@ -170,9 +178,7 @@ export function RelationGraph({
               >
                 {n.name}
               </text>
-              <title>
-                {n.name} ({ENTITY_TYPE_LABELS[n.type]}) · 관계 {n.degree}건
-              </title>
+              <title>{`${n.name} (${ENTITY_TYPE_LABELS[n.type]}) · 관계 ${n.degree}건`}</title>
             </g>
           );
         })}

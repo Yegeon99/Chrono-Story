@@ -127,3 +127,42 @@ export const CHAPTERS: Chapter[] = [
     ],
   },
 ];
+
+// Per-chapter official screenshots (Steam store page, © Chrono Studio ·
+// Kakao Games). Rendered full-bleed like a picture book; the source credit
+// lives once at the bottom of the chronicle, not on each figure.
+export type ChapterImage = { src: string; alt: string };
+
+export const CHAPTER_SOURCE_URL =
+  "https://store.steampowered.com/app/2873440/Chrono_Odyssey/";
+
+export const CHAPTER_IMAGES: Record<string, ChapterImage> = {
+  creation: {
+    src: "/chronicle/ch1.jpg",
+    alt: "금빛 평원 너머로 보이는 첨탑과 하늘의 거대한 기둥",
+  },
+  wrath: {
+    src: "/chronicle/ch2.jpg",
+    alt: "무장한 이들이 결이 새겨진 거대한 문 앞으로 걸어가는 모습",
+  },
+  unleashing: {
+    src: "/chronicle/ch3.jpg",
+    alt: "잿빛 안개 속에서 쏟아져 나오는 뒤틀린 마물의 무리",
+  },
+  invasion: {
+    src: "/chronicle/ch4.jpg",
+    alt: "어두운 숲에서 생존자들 앞에 나타난 거대한 괴수",
+  },
+  frontier: {
+    src: "/chronicle/ch5.jpg",
+    alt: "폭포 앞에서 함께 싸우는 마법사와 방패를 든 전사",
+  },
+  ruins: {
+    src: "/chronicle/ch6.jpg",
+    alt: "수호상이 내려다보는 고대 유적의 회랑",
+  },
+  regression: {
+    src: "/chronicle/ch7.jpg",
+    alt: "잿빛 하늘에서 날개를 펼친 비룡과 마주 선 창을 든 기사",
+  },
+};

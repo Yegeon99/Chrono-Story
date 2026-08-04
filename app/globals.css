@@ -34,6 +34,25 @@
 
 html {
   color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-700) transparent;
+}
+
+/* Thin archive-toned scrollbars (WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-700);
+  border: 3px solid var(--color-ink-950);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e3448;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 body {
@@ -61,10 +80,64 @@ body {
   background-color: var(--color-ink-950);
   background-image: radial-gradient(
       circle at 20% 0%,
-      rgba(201, 162, 39, 0.04),
+      rgba(201, 162, 39, 0.05),
       transparent 45%
     ),
-    radial-gradient(circle at 90% 100%, rgba(62, 124, 138, 0.05), transparent 50%);
+    radial-gradient(circle at 90% 100%, rgba(62, 124, 138, 0.06), transparent 50%),
+    radial-gradient(circle at 55% 45%, rgba(232, 226, 212, 0.015), transparent 60%);
+}
+
+/* -------------------------------------------------------------------------
+   Panel — the standard card surface. A faint parchment sheen along the top
+   edge gives cards physical depth without leaving the ink palette.
+------------------------------------------------------------------------- */
+.panel {
+  border: 1px solid var(--color-ink-700);
+  border-radius: 0.375rem;
+  background-color: var(--color-ink-900);
+  background-image: linear-gradient(
+    180deg,
+    rgba(232, 226, 212, 0.025),
+    transparent 42%
+  );
+  box-shadow: 0 1px 0 rgba(232, 226, 212, 0.03) inset, 0 8px 24px -18px rgba(0, 0, 0, 0.8);
+}
+
+/* Short gilt hairline used under page titles */
+.title-rule {
+  height: 1px;
+  width: 3rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-gilt) 85%, transparent),
+    transparent
+  );
+}
+.title-rule-center {
+  width: 5rem;
+  margin-inline: auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-gilt) 85%, transparent),
+    transparent
+  );
+}
+
+/* Page transition — a restrained fade+rise, per DIRECTIVE §5 motion budget.
+   Collapsed by the global prefers-reduced-motion override below. */
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.page-fade {
+  animation: page-fade 320ms ease-out both;
 }
 
 /* Monospace eyebrow used on fact cards: `FACT-0017 · timeline · confirmed` */

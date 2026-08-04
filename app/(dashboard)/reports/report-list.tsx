@@ -84,13 +84,13 @@ export function ReportList({
           return (
             <li key={r.id}>
               <article
-                className={`rounded-md border border-ink-700 border-l-2 bg-ink-900 ${sev.border}`}
+                className={`panel border-l-2 ${sev.border}`}
               >
                 <button
                   type="button"
                   onClick={() => setOpenId(open ? null : r.id)}
                   aria-expanded={open}
-                  className="flex w-full flex-col gap-1 px-4 py-3 text-left"
+                  className="flex w-full flex-col gap-1 rounded-md px-4 py-3 text-left transition-colors hover:bg-ink-800/40"
                 >
                   <span className="eyebrow">
                     {r.id} · {r.check_type} {CHECK_LABELS[r.check_type]} ·{" "}

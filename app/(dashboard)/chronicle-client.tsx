@@ -1,9 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Entity } from "@/lib/schema";
-import type { Chapter } from "@/lib/chronicle";
+import {
+  CHAPTER_IMAGES,
+  CHAPTER_SOURCE_URL,
+  type Chapter,
+} from "@/lib/chronicle";
 import {
   LoreParagraph,
   segmentText,
@@ -47,51 +52,76 @@ export function ChronicleClient({
   };
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div className="mx-auto max-w-4xl">
       {chapters.map((ch, ci) => {
         const chapterQa = qa[ch.id];
+        const image = CHAPTER_IMAGES[ch.id];
         return (
           <article key={ch.id} className="mb-14 last:mb-4">
             <header className="mb-5">
-              <p className="eyebrow mb-1.5">제{ch.num}장</p>
+              <p className="eyebrow mb-2 flex items-center gap-3">
+                <span className="text-gilt/80">제{ch.num}장</span>
+                <span
+                  className="h-px flex-1 bg-gradient-to-r from-ink-700 to-transparent"
+                  aria-hidden
+                />
+              </p>
               <h2 className="font-display text-xl font-black tracking-tight">
                 {ch.title}
               </h2>
             </header>
-            <div className="flex flex-col gap-4">
-              {segmented[ci].map((segments, pi) => (
-                <LoreParagraph
-                  key={pi}
-                  segments={segments}
-                  entityById={entityById}
-                  visited={visited}
-                  openTermKey={openTermKey}
-                  onToggleTerm={onToggleTerm}
-                  paragraphKey={`${ch.id}:${pi}`}
-                />
-              ))}
-            </div>
 
-            {(chapterQa.foreshadow > 0 || chapterQa.conflicts > 0) && (
-              <div className="mt-5 flex flex-wrap gap-2">
-                {chapterQa.foreshadow > 0 && (
-                  <Link
-                    href="/ledger"
-                    className="rounded-full border border-rift-teal/50 bg-ink-900 px-3 py-1 text-xs text-rift-teal transition-colors hover:bg-ink-800"
-                  >
-                    이 대목의 미해소 복선 {chapterQa.foreshadow}건 →
-                  </Link>
-                )}
-                {chapterQa.conflicts > 0 && (
-                  <Link
-                    href="/reports"
-                    className="rounded-full border border-ember/50 bg-ink-900 px-3 py-1 text-xs text-ember transition-colors hover:bg-ink-800"
-                  >
-                    이 대목의 충돌 팩트 {chapterQa.conflicts}건 →
-                  </Link>
-                )}
-              </div>
+            {image && (
+              <figure className="panel mb-7 overflow-hidden">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={1920}
+                  height={1080}
+                  sizes="(min-width: 1024px) 896px, 100vw"
+                  className="h-auto w-full"
+                  priority={ci === 0}
+                  loading="eager"
+                />
+              </figure>
             )}
+
+            <div className="mx-auto max-w-2xl">
+              <div className="flex flex-col gap-4">
+                {segmented[ci].map((segments, pi) => (
+                  <LoreParagraph
+                    key={pi}
+                    segments={segments}
+                    entityById={entityById}
+                    visited={visited}
+                    openTermKey={openTermKey}
+                    onToggleTerm={onToggleTerm}
+                    paragraphKey={`${ch.id}:${pi}`}
+                  />
+                ))}
+              </div>
+
+              {(chapterQa.foreshadow > 0 || chapterQa.conflicts > 0) && (
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {chapterQa.foreshadow > 0 && (
+                    <Link
+                      href="/ledger"
+                      className="rounded-full border border-rift-teal/50 bg-ink-900 px-3 py-1 text-xs text-rift-teal transition-colors hover:bg-ink-800"
+                    >
+                      이 대목의 미해소 복선 {chapterQa.foreshadow}건 →
+                    </Link>
+                  )}
+                  {chapterQa.conflicts > 0 && (
+                    <Link
+                      href="/reports"
+                      className="rounded-full border border-ember/50 bg-ink-900 px-3 py-1 text-xs text-ember transition-colors hover:bg-ink-800"
+                    >
+                      이 대목의 충돌 팩트 {chapterQa.conflicts}건 →
+                    </Link>
+                  )}
+                </div>
+              )}
+            </div>
 
             {ci < chapters.length - 1 && (
               <div className="mt-12 text-center text-gilt/50" aria-hidden>
@@ -102,13 +132,27 @@ export function ChronicleClient({
         );
       })}
 
-      <footer className="mb-6 rounded-md border border-ink-700 bg-ink-900 px-5 py-4 text-sm text-parchment-dim">
-        이야기의 모든 문장은 공개 자료의 사실을 자체적으로 재기술한 것이며, 본문의
-        금색 용어를 클릭하면 정의와 출처를 확인할 수 있습니다. 이 연대기 전체가{" "}
-        <Link href="/dashboard" className="text-gilt underline-offset-2 hover:underline">
-          정합성 검증 시스템
-        </Link>
-        의 감시 아래 있습니다.
+      <footer className="mx-auto mb-6 max-w-2xl">
+        <div className="panel px-5 py-4 text-sm text-parchment-dim">
+          이야기의 모든 문장은 공개 자료의 사실을 자체적으로 재기술한 것이며, 본문의
+          금색 용어를 클릭하면 정의와 출처를 확인할 수 있습니다. 이 연대기 전체가{" "}
+          <Link href="/dashboard" className="text-gilt underline-offset-2 hover:underline">
+            정합성 검증 시스템
+          </Link>
+          의 감시 아래 있습니다.
+        </div>
+        <p className="mt-4 text-center text-[11px] text-parchment-dim/50">
+          본 페이지의 삽화는 크로노 오디세이 공식 스크린샷입니다 · ©
+          Chrono Studio · Kakao Games ·{" "}
+          <a
+            href={CHAPTER_SOURCE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline-offset-2 hover:text-parchment-dim hover:underline"
+          >
+            출처
+          </a>
+        </p>
       </footer>
     </div>
   );

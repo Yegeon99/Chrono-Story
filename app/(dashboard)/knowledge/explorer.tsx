@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { Entity, Fact, Relation } from "@/lib/schema";
 import {
   ENTITY_TYPE_LABELS,
@@ -35,16 +35,11 @@ export function KnowledgeExplorer({
   const [query, setQuery] = useState("");
   const [typeFilter, setTypeFilter] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(initialSelectedId);
+  // Mobile fallback needs no JS: in graph view the graph is `hidden md:block`
+  // and the list is `md:hidden`, so small screens always get the list.
   const [view, setView] = useState<"graph" | "list">("graph");
   const [introOpen, setIntroOpen] = useState(false);
   const [introStep, setIntroStep] = useState(0);
-
-  // Mobile fallback: the graph collapses to list on small screens (DIRECTIVE §5)
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
-      setView("list");
-    }
-  }, []);
 
   const entityById = useMemo(
     () => new Map(entities.map((e) => [e.id, e])),
@@ -248,7 +243,7 @@ export function KnowledgeExplorer({
                 </div>
               </div>
               <p className="eyebrow mb-2">{filtered.length}개 엔티티</p>
-              <ul className="max-h-[60vh] divide-y divide-ink-700 overflow-y-auto rounded-md border border-ink-700 bg-ink-900 lg:max-h-[calc(100vh-320px)]">
+              <ul className="panel max-h-[60vh] divide-y divide-ink-700 overflow-y-auto lg:max-h-[calc(100vh-320px)]">
                 {filtered.map((e) => (
                   <li key={e.id}>
                     <button

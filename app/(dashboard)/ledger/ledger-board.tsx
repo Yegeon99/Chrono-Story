@@ -35,7 +35,7 @@ export function LedgerBoard({
             <section
               key={col.status}
               aria-label={col.label}
-              className="rounded-md border border-ink-700 bg-ink-900/60"
+              className="panel bg-ink-900/60"
             >
               <header className="border-b border-ink-700 px-3 py-2">
                 <span className={`text-sm font-medium ${col.accent}`}>
@@ -77,10 +77,7 @@ export function LedgerBoard({
       </div>
 
       {selected && (
-        <section
-          aria-label="복선 상세"
-          className="mt-6 rounded-md border border-ink-700 bg-ink-900 p-5"
-        >
+        <section aria-label="복선 상세" className="panel mt-6 p-5">
           <header className="mb-3">
             <p className="eyebrow mb-1">
               {selected.id} ·{" "}

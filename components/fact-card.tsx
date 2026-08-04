@@ -17,7 +17,7 @@ export function FactCard({ fact }: { fact: Fact }) {
   const dimmed = fact.status === "superseded" || fact.status === "deprecated";
   return (
     <article
-      className={`rounded-md border border-ink-700 bg-ink-900 px-4 py-3 ${
+      className={`panel px-4 py-3 ${
         fact.status === "conflicted" ? "border-l-2 border-l-ember" : ""
       } ${dimmed ? "opacity-70" : ""}`}
     >

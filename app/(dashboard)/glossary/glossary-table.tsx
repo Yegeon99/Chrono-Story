@@ -145,8 +145,8 @@ export function GlossaryTable({ entries }: { entries: GlossaryEntry[] }) {
       </div>
 
       <p className="eyebrow mb-2">{filtered.length}개 용어</p>
-      <div className="overflow-x-auto rounded-md border border-ink-700">
-        <table className="w-full min-w-[760px] bg-ink-900 text-sm">
+      <div className="panel overflow-x-auto">
+        <table className="w-full min-w-[760px] text-sm">
           <thead>
             <tr className="border-b border-ink-700 text-left">
               <Th>한글</Th>
@@ -162,7 +162,9 @@ export function GlossaryTable({ entries }: { entries: GlossaryEntry[] }) {
             {filtered.map((e) => (
               <tr
                 key={e.entity_id}
-                className={e.status === "deprecated" ? "opacity-60" : ""}
+                className={`transition-colors hover:bg-ink-800/40 ${
+                  e.status === "deprecated" ? "opacity-60" : ""
+                }`}
               >
                 <td className="px-3 py-2.5 font-medium whitespace-nowrap">
                   {e.ko}

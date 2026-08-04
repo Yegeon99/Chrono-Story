@@ -38,6 +38,15 @@ const REPORTS_DIR = path.join(process.cwd(), "data", "reports");
 const outFile = path.join(REPORTS_DIR, `${meta.kb_version}.json`);
 const force = process.argv.includes("--force");
 
+// Fail fast before writing anything: a keyless run would cache a report full of
+// parse-errors for this KB version and silently mask the real check results.
+if (!process.env.ANTHROPIC_API_KEY) {
+  console.error(
+    "ANTHROPIC_API_KEY is not set — aborting without writing a report. Add it to .env.local."
+  );
+  process.exit(1);
+}
+
 if (fs.existsSync(outFile) && !force) {
   console.log(`Cached report for KB ${meta.kb_version} exists (${outFile}). Use --force to re-run.`);
   process.exit(0);

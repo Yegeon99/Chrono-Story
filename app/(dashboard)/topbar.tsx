@@ -68,7 +68,7 @@ export function Topbar({
               <span className="text-parchment-faint" aria-hidden>
                 ·
               </span>{" "}
-              {conflicts > 0 ? `표기 충돌 ${conflicts}건` : "충돌 없음"}
+              {conflicts > 0 ? `표기·설정 충돌 ${conflicts}건` : "충돌 없음"}
             </span>
           </Link>
         </p>

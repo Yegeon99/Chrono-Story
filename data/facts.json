@@ -821,7 +821,7 @@
     "statement_en": "A Void Nexus is a dome holding Void enemies and corrupted land.",
     "sources": [
       {
-        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "url": "https://chronoodyssey.wiki.fextralife.com/Void+Nexus",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
       }
@@ -843,7 +843,7 @@
     "statement_en": "The source of a Nexus's corruption is a cocoon-like object called a Void Core.",
     "sources": [
       {
-        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "url": "https://chronoodyssey.wiki.fextralife.com/Void+Nexus",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
       }
@@ -865,7 +865,7 @@
     "statement_en": "Destroying a Void Core purifies the area, bringing Setera closer to freedom from the Void.",
     "sources": [
       {
-        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "url": "https://chronoodyssey.wiki.fextralife.com/Void+Nexus",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
       }
@@ -2787,7 +2787,7 @@
     "statement_en": "The English name of 보이드 넥서스 is Void Nexus.",
     "sources": [
       {
-        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "url": "https://chronoodyssey.wiki.fextralife.com/Void+Nexus",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
       }
@@ -2955,7 +2955,7 @@
     "statement_en": "The English name of 보이드 코어 is Void Core.",
     "sources": [
       {
-        "url": "https://chronoodyssey.wiki.fextralife.com/void+nexus",
+        "url": "https://chronoodyssey.wiki.fextralife.com/Void+Nexus",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
       }
@@ -3387,5 +3387,34 @@
     "confidence": "probable",
     "first_seen_kb_version": "2026.08.2",
     "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+  },
+  {
+    "id": "FACT-0143",
+    "entity_ids": [
+      "ENT-CHRONOS",
+      "ENT-SETERA",
+      "ENT-MAGELLAN",
+      "ENT-BETELGEUSE"
+    ],
+    "claim_type": "timeline",
+    "statement_ko": "크로노스의 축복은 열두 세계에 고르게 내리지 않았다 — 세테라가 풍요를 누리는 동안 마젤란은 기근과 황폐의 저주를 받았고, 이에 분노한 마젤란의 센티넬 베텔기우스가 복수를 도모했다.",
+    "statement_en": "Chronos's blessing fell unevenly across the twelve worlds — Setera enjoyed abundance while Magellan was cursed with famine and desolation, and Magellan's Sentinel Betelgeuse, enraged by this, set out for vengeance.",
+    "sources": [
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Betelgeuse",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-06"
+      },
+      {
+        "url": "https://chrono-odyssey.fandom.com/wiki/Magellan",
+        "source_tier": "official-wiki",
+        "captured_at": "2026-08-06"
+      }
+    ],
+    "status": "active",
+    "superseded_by": null,
+    "confidence": "probable",
+    "first_seen_kb_version": "2026.08.2",
+    "notes": "Chapter-2 motive gap closed 2026-08-06: the chronicle previously stated no public source explained Betelgeuse's wrath. Restated in our own words from the cited official wiki pages; sourced from one family only, hence probable rather than confirmed."
   }
 ]

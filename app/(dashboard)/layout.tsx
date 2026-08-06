@@ -134,6 +134,20 @@ export default function DashboardLayout({
             포트폴리오이며, 크로노 오디세이의 모든 권리는 해당 권리자에게
             있습니다.
           </p>
+          {/* Credit line: mono eyebrow register, set apart from the body-text
+              disclaimer above so the two read as different kinds of statement. */}
+          <p className="eyebrow mt-3 flex flex-wrap items-center gap-x-2">
+            <span>Made by 예건</span>
+            <span aria-hidden>·</span>
+            <a
+              href="https://github.com/Yegeon99/Chrono-Story"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gilt transition-colors hover:text-gilt-bright"
+            >
+              GitHub 리포지토리 ↗
+            </a>
+          </p>
         </footer>
       </div>
     </div>

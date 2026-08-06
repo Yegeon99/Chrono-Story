@@ -64,6 +64,13 @@ const S = {
       <path d="M10.7 2.6v2c0 1.4-2.7 2.2-2.7 3.4s2.7 2 2.7 3.4v2" />
     </>
   ),
+  info: (
+    <>
+      <circle cx="8" cy="8" r="5.6" />
+      <path d="M8 7.4v3.2" />
+      <path d="M8 5.3h.01" />
+    </>
+  ),
 };
 
 function Glyph({ children }: { children: React.ReactNode }) {
@@ -118,6 +125,11 @@ export const NAV_GROUPS: {
       { href: "/glossary", label: "용어집", en: "GLOSSARY", icon: S.book },
       { href: "/ledger", label: "복선 원장", en: "LEDGER", icon: S.hourglass },
     ],
+  },
+  {
+    numeral: "III",
+    label: "기록",
+    items: [{ href: "/about", label: "소개", en: "ABOUT", icon: S.info }],
   },
 ];
 

@@ -49,7 +49,7 @@ export default function AboutPage() {
         className="mb-10"
         eyebrow="PORTFOLIO · 프로젝트 기록"
         title="이 프로젝트에 대하여"
-        lede="Lore Guard가 왜, 어떻게, 얼마의 비용으로 만들어졌는지에 대한 기록입니다."
+        lede="Lore Guard가 왜, 어떻게 만들어졌는지에 대한 기록입니다."
       />
 
       <section aria-label="만든 이유" className="mb-10">
@@ -71,12 +71,27 @@ export default function AboutPage() {
       </section>
 
       <section aria-label="아키텍처" className="mb-10">
-        <SectionHeading aside="README §아키텍처">아키텍처</SectionHeading>
-        <div className="panel overflow-x-auto p-6">
-          <pre className="font-mono text-xs leading-relaxed text-parchment-dim">
-            {ARCHITECTURE}
-          </pre>
-        </div>
+        {/* Collapsed by default: the diagram is reference material, not part of
+            the page's reading flow. Native details keeps it JS-free. */}
+        <details className="group">
+          <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <div className="flex items-center gap-3">
+              <h2 className="font-display text-lg font-bold">아키텍처</h2>
+              <span className="rule-fade flex-1" aria-hidden />
+              <span className="eyebrow shrink-0 text-gilt group-open:hidden">
+                펼치기 +
+              </span>
+              <span className="eyebrow hidden shrink-0 text-gilt group-open:inline">
+                접기 −
+              </span>
+            </div>
+          </summary>
+          <div className="panel mt-3.5 overflow-x-auto p-6">
+            <pre className="font-mono text-xs leading-relaxed text-parchment-dim">
+              {ARCHITECTURE}
+            </pre>
+          </div>
+        </details>
       </section>
 
       <section aria-label="데이터 윤리" className="mb-10">
@@ -91,31 +106,6 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section aria-label="구축 기간과 비용" className="mb-10">
-        <SectionHeading>구축 기간과 비용</SectionHeading>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="panel px-5 py-5">
-            <p className="eyebrow mb-2">구축 기간</p>
-            <p className="readout text-2xl font-bold text-parchment">4일</p>
-            <p className="mt-2 text-xs leading-relaxed text-parchment-dim">
-              사전 조사 2026-07-31, 구현 2026-08-03 ~ 2026-08-06. PRD와 지침서
-              작성 후 Claude Code와 함께 구축했습니다.
-            </p>
-          </div>
-          <div className="panel px-5 py-5">
-            <p className="eyebrow mb-2">총 API 비용 (실측)</p>
-            <p className="readout text-2xl font-bold text-gilt">약 $200</p>
-            <p className="mt-2 text-xs leading-relaxed text-parchment-dim">
-              전체 구축 세션의 토큰 사용량 실측치(2026-08-06 집계)를 API 정가로
-              환산한 값입니다. 총 처리 약 1.7억 토큰, 그중 캐시 읽기가 약
-              1.69억 토큰, 모델 출력이 약 90만 토큰입니다. 앱 자체의 판정
-              호출(C1~C5 검사·게이트)은 규칙 기반 후보 선별과 KB 버전별 캐시로
-              비용을 억제합니다.
-            </p>
-          </div>
-        </div>
       </section>
 
       <section aria-label="저장소">

@@ -40,7 +40,9 @@ export function ReportList({
     .filter((r) => (check ? r.check_type === check : true))
     .sort(
       (a, b) =>
-        order[a.severity] - order[b.severity] || a.id.localeCompare(b.id)
+        order[a.severity] - order[b.severity] ||
+        a.id.localeCompare(b.id) ||
+        b.kb_version.localeCompare(a.kb_version)
     );
 
   const counts = {
@@ -80,20 +82,25 @@ export function ReportList({
       <ul className="flex flex-col gap-2.5">
         {filtered.map((r) => {
           const sev = SEVERITY_META[r.severity];
-          const open = openId === r.id;
+          // CHK ids restart at 0001 for every KB version, so the version must
+          // be part of the identity: bare r.id collides across versions, which
+          // breaks React's list reconciliation when filters change.
+          const uid = `${r.kb_version}:${r.id}`;
+          const open = openId === uid;
           return (
-            <li key={r.id}>
+            <li key={uid}>
               <article
                 className={`panel border-l-2 ${sev.border}`}
               >
                 <button
                   type="button"
-                  onClick={() => setOpenId(open ? null : r.id)}
+                  onClick={() => setOpenId(open ? null : uid)}
                   aria-expanded={open}
                   className="flex w-full flex-col gap-1 rounded-md px-4 py-3 text-left transition-colors hover:bg-ink-800/40"
                 >
                   <span className="eyebrow">
-                    {r.id} · {r.check_type} {CHECK_LABELS[r.check_type]} ·{" "}
+                    {r.id} · KB {r.kb_version} · {r.check_type}{" "}
+                    {CHECK_LABELS[r.check_type]} ·{" "}
                     <span className={sev.text}>{sev.label}</span>
                   </span>
                   <span className="text-sm">{r.verdict_ko}</span>

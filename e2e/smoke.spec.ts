@@ -93,6 +93,25 @@ test("reports page renders findings with evidence", async ({ page }) => {
   await expect(page.getByText("FACT-0100").first()).toBeVisible();
 });
 
+test("reports severity filter survives switching categories", async ({
+  page,
+}) => {
+  await page.goto("/reports");
+  const items = page.locator("ul > li > article");
+  const chipCount = async (label: RegExp) => {
+    const text = await page.getByRole("button", { name: label }).innerText();
+    return Number(text.replace(/\D/g, ""));
+  };
+
+  const warning = await chipCount(/^주의 \d+$/);
+  // Regression: CHK ids repeat across KB versions; duplicate React keys made
+  // the list show every item after warning -> info -> warning round trips.
+  await page.getByRole("button", { name: /^주의 \d+$/ }).click();
+  await page.getByRole("button", { name: /^정보 \d+$/ }).click();
+  await page.getByRole("button", { name: /^주의 \d+$/ }).click();
+  await expect(items).toHaveCount(warning);
+});
+
 test("glossary exports CSV with all rows", async ({ page }) => {
   await page.goto("/glossary");
   await expect(page.getByText("⚠ 표기 충돌").first()).toBeVisible();

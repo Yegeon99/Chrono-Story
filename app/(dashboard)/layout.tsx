@@ -121,11 +121,7 @@ export default function DashboardLayout({
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <Topbar
-          kbVersion={meta.kb_version}
-          updatedAt={meta.updated_at}
-          conflicts={conflicts}
-        />
+        <Topbar kbVersion={meta.kb_version} updatedAt={meta.updated_at} />
         <main className="flex-1 px-5 py-9 md:px-10 md:py-12">{children}</main>
         <footer className="border-t border-ink-700/70 bg-ink-950/70 px-5 py-5 md:px-10">
           <div className="rule-fade mb-3.5 max-w-24" aria-hidden />

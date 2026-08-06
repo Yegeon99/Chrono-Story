@@ -54,11 +54,9 @@ test("QA dashboard leads with gate and reports", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByText("최근 변경 감지")).toBeVisible();
 
-  // the topbar watch lamp names what it is holding and leads to the evidence
-  const watch = page.getByTestId("topbar-watch");
-  await expect(watch).toHaveAttribute("href", "/reports");
-  await expect(watch).toContainText(/감시 중/);
-  await expect(watch).toContainText(/표기·설정 충돌 \d+건|충돌 없음/);
+  // the topbar stays a location and version indicator; conflict readings
+  // live in the sidebar gauges
+  await expect(page.getByText(/^KB \d{4}\.\d{2}/).first()).toBeVisible();
 });
 
 test("knowledge explorer: graph, intro path, list fallback", async ({ page }) => {

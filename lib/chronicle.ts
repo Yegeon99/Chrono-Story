@@ -34,9 +34,16 @@ export const CHAPTERS: Chapter[] = [
     title: "마젤란의 저주와 베텔기우스의 분노",
     paragraphs: [
       "마젤란의 센티넬 베텔기우스도 한때는 그 균형의 수호자였다. 크로노텍터를 지닌 반신으로서, 그는 자신의 행성과 운명을 함께하는 존재였다.",
-      "그러나 어느 날 그는 격렬한 분노에 사로잡혔다. 복수 — 기록은 그 단어만을 남긴다. 무엇이 그를 그토록 뒤틀리게 했는지, 그 분노가 누구를 향한 것이었는지는 아직 어떤 공개 자료도 말해주지 않는다. 분명한 것은 하나다. 그는 결코 열어서는 안 될 것을 열기로 결심했다.",
+      "그러나 크로노스의 축복은 열두 세계에 고르게 내리지 않았다. 세테라가 풍요를 누리는 동안, 마젤란에게 돌아온 것은 기근과 황폐의 저주였다. 자신의 행성이 말라 가는 것을 지켜본 베텔기우스는 그 불균형 앞에서 격렬한 분노에 사로잡혔고, 마침내 복수를 결심했다. 그 복수의 방법은 하나였다 — 결코 열어서는 안 될 것을 여는 것.",
     ],
-    entity_ids: ["ENT-BETELGEUSE", "ENT-MAGELLAN", "ENT-CHRONOTECTOR", "ENT-SENTINEL"],
+    entity_ids: [
+      "ENT-BETELGEUSE",
+      "ENT-MAGELLAN",
+      "ENT-CHRONOTECTOR",
+      "ENT-SENTINEL",
+      "ENT-CHRONOS",
+      "ENT-SETERA",
+    ],
   },
   {
     id: "unleashing",

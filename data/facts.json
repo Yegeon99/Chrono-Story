@@ -635,7 +635,7 @@
     "superseded_by": null,
     "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": "Key timeline anchor — gate demo FAIL scenario contradicts this ('ten years'). Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
+    "notes": "Key timeline anchor. The gate demo FAIL scenario contradicts this ('ten years'). Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
   },
   {
     "id": "FACT-0025",
@@ -1977,7 +1977,7 @@
     "superseded_by": null,
     "confidence": "probable",
     "first_seen_kb_version": "2026.08",
-    "notes": "Foreshadowing seed — the nature of these secrets is unresolved."
+    "notes": "Foreshadowing seed. The nature of these secrets is unresolved."
   },
   {
     "id": "FACT-0080",
@@ -2439,7 +2439,7 @@
     "superseded_by": null,
     "confidence": "speculative",
     "first_seen_kb_version": "2026.08",
-    "notes": "Naming-conflict evidence case #1 (pairs with FACT-0100). Source-URL history: the original citation was Fextralife's dedicated character page, which by 2026-08 had been corrected to Etheldreda and now 404s at /Etheldrena. The Fextralife Factions page still lists the Vanguard roster as \"Alexios, Baldur, Etheldrena, and Kaya\", so the spelling survives inside the same wiki — the site now contradicts itself. Citation moved to /Factions on 2026-08-06; the conflict is live, not superseded."
+    "notes": "Naming-conflict evidence case #1 (pairs with FACT-0100). Source-URL history: the original citation was Fextralife's dedicated character page, which by 2026-08 had been corrected to Etheldreda and now 404s at /Etheldrena. The Fextralife Factions page still lists the Vanguard roster as \"Alexios, Baldur, Etheldrena, and Kaya\", so the spelling survives inside the same wiki, and the site now contradicts itself. Citation moved to /Factions on 2026-08-06; the conflict is live, not superseded."
   },
   {
     "id": "FACT-0102",
@@ -3397,8 +3397,8 @@
       "ENT-BETELGEUSE"
     ],
     "claim_type": "timeline",
-    "statement_ko": "크로노스의 축복은 열두 세계에 고르게 내리지 않았다 — 세테라가 풍요를 누리는 동안 마젤란은 기근과 황폐의 저주를 받았고, 이에 분노한 마젤란의 센티넬 베텔기우스가 복수를 도모했다.",
-    "statement_en": "Chronos's blessing fell unevenly across the twelve worlds — Setera enjoyed abundance while Magellan was cursed with famine and desolation, and Magellan's Sentinel Betelgeuse, enraged by this, set out for vengeance.",
+    "statement_ko": "크로노스의 축복은 열두 세계에 고르게 내리지 않았다. 세테라가 풍요를 누리는 동안 마젤란은 기근과 황폐의 저주를 받았고, 이에 분노한 마젤란의 센티넬 베텔기우스가 복수를 도모했다.",
+    "statement_en": "Chronos's blessing fell unevenly across the twelve worlds. Setera enjoyed abundance while Magellan was cursed with famine and desolation, and Magellan's Sentinel Betelgeuse, enraged by this, set out for vengeance.",
     "sources": [
       {
         "url": "https://chrono-odyssey.fandom.com/wiki/Betelgeuse",

@@ -75,8 +75,10 @@ export function ChronicleClient({
                   height={1080}
                   sizes="(min-width: 1024px) 896px, 100vw"
                   className="h-auto w-full"
+                  // Only ch.1 is above the fold; eager-loading all seven cost
+                  // mobile LCP several seconds for images nobody had scrolled to.
                   priority={ci === 0}
-                  loading="eager"
+                  loading={ci === 0 ? "eager" : "lazy"}
                 />
               </figure>
             )}

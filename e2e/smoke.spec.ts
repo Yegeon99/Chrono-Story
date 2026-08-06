@@ -78,6 +78,14 @@ test("knowledge explorer: graph, intro path, list fallback", async ({ page }) =>
   // list view still works
   await page.getByRole("tab", { name: "리스트" }).click();
   await expect(page.getByPlaceholder("이름·영문·별칭 검색")).toBeVisible();
+
+  // the conflict callout names the affected entity and jumps to its facts
+  await expect(page.getByText(/표기·설정 충돌 팩트 \d+건/)).toBeVisible();
+  await page
+    .getByRole("button", { name: /⚠ .*충돌 팩트 \d+건/ })
+    .first()
+    .click();
+  await expect(page.getByText("FACT-0100").first()).toBeVisible();
 });
 
 test("reports page renders findings with evidence", async ({ page }) => {

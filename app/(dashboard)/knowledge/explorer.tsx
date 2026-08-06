@@ -67,8 +67,61 @@ export function KnowledgeExplorer({
   const selected = selectedId ? entityById.get(selectedId) : undefined;
   const step = INTRO_STEPS[introStep];
 
+  // The sidebar's 표기·설정 충돌 gauge lands here, so the page must answer
+  // "which facts, on which entity" without the reader having to guess.
+  const conflictedFacts = useMemo(
+    () => facts.filter((f) => f.status === "conflicted"),
+    [facts]
+  );
+  const conflictedEntityIds = useMemo(
+    () => [...new Set(conflictedFacts.flatMap((f) => f.entity_ids))],
+    [conflictedFacts]
+  );
+
   return (
     <div>
+      {/* ---- conflict callout ----------------------------------------- */}
+      {conflictedFacts.length > 0 && (
+        <section
+          aria-label="표기·설정 충돌"
+          className="mb-4 rounded-md border border-ember/40 bg-ink-900 px-4 py-3"
+        >
+          <p className="eyebrow mb-1 text-ember">
+            ⚠ 표기·설정 충돌 팩트 {conflictedFacts.length}건
+          </p>
+          <p className="text-sm text-parchment-dim">
+            충돌 상태의 팩트를 보유한 엔티티입니다. 선택하면 해당 팩트가 붉은
+            테두리와 ⚠ 표시로 나타납니다.
+          </p>
+          <div className="mt-2.5 flex flex-wrap gap-1.5">
+            {conflictedEntityIds.map((id) => {
+              const e = entityById.get(id);
+              if (!e) return null;
+              const n = conflictedFacts.filter((f) =>
+                f.entity_ids.includes(id)
+              ).length;
+              return (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setSelectedId(id)}
+                  className={`rounded-full border px-3 py-1 text-xs transition-colors ${
+                    selectedId === id
+                      ? "border-ember/70 bg-ink-800 text-ember"
+                      : "border-ember/40 bg-ink-950/50 text-parchment hover:border-ember/70"
+                  }`}
+                >
+                  ⚠ {e.name_ko}
+                  <span className="ml-1.5 text-parchment-dim">
+                    충돌 팩트 {n}건
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
       {/* ---- controls ------------------------------------------------- */}
       <div className="mb-4 flex flex-wrap items-center gap-2">
         <div
@@ -255,6 +308,11 @@ export function KnowledgeExplorer({
                       }`}
                     >
                       <span className="min-w-0">
+                        {conflictedEntityIds.includes(e.id) && (
+                          <span className="mr-1 text-ember" aria-hidden>
+                            ⚠
+                          </span>
+                        )}
                         <span
                           className={`text-sm ${e.status === "deprecated" ? "text-parchment-dim" : ""}`}
                         >

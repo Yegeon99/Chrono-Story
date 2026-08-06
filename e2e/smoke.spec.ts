@@ -58,7 +58,7 @@ test("QA dashboard leads with gate and reports", async ({ page }) => {
   const watch = page.getByTestId("topbar-watch");
   await expect(watch).toHaveAttribute("href", "/reports");
   await expect(watch).toContainText(/감시 중/);
-  await expect(watch).toContainText(/표기 충돌 \d+건|충돌 없음/);
+  await expect(watch).toContainText(/표기·설정 충돌 \d+건|충돌 없음/);
 });
 
 test("knowledge explorer: graph, intro path, list fallback", async ({ page }) => {

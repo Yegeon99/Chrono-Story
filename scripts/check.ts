@@ -1,4 +1,4 @@
-// Consistency check engine — C1..C5 (DIRECTIVE Phase 2).
+// Consistency check engine: C1..C5 (DIRECTIVE Phase 2).
 // Rule-based candidate selection first, LLM judgment second (cost control).
 // Results are written to data/reports/<kb_version>.json and cached per KB version.
 //
@@ -42,7 +42,7 @@ const force = process.argv.includes("--force");
 // parse-errors for this KB version and silently mask the real check results.
 if (!process.env.ANTHROPIC_API_KEY) {
   console.error(
-    "ANTHROPIC_API_KEY is not set — aborting without writing a report. Add it to .env.local."
+    "ANTHROPIC_API_KEY is not set. Aborting without writing a report. Add it to .env.local."
   );
   process.exit(1);
 }
@@ -78,7 +78,7 @@ function levenshtein(a: string, b: string): number {
 }
 
 // ---------------------------------------------------------------------------
-// C3 — naming consistency: rule-based candidates -> LLM same-subject judgment
+// C3, naming consistency: rule-based candidates -> LLM same-subject judgment
 // ---------------------------------------------------------------------------
 async function runC3(): Promise<Finding[]> {
   type Candidate = { entity_id: string; variants: string[]; fact_ids: string[] };
@@ -151,7 +151,7 @@ ${candidates
 }
 
 // ---------------------------------------------------------------------------
-// C1 — timeline conflicts: all timeline facts in one LLM pass
+// C1, timeline conflicts: all timeline facts in one LLM pass
 // ---------------------------------------------------------------------------
 async function runC1(): Promise<Finding[]> {
   const timelineFacts = facts.filter((f) => f.claim_type === "timeline");
@@ -174,7 +174,7 @@ ${timelineFacts.map(compactFact).join("\n")}
 }
 
 // ---------------------------------------------------------------------------
-// C2 — lore contradictions: per-entity fact groups, batched
+// C2, lore contradictions: per-entity fact groups, batched
 // ---------------------------------------------------------------------------
 async function runC2(): Promise<Finding[]> {
   const groups: { entity: string; facts: Fact[] }[] = [];
@@ -222,12 +222,12 @@ ${g.facts.map(compactFact).join("\n")}`
 }
 
 // ---------------------------------------------------------------------------
-// C4 — tone violations: rule-based pattern scan over statements (KB self-check)
+// C4, tone violations: rule-based pattern scan over statements (KB self-check)
 // ---------------------------------------------------------------------------
 function runC4(): Finding[] {
   const findings: Finding[] = [];
   for (const f of facts) {
-    // tone-canon facts describe the rules themselves — scanning them is a false positive
+    // tone-canon facts describe the rules themselves, so scanning them is a false positive
     if (f.claim_type === "tone-canon") continue;
     for (const bp of toneCanon.banned_patterns) {
       const re = new RegExp(bp.pattern);
@@ -246,7 +246,7 @@ function runC4(): Finding[] {
 }
 
 // ---------------------------------------------------------------------------
-// C5 — unresolved foreshadowing: LLM extraction vs existing ledger
+// C5, unresolved foreshadowing: LLM extraction vs existing ledger
 // ---------------------------------------------------------------------------
 async function runC5(): Promise<Finding[]> {
   const loreFacts = facts.filter(
@@ -254,7 +254,7 @@ async function runC5(): Promise<Finding[]> {
   );
   const user = `다음은 세계관 팩트와 현재 복선 원장 목록이다. 팩트에서 '언급됐으나 회수되지 않은 설정(복선)' 후보를 추출하고, 원장에 아직 없는 것만 보고하라.
 
-## 현재 복선 원장 (이미 등록됨 — 중복 보고 금지)
+## 현재 복선 원장 (이미 등록됨, 중복 보고 금지)
 ${foreshadowing.map((fs_) => `- ${fs_.id}: ${fs_.title_ko}`).join("\n")}
 
 ## 팩트

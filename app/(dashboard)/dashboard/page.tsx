@@ -100,8 +100,8 @@ export default function DashboardPage() {
             <h2 className="font-display text-xl font-bold">검사 리포트</h2>
             <p className="mt-2 text-sm text-parchment-dim">
               연표·설정·표기·톤·복선 검사가 탐지한{" "}
-              <b className="text-amber-warn">{checkReports.length}건</b>의 발견
-              — 실존 표기 충돌과 설정 개편 이력이 근거 팩트와 함께 기록되어
+              <b className="text-amber-warn">{checkReports.length}건</b>의 발견.
+              실존 표기 충돌과 설정 개편 이력이 근거 팩트와 함께 기록되어
               있습니다.
             </p>
             <p className="mt-3 text-xs text-amber-warn opacity-70 transition-opacity group-hover:opacity-100">
@@ -132,7 +132,7 @@ export default function DashboardPage() {
         </SectionHeading>
         <div className="panel px-5 py-4">
           <p className="mb-3 text-xs leading-relaxed text-parchment-dim">
-            신뢰도 분포를 숨기지 않고 그대로 보여줍니다 — 확정으로 승급하려면
+            신뢰도 분포를 숨기지 않고 그대로 보여줍니다. 확정으로 승급하려면
             서로 다른 공식 계열 출처 2개의 교차 확인이 필요하며, 이 규칙은
             린트로 강제됩니다.
           </p>

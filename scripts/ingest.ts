@@ -202,7 +202,7 @@ ${factList}
 ${extraction.candidates.map((c) => `- ${c.statement_ko}`).join("\n")}
 
 ## 미해소 복선 목록
-${openForeshadowing.map((f) => `${f.id}: ${f.title_ko} — ${f.summary_ko}`).join("\n")}
+${openForeshadowing.map((f) => `${f.id}: ${f.title_ko}: ${f.summary_ko}`).join("\n")}
 
 신규 소스가 실질적으로 다시 언급하거나 진전시키는 복선만 보고하라. 막연한 연상은 제외한다.
 출력 JSON: {"resurfaced":[{"foreshadowing_id":"FS-...","reason_ko":"..."}]}
@@ -218,7 +218,7 @@ ${openForeshadowing.map((f) => `${f.id}: ${f.title_ko} — ${f.summary_ko}`).joi
       item.status = "resurfaced";
       item.history.push({
         date: today,
-        event: `재부상 — ${label}: ${r.reason_ko}`,
+        event: `재부상, ${label}: ${r.reason_ko}`,
         source_url: url,
       });
       resurfacedIds.push(item.id);
@@ -264,7 +264,7 @@ ${openForeshadowing.map((f) => `${f.id}: ${f.title_ko} — ${f.summary_ko}`).joi
   write(path.join("reports", `change-${newVersion}.json`), changeReport);
 
   const md = [
-    `# 변경 감지 리포트 — KB ${newVersion}`,
+    `# 변경 감지 리포트, KB ${newVersion}`,
     ``,
     `- 소스: [${label}](${url}) (${tier})`,
     `- 생성: ${new Date().toISOString()}`,

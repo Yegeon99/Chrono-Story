@@ -1,5 +1,5 @@
 // Server-only Claude API client (DIRECTIVE §6).
-// Never import from client components — used by server routes and scripts.
+// Never import from client components. Used by server routes and scripts.
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 
@@ -41,7 +41,7 @@ function stripFences(text: string): string {
 /**
  * Ask Claude for a JSON answer validated by a zod schema.
  * On parse failure, retries once with a format-correction instruction.
- * Throws after the second failure — callers record it as a parse-error, never swallow.
+ * Throws after the second failure; callers record it as a parse-error, never swallow.
  */
 export async function askJson<T>(opts: {
   system: string;

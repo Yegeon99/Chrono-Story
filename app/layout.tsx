@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
 
-// Display face: Gowun Batang — a Korean myeongjo with calligraphic stroke
+// Display face: Gowun Batang, a Korean myeongjo with calligraphic stroke
 // terminals. Chosen over a neutral system serif because titles and the verdict
 // seal carry the "고문서" half of the concept (DIRECTIVE §5).
 //
@@ -15,7 +15,7 @@ import "./globals.css";
 // (see scripts/subset-display-font.ts; regenerate with `pnpm subset-font`
 // after adding entities, chapters or headings). preload stays off: with only
 // two files left, demand-loading measured the same LCP as preloading while
-// keeping the 400 face — which only the empty stamp bed on /gate uses — off
+// keeping the 400 face (which only the empty stamp bed on /gate uses) off
 // every other route's critical path.
 const gowun = localFont({
   variable: "--font-gowun",
@@ -49,14 +49,14 @@ const SITE_DESCRIPTION =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Lore Guard — 세계관 정합성 QA",
+    default: "Lore Guard, 세계관 정합성 QA",
     template: "%s · Lore Guard",
   },
   description: SITE_DESCRIPTION,
   openGraph: {
     type: "website",
     siteName: "Lore Guard",
-    title: "Lore Guard — 세계관 정합성 QA (내러티브 CI)",
+    title: "Lore Guard, 세계관 정합성 QA (내러티브 CI)",
     description: SITE_DESCRIPTION,
     locale: "ko_KR",
     images: [
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Lore Guard — 크로노 오디세이 내러티브 CI",
+        alt: "Lore Guard, 크로노 오디세이 내러티브 CI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lore Guard — 세계관 정합성 QA (내러티브 CI)",
+    title: "Lore Guard, 세계관 정합성 QA (내러티브 CI)",
     description: SITE_DESCRIPTION,
     images: ["/og.png"],
   },

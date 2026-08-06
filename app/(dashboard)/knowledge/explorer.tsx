@@ -111,7 +111,7 @@ export function KnowledgeExplorer({
         </button>
       </div>
 
-      {/* ---- intro path (secondary to QA — an on-ramp, not the product) */}
+      {/* ---- intro path (secondary to QA: an on-ramp, not the product) */}
       {introOpen && (
         <section
           aria-label="세계관 입문 경로"
@@ -130,7 +130,7 @@ export function KnowledgeExplorer({
                     : "border-ink-700 text-parchment-dim hover:text-parchment"
                 }`}
               >
-                {i + 1}. {s.title.split(" — ")[0]}
+                {i + 1}. {s.title.split(", ")[0]}
               </button>
             ))}
           </div>
@@ -183,7 +183,7 @@ export function KnowledgeExplorer({
                 onClick={() => setIntroOpen(false)}
                 className="rounded-md border border-rift-teal/50 px-3 py-1 text-xs text-rift-teal transition-colors hover:bg-ink-800"
               >
-                입문 완료 — 자유롭게 탐색하기
+                입문 완료, 자유롭게 탐색하기
               </button>
             )}
           </div>

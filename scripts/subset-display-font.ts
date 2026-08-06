@@ -15,12 +15,12 @@
 //   - entities.json name_ko / name_en / aliases  (knowledge heading, lore popover)
 //   - foreshadowing.json title_ko                (ledger detail heading)
 //   - `title:` fields in lib/chronicle.ts and lib/intro-path.ts
-// Over-inclusion is safe (a few unused outlines); under-inclusion is not — a
+// Over-inclusion is safe (a few unused outlines); under-inclusion is not: a
 // missing glyph silently falls back to Batang/serif mid-heading.
 //
 // Sources are fetched from the upstream OFL release and cached outside the
 // repo; only the subsets and the license are committed.
-// Run: pnpm subset-font   (then rebuild — next/font/local picks the files up)
+// Run: pnpm subset-font   (then rebuild; next/font/local picks the files up)
 import fs from "node:fs";
 import path from "node:path";
 import subsetFont from "subset-font";
@@ -54,12 +54,13 @@ const WEIGHTS = [
 
 // Always keep these regardless of what the scan finds: the Latin/digit core the
 // seal and the numeric readouts depend on, plus the punctuation the layout
-// leans on (middot separators, em dashes, arrows, status marks).
+// leans on (middot separators, arrows, status marks). Dashes are deliberately
+// absent: the copy style bans em/en dashes, so shipping their outlines is waste.
 const ALWAYS = [
   " !\"#$%&'()*+,-./0123456789:;<=>?@",
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`",
   "abcdefghijklmnopqrstuvwxyz{|}~",
-  "·—–…‘’“”「」『』〈〉《》→←↑↓✓⚠◆●○×°※",
+  "·…‘’“”「」『』〈〉《》→←↑↓✓⚠◆●○×°※",
 ].join("");
 
 function walk(dir: string, out: string[] = []): string[] {
@@ -97,7 +98,7 @@ function collectGlyphs(): string {
   ) as { title_ko: string }[];
   for (const f of foreshadowing) add(f.title_ko);
 
-  // Only the `title:` fields — chapter bodies and step descriptions render in
+  // Only the `title:` fields. Chapter bodies and step descriptions render in
   // the sans face and would drag hundreds of unused outlines into the subset.
   for (const lib of ["chronicle.ts", "intro-path.ts"]) {
     const src = fs.readFileSync(path.join(ROOT, "lib", lib), "utf-8");

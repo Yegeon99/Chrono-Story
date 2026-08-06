@@ -3,7 +3,7 @@ import { z } from "zod";
 // ---------------------------------------------------------------------------
 // Lore Guard data schemas (PRD §4 F1, DIRECTIVE §3)
 // All KB JSON files are validated against these schemas at load time.
-// Validation failure is treated as a build failure — the tool CIs its own data.
+// Validation failure is treated as a build failure. The tool CIs its own data.
 // ---------------------------------------------------------------------------
 
 export const ENTITY_TYPES = [

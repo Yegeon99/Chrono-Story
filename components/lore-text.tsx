@@ -1,7 +1,7 @@
 "use client";
 
 // Auto-linking lore text: scans prose against entities.json (name_ko / name_en /
-// aliases — nothing hardcoded) and turns matches into clickable terms with a
+// aliases, nothing hardcoded) and turns matches into clickable terms with a
 // definition popover. First occurrence per chapter is linked; visited terms are
 // visually distinguished and persisted in localStorage.
 import { useMemo, useSyncExternalStore } from "react";
@@ -38,7 +38,7 @@ export function useLoreMatcher(entities: Entity[]) {
 }
 
 /** Splits a paragraph into text/term segments. `linkedInScope` dedupes links
- *  across a chapter — only the first occurrence of an entity becomes a term. */
+ *  across a chapter, so only the first occurrence of an entity becomes a term. */
 export function segmentText(
   text: string,
   matcher: ReturnType<typeof useLoreMatcher>,
@@ -100,7 +100,7 @@ export function useVisitedTerms() {
     try {
       localStorage.setItem(VISITED_KEY, JSON.stringify([...next]));
     } catch {
-      // storage full/blocked — visual state still works for the session
+      // storage full/blocked; visual state still works for the session
     }
     visitedListeners.forEach((l) => l());
   };

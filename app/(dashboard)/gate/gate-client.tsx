@@ -70,7 +70,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
         body: JSON.stringify({ text }),
         signal: ac.signal,
       });
-      // Throttled: guidance, not failure — the demo chips still give a verdict.
+      // Throttled: guidance, not failure. The demo chips still give a verdict.
       if (res.status === 429) {
         const body = await res.json().catch(() => null);
         setThrottleNotice(

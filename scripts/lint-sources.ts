@@ -1,4 +1,4 @@
-// Source hygiene linter — static checks on fact sources (no LLM, CI-safe).
+// Source hygiene linter: static checks on fact sources (no LLM, CI-safe).
 // Enforces the honesty contract behind confidence levels:
 //   - every source URL is https and its host is registered in kb-meta.json
 //   - the tier stamped on a fact source matches the registry tier for that host
@@ -22,7 +22,7 @@ const registryTierByHost = new Map<string, string>(
 );
 
 const errors: string[] = [];
-// Local calendar date — toISOString() is UTC and flags same-day KST captures.
+// Local calendar date; toISOString() is UTC and flags same-day KST captures.
 const now = new Date();
 const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
 
@@ -79,5 +79,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `Source lint OK — ${facts.length} facts, ${registryTierByHost.size} registered hosts`
+  `Source lint OK, ${facts.length} facts, ${registryTierByHost.size} registered hosts`
 );

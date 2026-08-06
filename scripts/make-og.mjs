@@ -1,4 +1,4 @@
-// Generates public/og.png (1200x630) from design-system tokens only —
+// Generates public/og.png (1200x630) from design-system tokens only,
 // no game art (DIRECTIVE §0.4). Renders an inline HTML card with the
 // archive-seal sigil and screenshots it via Playwright.
 import { chromium } from "@playwright/test";
@@ -79,7 +79,7 @@ const html = `<!doctype html>
     </div>
   </div>
   <div class="foot">
-    <span>ENTITY — FACT — RELATION — SOURCE</span>
+    <span>ENTITY · FACT · RELATION · SOURCE</span>
     <span>비공식 팬 포트폴리오</span>
   </div>
 </body>

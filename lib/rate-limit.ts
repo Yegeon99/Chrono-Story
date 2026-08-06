@@ -1,6 +1,6 @@
 // Sliding-window per-IP rate limiter for the paid LLM route (/api/gate).
 //
-// LIMITATION — Vercel serverless: this Map lives in one lambda instance's
+// LIMITATION (Vercel serverless): this Map lives in one lambda instance's
 // memory. Vercel runs several concurrent instances and recycles idle ones, so
 // the counter is per-instance and resets on every cold start; the effective
 // ceiling is `limit` per instance per window, not a global quota. That is
@@ -53,7 +53,7 @@ export function checkRateLimit(
 }
 
 // Vercel always sets x-forwarded-for; local dev has no proxy header, so every
-// local caller shares one bucket (fine — it is a single-developer machine).
+// local caller shares one bucket (fine, it is a single-developer machine).
 export function clientIp(req: Request): string {
   const forwarded = req.headers.get("x-forwarded-for");
   if (forwarded) return forwarded.split(",")[0]!.trim();

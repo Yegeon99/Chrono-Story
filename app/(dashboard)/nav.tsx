@@ -11,7 +11,7 @@ type NavItem = {
   icon: React.ReactNode;
 };
 
-// 16px stroke glyphs, drawn inline — the project bans heavy UI dependencies
+// 16px stroke glyphs, drawn inline; the project bans heavy UI dependencies
 // (DIRECTIVE §1) and seven icons do not justify an icon package.
 const S = {
   scroll: (
@@ -131,7 +131,7 @@ export function Nav() {
   const activeRef = useRef<HTMLAnchorElement>(null);
 
   // On mobile the drawer collapses to a horizontal strip, where the current
-  // screen can sit off-view. Centre it — but only when the strip really does
+  // screen can sit off-view. Centre it, but only when the strip really does
   // overflow, so the desktop column is never scrolled.
   useEffect(() => {
     const scroller = scrollerRef.current;

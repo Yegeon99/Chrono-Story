@@ -1,7 +1,7 @@
 // Re-encodes the chronicle chapter illustrations in place under a size budget.
 //
 // The chronicle renders these full-bleed at max-w-4xl (896 CSS px), so anything
-// past ~1792 physical px is wasted even on a 2x display — and mobile is the
+// past ~1792 physical px is wasted even on a 2x display, and mobile is the
 // screen that actually pays for the bytes. next/image derives its AVIF/WebP
 // variants from these files, so a smaller, cleaner source shrinks every variant.
 // Quality steps down (and, as a last resort, width) until the file fits BUDGET.

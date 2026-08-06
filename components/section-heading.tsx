@@ -1,4 +1,4 @@
-// Section heading inside a page: display title closed by a fading hairline —
+// Section heading inside a page: display title closed by a fading hairline,
 // the same grammar the sidebar uses for its group headers, one level down.
 export function SectionHeading({
   children,

@@ -40,7 +40,7 @@ export default function ChroniclePage() {
         title="연대기"
         lede={
           <>
-            열두 세계의 창조부터 1년 회귀까지 — 크로노 오디세이의 이야기를
+            열두 세계의 창조부터 1년 회귀까지, 크로노 오디세이의 이야기를
             일곱 개의 장으로 담았습니다.{" "}
             <span className="text-gilt">금색 용어</span>를 클릭하면 정의가
             열리고, 각 장 말미의 칩은 그 대목에 얽힌 검증 이슈로 이어집니다.

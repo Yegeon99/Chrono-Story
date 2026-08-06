@@ -92,7 +92,7 @@ export default function DashboardLayout({
           <Nav />
         </div>
 
-        {/* Instrument dock — pinned to the foot of the drawer. */}
+        {/* Instrument dock, pinned to the foot of the drawer. */}
         <div className="hidden shrink-0 border-t border-ink-700/70 px-5 py-4 md:block">
           <p className="eyebrow mb-2 flex items-center gap-2">
             <span className="inline-block h-2 w-px shrink-0 bg-gilt" aria-hidden />
@@ -104,7 +104,7 @@ export default function DashboardLayout({
                 <Link
                   href={g.href}
                   className="gauge-row"
-                  title={`${g.label} ${g.value}건 — 자세히 보기`}
+                  title={`${g.label} ${g.value}건, 자세히 보기`}
                 >
                   <span className="gauge-label">{g.label}</span>
                   <span className="gauge-leader" aria-hidden />

@@ -1,4 +1,4 @@
-# Narrative CI — the repository guards its own knowledge base.
+# Narrative CI: the repository guards its own knowledge base.
 # LLM-backed checks (C1-C5, gate judgments) are intentionally excluded here:
 # they cost API tokens and their outputs are cached in data/reports/.
 name: CI

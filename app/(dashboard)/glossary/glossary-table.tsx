@@ -181,7 +181,7 @@ export function GlossaryTable({ entries }: { entries: GlossaryEntry[] }) {
                 </td>
                 <td className="px-3 py-2.5 font-mono text-xs whitespace-nowrap">{e.en}</td>
                 <td className="px-3 py-2.5 font-mono text-xs text-amber-warn whitespace-nowrap">
-                  {e.variants.join(" / ") || "—"}
+                  {e.variants.join(" / ") || "없음"}
                 </td>
                 <td className="px-3 py-2.5 whitespace-nowrap text-xs text-parchment-dim">
                   {ENTITY_TYPE_LABELS[e.type]}

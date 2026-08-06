@@ -17,7 +17,7 @@ test("chronicle: chapters, term popover, QA chips", async ({ page }) => {
   ).toHaveCount(0);
 
   // auto-linked term opens a definition popover with a KB deep link
-  // (크로노스 is now linked in ch.1 and ch.2 — take the first occurrence)
+  // (크로노스 is now linked in ch.1 and ch.2, so take the first occurrence)
   await page.getByRole("button", { name: "크로노스", exact: true }).first().click();
   const popover = page.getByRole("dialog", { name: "크로노스 정의" });
   await expect(popover).toBeVisible();
@@ -63,7 +63,7 @@ test("knowledge explorer: graph, intro path, list fallback", async ({ page }) =>
 
   // intro path opens and navigates
   await page.getByRole("button", { name: /세계관 입문 경로/ }).click();
-  await expect(page.getByText("주요 인물 — 시간을 짊어진 자들")).toBeVisible();
+  await expect(page.getByText("주요 인물, 시간을 짊어진 자들")).toBeVisible();
   await page.getByRole("button", { name: "다음 →" }).click();
   await expect(page.getByText(/세력 지형/).first()).toBeVisible();
 
@@ -116,7 +116,7 @@ test("ledger kanban shows resurfaced item", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "이력 타임라인" })
   ).toBeVisible();
-  await expect(page.getByText(/재부상 — 5차 개발자 노트/).first()).toBeVisible();
+  await expect(page.getByText(/재부상, 5차 개발자 노트/).first()).toBeVisible();
 });
 
 // Keep this last in the file: it deliberately exhausts the gate's per-IP

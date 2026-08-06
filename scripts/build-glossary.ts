@@ -1,4 +1,4 @@
-// Glossary builder — derives data/glossary.json from naming facts (DIRECTIVE Phase 3).
+// Glossary builder: derives data/glossary.json from naming facts (DIRECTIVE Phase 3).
 // Conflicted spellings are kept side by side and flagged, never hidden.
 import fs from "node:fs";
 import path from "node:path";

@@ -1,6 +1,6 @@
 "use client";
 
-// Relation graph — self-rendered SVG + d3-force for layout only (DIRECTIVE §1).
+// Relation graph: self-rendered SVG + d3-force for layout only (DIRECTIVE §1).
 // ~53 nodes: no heavy graph library needed. Falls back to list view on mobile.
 import { useMemo } from "react";
 import {
@@ -80,7 +80,7 @@ export function RelationGraph({
       .stop();
     for (let i = 0; i < 300; i++) sim.tick();
     // Round positions so server- and client-rendered SVG attribute strings are
-    // byte-identical — raw floats can differ in the last bits across V8
+    // byte-identical, since raw floats can differ in the last bits across V8
     // versions and would trip React hydration.
     for (const n of nodes) {
       n.x = Math.round((n.x ?? 0) * 10) / 10;
@@ -135,7 +135,7 @@ export function RelationGraph({
               strokeWidth={active ? 1.6 : 1}
               strokeOpacity={selectedId && !active ? 0.35 : 1}
             >
-              <title>{`${s.name} — ${RELATION_TYPE_LABELS[l.relType] ?? l.relType} → ${t.name}`}</title>
+              <title>{`${s.name} → ${t.name} (${RELATION_TYPE_LABELS[l.relType] ?? l.relType})`}</title>
             </line>
           );
         })}

@@ -1,4 +1,4 @@
-// Verification gate endpoint — NDJSON streaming of pipeline stages.
+// Verification gate endpoint: NDJSON streaming of pipeline stages.
 // Server-only: the Anthropic key never leaves this route.
 import { judgeText } from "@/lib/gate";
 import {

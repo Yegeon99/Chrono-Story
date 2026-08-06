@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------------
-   Lore Guard design system — "고문서 보관소의 계기판"
+   Lore Guard design system: "고문서 보관소의 계기판"
    Dark-only by design (DIRECTIVE §5). No light mode.
 
-   The palette in §5 is fixed; this file deepens it rather than replacing it —
+   The palette in §5 is fixed; this file deepens it rather than replacing it;
    intermediate ink steps, two gilt derivatives, and a set of primitives
    (rules, corner marks, grain, plates) that give the archive physical weight
    while the data surfaces stay instrument-clear.
@@ -15,7 +15,7 @@
 --------------------------------------------------------------------------- */
 
 @theme {
-  /* Surfaces — DIRECTIVE §5 values, plus intermediate steps for layering */
+  /* Surfaces: DIRECTIVE §5 values, plus intermediate steps for layering */
   --color-ink-950: #0c0e13;
   --color-ink-900: #12151d;
   --color-ink-850: #161a24;
@@ -39,14 +39,14 @@
 
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Segoe UI",
     "Malgun Gothic", sans-serif;
-  /* next/font bakes the fallback chain (…, Batang, serif) into --font-gowun —
+  /* next/font bakes the fallback chain (…, Batang, serif) into --font-gowun;
      see the `fallback` option in app/layout.tsx. */
   --font-display: var(--font-gowun);
   --font-mono: var(--font-jbmono), "JetBrains Mono", ui-monospace, monospace;
 
   --text-xs: 0.75rem; /* 12 */
   --text-sm: 0.8125rem; /* 13 */
-  --text-base: 0.9375rem; /* 15 — 기준 */
+  --text-base: 0.9375rem; /* 15, 기준 */
   --text-lg: 1.125rem; /* 18 */
   --text-xl: 1.5rem; /* 24 */
   --text-2xl: 2.125rem; /* 34 */
@@ -54,7 +54,7 @@
 }
 
 @layer base {
-  /* Shared grain plate — one fractal-noise tile reused by every paper surface.
+  /* Shared grain plate: one fractal-noise tile reused by every paper surface.
      Held in a variable so the encoded SVG appears exactly once. */
   :root {
     --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='0.55'/%3E%3C/svg%3E");
@@ -103,7 +103,7 @@
     word-break: normal;
   }
 
-  /* Focus visibility — gilt ring, keyboard-first (DIRECTIVE §5 품질 플로어) */
+  /* Focus visibility: gilt ring, keyboard-first (DIRECTIVE §5 품질 플로어) */
   :focus-visible {
     outline: 2px solid var(--color-gilt);
     outline-offset: 2px;
@@ -117,7 +117,7 @@
 
 @layer components {
   /* -----------------------------------------------------------------------
-     Archive backdrop — deep ink, two distant light sources, and a paper grain
+     Archive backdrop: deep ink, two distant light sources, and a paper grain
      so empty regions read as a surface rather than a void.
   ----------------------------------------------------------------------- */
   .bg-archive {
@@ -140,7 +140,7 @@
     background-attachment: fixed;
   }
 
-  /* Grain film over the whole shell. Kept under 2% — at archive scale it should
+  /* Grain film over the whole shell. Kept under 2%; at archive scale it should
      register as surface, never as noise. pointer-events:none keeps it inert. */
   .bg-archive::before {
     content: "";
@@ -154,7 +154,7 @@
   }
 
   /* -----------------------------------------------------------------------
-     Panel — the standard card surface. Parchment sheen along the top edge,
+     Panel: the standard card surface. Parchment sheen along the top edge,
      a hairline inner highlight, and a faint grain so cards feel like plates
      pinned to the archive wall rather than flat rectangles.
   ----------------------------------------------------------------------- */
@@ -204,7 +204,7 @@
     transform: translateY(-1px);
   }
 
-  /* Feature plates get gilt corner ticks — the archivist's registration marks. */
+  /* Feature plates get gilt corner ticks, the archivist's registration marks. */
   .plate-marks::after {
     content: "";
     position: absolute;
@@ -236,7 +236,7 @@
   }
 
   /* -----------------------------------------------------------------------
-     Rules — the archive's structural grammar.
+     Rules: the archive's structural grammar.
   ----------------------------------------------------------------------- */
 
   /* Short gilt hairline used under page titles */
@@ -260,13 +260,13 @@
     width: 3.5rem;
   }
 
-  /* A hairline that fades to nothing — used to close section headings. */
+  /* A hairline that fades to nothing, used to close section headings. */
   .rule-fade {
     height: 1px;
     background: linear-gradient(90deg, var(--color-ink-600), transparent);
   }
 
-  /* Double rule under the wordmark — a bound-volume cue. */
+  /* Double rule under the wordmark: a bound-volume cue. */
   .rule-double {
     height: 3px;
     background:
@@ -281,7 +281,7 @@
      Typography primitives
   ----------------------------------------------------------------------- */
 
-  /* Monospace eyebrow: `FACT-0017 · timeline · confirmed` — data's identity. */
+  /* Monospace eyebrow: `FACT-0017 · timeline · confirmed`, data's identity. */
   .eyebrow {
     font-family: var(--font-mono);
     font-size: var(--text-xs);
@@ -295,7 +295,7 @@
     line-height: 1.28;
   }
 
-  /* Numeric readouts on the instrument panel — tabular so columns don't jitter. */
+  /* Numeric readouts on the instrument panel: tabular so columns don't jitter. */
   .readout {
     font-family: var(--font-display);
     font-variant-numeric: tabular-nums;
@@ -303,7 +303,7 @@
   }
 
   /* -----------------------------------------------------------------------
-     Sidebar navigation — the archive's index card drawer.
+     Sidebar navigation: the archive's index card drawer.
   ----------------------------------------------------------------------- */
   .nav-group-head {
     display: flex;
@@ -396,7 +396,7 @@
   }
 
   /* -----------------------------------------------------------------------
-     Gauge readouts — the sidebar's instrument panel. A bare number in a nav
+     Gauge readouts: the sidebar's instrument panel. A bare number in a nav
      reads as an unread count; these are measurements, so each one carries its
      own label and a ledger leader line to its value.
   ----------------------------------------------------------------------- */
@@ -551,7 +551,7 @@
     line-height: 1.5;
   }
 
-  /* Status dot with a soft halo — used in the sidebar dock and topbar. */
+  /* Status dot with a soft halo, used in the sidebar dock and topbar. */
   .status-dot {
     display: inline-block;
     width: 0.4375rem;
@@ -566,7 +566,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     Signature moment (DIRECTIVE §5): the verdict seal — stamped, not
+     Signature moment (DIRECTIVE §5): the verdict seal: stamped, not
      rendered. scale 1.6 -> 1.0 with a brief ink-bleed ring, 350ms.
      prefers-reduced-motion collapses it to a fade via the override below.
   --------------------------------------------------------------------- */
@@ -617,7 +617,7 @@
     pointer-events: none;
   }
 
-  /* The waiting seal: same geometry, no ink, no animation — an empty stamp bed. */
+  /* The waiting seal: same geometry, no ink, no animation. An empty stamp bed. */
   .seal-ghost {
     display: inline-flex;
     align-items: center;
@@ -634,7 +634,7 @@
 }
 
 /* -------------------------------------------------------------------------
-   Motion — restrained per DIRECTIVE §5 budget.
+   Motion: restrained per DIRECTIVE §5 budget.
 ------------------------------------------------------------------------- */
 @keyframes page-fade {
   from {

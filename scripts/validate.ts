@@ -1,4 +1,4 @@
-// KB validation — runs zod schema checks + referential integrity on /data.
+// KB validation: runs zod schema checks + referential integrity on /data.
 // Non-zero exit on any failure; wired into the build so bad data fails CI.
 import {
   loadEntities,

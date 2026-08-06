@@ -17,21 +17,21 @@ const page = await browser.newPage({
   deviceScaleFactor: 1.5,
 });
 
-// 1 — chronicle term popover
+// 1. chronicle term popover
 await page.goto(BASE + "/", { waitUntil: "networkidle" });
 await page.getByRole("button", { name: "크로노스", exact: true }).first().click();
 await page.getByRole("dialog", { name: "크로노스 정의" }).waitFor();
 await page.waitForTimeout(400);
 await page.screenshot({ path: path.join(OUT_DIR, "chronicle-popover.png") });
 
-// 2 — gate FAIL seal
+// 2. gate FAIL seal
 await page.goto(BASE + "/gate", { waitUntil: "networkidle" });
 await page.getByRole("button", { name: "FAIL 시나리오" }).click();
 await page.locator(".seal").waitFor();
 await page.waitForTimeout(600); // let the stamp animation settle
 await page.screenshot({ path: path.join(OUT_DIR, "gate-fail-seal.png") });
 
-// 3 — QA dashboard (change detection + confidence gauge)
+// 3. QA dashboard (change detection + confidence gauge)
 await page.goto(BASE + "/dashboard", { waitUntil: "networkidle" });
 await page.getByText("출처 정직성 지표").first().scrollIntoViewIfNeeded();
 await page.waitForTimeout(400);

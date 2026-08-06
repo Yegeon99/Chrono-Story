@@ -2430,16 +2430,16 @@
     "statement_en": "The Fextralife wiki spells the same character's name Etheldrena.",
     "sources": [
       {
-        "url": "https://chronoodyssey.wiki.fextralife.com/Etheldrena",
+        "url": "https://chronoodyssey.wiki.fextralife.com/Factions",
         "source_tier": "community-wiki",
-        "captured_at": "2026-08-03"
+        "captured_at": "2026-08-06"
       }
     ],
     "status": "conflicted",
     "superseded_by": null,
     "confidence": "speculative",
     "first_seen_kb_version": "2026.08",
-    "notes": "Naming-conflict evidence case #1 (pairs with FACT-0100)."
+    "notes": "Naming-conflict evidence case #1 (pairs with FACT-0100). Source-URL history: the original citation was Fextralife's dedicated character page, which by 2026-08 had been corrected to Etheldreda and now 404s at /Etheldrena. The Fextralife Factions page still lists the Vanguard roster as \"Alexios, Baldur, Etheldrena, and Kaya\", so the spelling survives inside the same wiki — the site now contradicts itself. Citation moved to /Factions on 2026-08-06; the conflict is live, not superseded."
   },
   {
     "id": "FACT-0102",

@@ -148,9 +148,9 @@
       "FACT-0100",
       "FACT-0101"
     ],
-    "verdict_ko": "ENT-ETHELDRENA에 대해 'Etheldreda'(official-wiki)와 'Etheldrena'(community-wiki) 두 가지 표기가 혼재하며, 동일 인물에 대한 표기 갈림으로 판정한다.",
-    "evidence_ko": "FACT-0100(official-wiki 티어)은 뱅가드 지휘관의 이름을 'Etheldreda'로 표기하고, FACT-0101(community-wiki 티어)은 동일 인물을 'Etheldrena'로 표기한다. 두 표기는 철자 차이('dreda' vs 'drena')가 명확하여 단순 오타 이상의 갈림으로 볼 수 있다. 다만 FACT-0100의 신뢰도가 'probable', FACT-0101이 'speculative'로 모두 확정 등급이 아니므로 불확실성을 반영해 severity를 critical에서 warning으로 한 단계 낮춘다.",
-    "recommendation_ko": "소스 티어 우선순위에 따라 official-wiki(FACT-0100) 출처인 'Etheldreda'를 기준 표기로 채택할 것을 권고한다. 단, 두 팩트 모두 확정 등급이 아니므로 official-site 또는 steam-official 등 상위 티어 출처에서 표기를 추가 검증한 후 최종 확정하는 것이 바람직하다.",
+    "verdict_ko": "ENT-ETHELDRENA에 대해 'Etheldreda'(official-wiki)와 'Etheldrena'(community-wiki) 두 가지 표기가 혼재하며, 동일 인물에 대한 표기 갈림으로 판정한다. 2026-08-06 재확인 결과 갈림은 여전히 현존하되, 그 성격이 '위키 간 불일치'에서 '위키 간 불일치 + 팬 위키 내부 불일치'로 진화했다.",
+    "evidence_ko": "FACT-0100(official-wiki 티어)은 뱅가드 지휘관의 이름을 'Etheldreda'로 표기하고, FACT-0101(community-wiki 티어)은 동일 인물을 'Etheldrena'로 표기한다. 두 표기는 철자 차이('dreda' vs 'drena')가 명확하여 단순 오타 이상의 갈림으로 볼 수 있다. 다만 FACT-0100의 신뢰도가 'probable', FACT-0101이 'speculative'로 모두 확정 등급이 아니므로 불확실성을 반영해 severity를 critical에서 warning으로 한 단계 낮춘다. [2026-08-06 근거 갱신] 소스 점검에서 Fextralife의 인물 전용 페이지가 'Etheldreda'로 정정되어 기존 인용 URL(/Etheldrena)이 404가 된 것을 확인했다. 그러나 같은 위키의 Factions 페이지 본문은 뱅가드 구성원을 여전히 'Alexios, Baldur, Etheldrena, and Kaya'로 나열하고 있어, FACT-0101의 근거를 해당 페이지로 교체했다. 즉 팬 위키가 내부적으로 두 표기를 동시에 노출하는 상태이므로 갈림은 해소되지 않았고, superseded 처리 대상이 아니다.",
+    "recommendation_ko": "소스 티어 우선순위에 따라 official-wiki(FACT-0100) 출처인 'Etheldreda'를 기준 표기로 채택할 것을 권고한다. 단, 두 팩트 모두 확정 등급이 아니므로 official-site 또는 steam-official 등 상위 티어 출처에서 표기를 추가 검증한 후 최종 확정하는 것이 바람직하다. 팬 위키 측 표기가 페이지마다 갈리는 만큼, 이 케이스는 해소가 아니라 '소스 내부 불일치'로 계속 추적한다 — Factions 페이지가 정정되는 시점이 이 충돌의 실질적 종료 신호다.",
     "created_at": "2026-08-03T01:07:09.560Z"
   },
   {

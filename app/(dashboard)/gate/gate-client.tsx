@@ -29,6 +29,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
   const [result, setResult] = useState<GateResult | null>(null);
   const [matchedNames, setMatchedNames] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [throttleNotice, setThrottleNotice] = useState<string | null>(null);
   const [precomputed, setPrecomputed] = useState(false);
   const [sealKey, setSealKey] = useState(0);
   const abortRef = useRef<AbortController | null>(null);
@@ -47,6 +48,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
     abortRef.current?.abort();
     setText(demo.input_text);
     setError(null);
+    setThrottleNotice(null);
     showResult(demo.result, [], true);
   };
 
@@ -56,6 +58,7 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
     const ac = new AbortController();
     abortRef.current = ac;
     setError(null);
+    setThrottleNotice(null);
     setResult(null);
     setPrecomputed(false);
     setStage("extract");
@@ -67,6 +70,16 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
         body: JSON.stringify({ text }),
         signal: ac.signal,
       });
+      // Throttled: guidance, not failure — the demo chips still give a verdict.
+      if (res.status === 429) {
+        const body = await res.json().catch(() => null);
+        setThrottleNotice(
+          body?.error ??
+            "실시간 판정 횟수를 초과했습니다. 데모 시나리오의 사전 계산 결과를 이용해 주세요."
+        );
+        setStage("idle");
+        return;
+      }
       if (!res.ok || !res.body) {
         const body = await res.json().catch(() => null);
         throw new Error(body?.error ?? `요청 실패 (${res.status})`);
@@ -160,8 +173,17 @@ export function GateClient({ demos, facts }: { demos: GateDemo[]; facts: Fact[] 
             </ol>
           )}
         </div>
+        {throttleNotice && (
+          <p
+            role="status"
+            data-testid="gate-throttle-notice"
+            className="mt-3 rounded-md border border-amber-warn/40 bg-amber-warn/5 px-4 py-3 text-sm text-amber-warn"
+          >
+            {throttleNotice}
+          </p>
+        )}
         {error && (
-          <p role="alert" className="mt-3 text-sm text-ember">
+          <p role="alert" data-testid="gate-error" className="mt-3 text-sm text-ember">
             {error}
           </p>
         )}

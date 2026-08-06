@@ -1,11 +1,31 @@
 // Verification gate endpoint — NDJSON streaming of pipeline stages.
 // Server-only: the Anthropic key never leaves this route.
 import { judgeText } from "@/lib/gate";
+import {
+  RATE_LIMITED_MESSAGE,
+  checkRateLimit,
+  clientIp,
+} from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
+  // Throttle before parsing: every request from an IP counts, valid or not.
+  const verdict = checkRateLimit(clientIp(req));
+  if (!verdict.allowed) {
+    return Response.json(
+      { error: RATE_LIMITED_MESSAGE, rate_limited: true },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": String(verdict.retryAfterSeconds),
+          "Cache-Control": "no-store",
+        },
+      }
+    );
+  }
+
   let text: unknown;
   try {
     ({ text } = await req.json());

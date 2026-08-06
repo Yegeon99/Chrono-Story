@@ -135,13 +135,18 @@
         "url": "https://zdnet.co.kr/view/?no=20260507152807",
         "source_tier": "dev-note",
         "captured_at": "2026-08-03"
+      },
+      {
+        "url": "https://www.khgames.co.kr/news/articleView.html?idxno=240172",
+        "source_tier": "press",
+        "captured_at": "2026-08-06"
       }
     ],
     "status": "active",
     "superseded_by": null,
     "confidence": "probable",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "2026-08-06 재검증: 윤상태 개발 총괄 PD 표기는 2025-05-23 개발자 인터뷰 보도(경향게임스)로 확인. ZDNet 기사는 개발사 크로노스튜디오만 지지."
   },
   {
     "id": "FACT-0007",
@@ -774,8 +779,8 @@
       "ENT-VOID-SPADA"
     ],
     "claim_type": "timeline",
-    "statement_ko": "에셀드레나는 프롤로그에서 보이드 스파다의 습격으로 전사한다.",
-    "statement_en": "Etheldrena falls to the Void Spada's assault during the prologue.",
+    "statement_ko": "에셀드레나는 프롤로그 말미, 유적 심부에서 주인공과 재회해 유물을 눈앞에 둔 순간 난입한 보이드 스파다의 습격으로 전사한다.",
+    "statement_en": "Etheldrena falls at the prologue's end: after reuniting with the protagonist deep in the ruins, with the relic within grasp, she is cut down by the breaching Void Spada.",
     "sources": [
       {
         "url": "https://chrono-odyssey.fandom.com/wiki/Etheldreda",
@@ -787,7 +792,7 @@
     "superseded_by": null,
     "confidence": "probable",
     "first_seen_kb_version": "2026.08",
-    "notes": "Occurs in the pre-regression timeline; useful anchor for C1 timeline checks."
+    "notes": "2026-08-06 재검증: 공식 위키 Prologue 문서 기준, 전사는 재회·유물 도달 이후의 사건. 순서를 명시해 재회 팩트(FACT-0135)와의 표면적 모순을 해소."
   },
   {
     "id": "FACT-0031",
@@ -911,8 +916,8 @@
       "ENT-FRONTIER"
     ],
     "claim_type": "relation",
-    "statement_ko": "프론티어는 전설적인 전사 이오비스가 창설했으며, 그가 이끌고 있다.",
-    "statement_en": "The Frontier was founded and is led by the legendary warrior Iobis.",
+    "statement_ko": "프론티어는 보이드 침공 생존자들이 결성한 조직으로, 전설적인 전사 이오비스가 창설을 주도했으며 현재 그가 이끌고 있다.",
+    "statement_en": "The Frontier was formed by survivors of the Void invasion; the legendary warrior Iobis played the pivotal role in its founding and leads it today.",
     "sources": [
       {
         "url": "https://chrono-odyssey.fandom.com/wiki/Frontier",
@@ -934,7 +939,7 @@
     "superseded_by": null,
     "confidence": "confirmed",
     "first_seen_kb_version": "2026.08",
-    "notes": "Cross-checked against official-family sources on 2026-08-05 (manual CONFIRMED-path sweep)."
+    "notes": "2026-08-06 재검증: 공식 위키 Frontier 문서는 창설 주체를 생존자들로, 이오비스를 창설 주도자(전직 용병대장)로 서술."
   },
   {
     "id": "FACT-0037",
@@ -1536,7 +1541,7 @@
     "statement_en": "The Outcasts are an armed band of World Movers ousted over conflicts or immoral acts.",
     "sources": [
       {
-        "url": "https://chronoodyssey.online/the-world-movers/",
+        "url": "https://chronoodyssey.online/the-outcasts/",
         "source_tier": "community-wiki",
         "captured_at": "2026-08-03"
       }
@@ -1545,7 +1550,7 @@
     "superseded_by": null,
     "confidence": "speculative",
     "first_seen_kb_version": "2026.08",
-    "notes": ""
+    "notes": "2026-08-06 재검증: 출처를 실제 서술이 있는 The Outcasts 문서로 교정."
   },
   {
     "id": "FACT-0061",
@@ -3322,7 +3327,7 @@
       "ENT-TWELVE-WORLDS"
     ],
     "claim_type": "timeline",
-    "statement_ko": "보이드는 본래 시간의 균열 깊은 곳에 봉인되어 있었으나, 베텔기우스가 크로노텍터의 조율 능력으로 깨워 열두 세계에 풀어놓았다.",
+    "statement_ko": "보이드는 본래 시간의 균열 깊은 곳에 봉인되어 있었으나, 베텔기우스가 자신의 크로노텍터의 조율 능력으로 깨워 열두 세계에 풀어놓았다.",
     "statement_en": "The Void lay sealed deep within the Temporal Rift until Betelgeuse woke it with his Chronotector's tuning power and unleashed it upon the twelve worlds.",
     "sources": [
       {
@@ -3340,7 +3345,7 @@
     "superseded_by": null,
     "confidence": "probable",
     "first_seen_kb_version": "2026.08.2",
-    "notes": "Prologue-timeline reinforcement 2026-08-05: restated from the cited official wiki pages."
+    "notes": "2026-08-06 재검증: 공식 위키 Void·Betelgeuse 문서 기준 베텔기우스 본인의 크로노텍터([Temporal Tuning]). 주인공의 크로노텍터(FACT-0023)와 별개임을 명시."
   },
   {
     "id": "FACT-0141",

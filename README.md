@@ -54,6 +54,8 @@ pnpm build          # 검증 + 용어집 파생 + 빌드
 pnpm check          # C1~C5 정합성 검사 (LLM, KB 버전별 캐시)
 pnpm ingest --url <url> --label "<이름>" --tier dev-note   # 변경 감지 파이프라인
 pnpm test:e2e       # Playwright 스모크 테스트
+pnpm subset-font    # 디스플레이 폰트 서브셋 재생성 (엔티티·장 제목·헤딩 추가 시)
+pnpm optimize-images # 연대기 삽화 재압축 (장당 200KB 예산)
 ```
 
 ## 저작권·데이터 윤리
@@ -70,6 +72,9 @@ pnpm test:e2e       # Playwright 스모크 테스트
   이 정책은 최초 기획의 "이미지 미사용" 조항을 2026-08-06자로 개정한 것이며,
   원 조항과 개정 사유는 [PRD §6.6′](PRD.md)와
   [LOREGUARD_DIRECTIVE §0.4](LOREGUARD_DIRECTIVE.md)에 이력으로 남아 있습니다.
+- 디스플레이 서체 고운바탕은 SIL Open Font License 1.1로 배포되며, 실제 사용되는
+  글리프만 추린 서브셋을 `app/fonts/`에 원문 라이선스(`OFL.txt`)와 함께
+  자체 호스팅합니다.
 - 공개 데이터만 사용합니다. 데이터마이닝·유출 자료는 다루지 않습니다.
 - 권리자 요청 시 즉시 비공개로 전환합니다.
 

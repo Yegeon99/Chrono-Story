@@ -6,7 +6,7 @@ import {
   loadForeshadowing,
   loadKbMeta,
   loadChangeReports,
-  loadReports,
+  loadLatestReports,
 } from "@/lib/kb";
 import { PageHeader } from "@/components/page-header";
 import { SectionHeading } from "@/components/section-heading";
@@ -20,7 +20,7 @@ export default function DashboardPage() {
   const relations = loadRelations();
   const foreshadowing = loadForeshadowing();
   const changeReports = loadChangeReports();
-  const checkReports = loadReports();
+  const checkReports = loadLatestReports();
 
   const conflicted = facts.filter((f) => f.status === "conflicted").length;
   const unresolved = foreshadowing.filter(

@@ -3,7 +3,7 @@ import {
   loadFacts,
   loadForeshadowing,
   loadKbMeta,
-  loadReports,
+  loadLatestReports,
 } from "@/lib/kb";
 import { Nav } from "./nav";
 import { Topbar } from "./topbar";
@@ -37,7 +37,7 @@ export default function DashboardLayout({
   const meta = loadKbMeta();
   const facts = loadFacts();
   const foreshadowing = loadForeshadowing();
-  const reports = loadReports();
+  const reports = loadLatestReports();
 
   const conflicts = facts.filter((f) => f.status === "conflicted").length;
   const unresolved = foreshadowing.filter(

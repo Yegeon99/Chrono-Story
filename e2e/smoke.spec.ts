@@ -99,6 +99,33 @@ test("reports page renders findings with evidence", async ({ page }) => {
   await expect(page.getByText("FACT-0100").first()).toBeVisible();
 });
 
+test("검사 발견 counts agree across sidebar, dashboard and reports", async ({
+  page,
+}) => {
+  await page.goto("/dashboard");
+  const gauge = page.locator(".gauge-row", { hasText: "검사 발견" });
+  const gaugeN = Number(
+    (await gauge.locator(".gauge-value").innerText()).trim()
+  );
+  const stat = page.locator(
+    'section[aria-label="지식베이스 통계"] .panel',
+    { hasText: "검사 발견" }
+  );
+  const statN = Number((await stat.locator(".readout").innerText()).trim());
+
+  await page.goto("/reports");
+  const header = await page.getByText(/검사 항목 \d+건/).innerText();
+  const headerN = Number(header.match(/검사 항목 (\d+)건/)![1]);
+  const chip = await page
+    .getByRole("button", { name: /^전체 \d+$/ })
+    .innerText();
+  const chipN = Number(chip.replace(/\D/g, ""));
+
+  expect(statN).toBe(gaugeN);
+  expect(headerN).toBe(gaugeN);
+  expect(chipN).toBe(gaugeN);
+});
+
 test("reports severity filter survives switching categories", async ({
   page,
 }) => {

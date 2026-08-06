@@ -24,38 +24,66 @@ const SEVERITY_META: Record<
 export function ReportList({
   reports,
   facts,
+  versions,
+  currentVersion,
 }: {
   reports: CheckReport[];
   facts: Fact[];
+  /** All KB versions with a report on disk, newest first. */
+  versions: string[];
+  currentVersion: string;
 }) {
+  const [version, setVersion] = useState(
+    versions.includes(currentVersion) ? currentVersion : versions[0]
+  );
   const [severity, setSeverity] = useState<string | null>(null);
   const [check, setCheck] = useState<string | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
 
   const factById = useMemo(() => new Map(facts.map((f) => [f.id, f])), [facts]);
 
+  // One version at a time: older reports are history, not part of the current
+  // reading, so they never mix into the list or the counts.
+  const inVersion = reports.filter((r) => r.kb_version === version);
+
   const order = { critical: 0, warning: 1, info: 2 } as const;
-  const filtered = reports
+  const filtered = inVersion
     .filter((r) => (severity ? r.severity === severity : true))
     .filter((r) => (check ? r.check_type === check : true))
     .sort(
       (a, b) =>
-        order[a.severity] - order[b.severity] ||
-        a.id.localeCompare(b.id) ||
-        b.kb_version.localeCompare(a.kb_version)
+        order[a.severity] - order[b.severity] || a.id.localeCompare(b.id)
     );
 
   const counts = {
-    critical: reports.filter((r) => r.severity === "critical").length,
-    warning: reports.filter((r) => r.severity === "warning").length,
-    info: reports.filter((r) => r.severity === "info").length,
+    critical: inVersion.filter((r) => r.severity === "critical").length,
+    warning: inVersion.filter((r) => r.severity === "warning").length,
+    info: inVersion.filter((r) => r.severity === "info").length,
   };
 
   return (
     <div>
+      {versions.length > 1 && (
+        <div className="mb-3 flex flex-wrap items-center gap-1.5">
+          <span className="eyebrow mr-1">검사 이력</span>
+          {versions.map((v) => (
+            <Chip
+              key={v}
+              label={`KB ${v}${v === currentVersion ? " · 현재" : ""} (${
+                reports.filter((r) => r.kb_version === v).length
+              })`}
+              active={version === v}
+              onClick={() => {
+                setVersion(v);
+                setOpenId(null);
+              }}
+            />
+          ))}
+        </div>
+      )}
       <div className="mb-4 flex flex-wrap items-center gap-1.5">
         <Chip
-          label={`전체 ${reports.length}`}
+          label={`전체 ${inVersion.length}`}
           active={severity === null}
           onClick={() => setSeverity(null)}
         />
@@ -99,8 +127,7 @@ export function ReportList({
                   className="flex w-full flex-col gap-1 rounded-md px-4 py-3 text-left transition-colors hover:bg-ink-800/40"
                 >
                   <span className="eyebrow">
-                    {r.id} · KB {r.kb_version} · {r.check_type}{" "}
-                    {CHECK_LABELS[r.check_type]} ·{" "}
+                    {r.id} · {r.check_type} {CHECK_LABELS[r.check_type]} ·{" "}
                     <span className={sev.text}>{sev.label}</span>
                   </span>
                   <span className="text-sm">{r.verdict_ko}</span>

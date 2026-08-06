@@ -74,6 +74,15 @@ export function loadReports(): CheckReport[] {
   return reports;
 }
 
+/** Findings for the current KB version only. Every headline count (sidebar
+ *  gauge, dashboard stat, reports header) reads this; older report files stay
+ *  on disk as history and are reachable through the reports screen's version
+ *  picker, never summed into a headline number. */
+export function loadLatestReports(): CheckReport[] {
+  const version = loadKbMeta().kb_version;
+  return loadReports().filter((r) => r.kb_version === version);
+}
+
 import { ChangeReportSchema, type ChangeReport } from "./schema";
 
 /** Change-detection reports (F6), newest first. */

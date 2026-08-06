@@ -11,6 +11,16 @@ test("knowledge: graph falls back to the list on mobile", async ({ page }) => {
   await expect(page.getByPlaceholder("이름·영문·별칭 검색")).toBeVisible();
 });
 
+test("topbar: the conflict count survives where the sidebar gauges do not", async ({
+  page,
+}) => {
+  await page.goto("/dashboard");
+  const watch = page.getByTestId("topbar-watch");
+  await expect(watch).toBeVisible();
+  await expect(watch).toContainText(/충돌 \d+|정상/);
+  await expect(watch).toHaveAttribute("href", "/reports");
+});
+
 test("chronicle: unofficial notice is present on mobile", async ({ page }) => {
   await page.goto("/");
   const notice = page.getByText(

@@ -138,7 +138,7 @@ export function ChronicleClient({
           <Link href="/dashboard" className="text-gilt underline-offset-2 hover:underline">
             정합성 검증 시스템
           </Link>
-          의 감시 아래 있습니다.
+          의 상시 대조를 거칩니다.
         </div>
         <p className="mt-4 text-center text-[11px] text-parchment-dim/50">
           본 페이지의 삽화는 크로노 오디세이 공식 스크린샷입니다 · ©

@@ -96,7 +96,7 @@ export default function DashboardLayout({
         <div className="hidden shrink-0 border-t border-ink-700/70 px-5 py-4 md:block">
           <p className="eyebrow mb-2 flex items-center gap-2">
             <span className="inline-block h-2 w-px shrink-0 bg-gilt" aria-hidden />
-            감시 지표
+            정합 지표
           </p>
           <ul>
             {gauges.map((g) => (

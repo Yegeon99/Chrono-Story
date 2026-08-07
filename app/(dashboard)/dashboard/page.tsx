@@ -72,7 +72,7 @@ export default function DashboardPage() {
     <div className="mx-auto max-w-5xl">
       <PageHeader
         className="mb-10"
-        eyebrow={`KB ${meta.kb_version} · 갱신 ${meta.updated_at}`}
+        eyebrow={`KB ${meta.kb_version}`}
         title="QA 대시보드"
         lede="지식베이스의 정합성 현황입니다. 모든 팩트는 출처 링크와 신뢰도를 보유하며, 모든 변경은 git 이력으로 남습니다."
       />

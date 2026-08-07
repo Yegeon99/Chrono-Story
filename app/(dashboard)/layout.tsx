@@ -114,14 +114,13 @@ export default function DashboardLayout({
             ))}
           </ul>
           <p className="eyebrow mt-3 border-t border-ink-700/60 pt-2.5 text-[10px] text-parchment-faint">
-            KB <span className="text-gilt">{meta.kb_version}</span> · 갱신{" "}
-            {meta.updated_at}
+            KB <span className="text-gilt">{meta.kb_version}</span>
           </p>
         </div>
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <Topbar kbVersion={meta.kb_version} updatedAt={meta.updated_at} />
+        <Topbar kbVersion={meta.kb_version} />
         <main className="flex-1 px-5 py-9 md:px-10 md:py-12">{children}</main>
         <footer className="border-t border-ink-700/70 bg-ink-950/70 px-5 py-5 md:px-10">
           <div className="rule-fade mb-3.5 max-w-24" aria-hidden />

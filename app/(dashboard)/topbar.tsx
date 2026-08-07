@@ -6,13 +6,7 @@ import { NAV_GROUPS, isActive } from "./nav";
 /** Slim instrument strip above every screen: where you are, and the state of
  *  the knowledge base you are looking at. The conflict readings live in the
  *  sidebar gauges only; the topbar stays a location and version indicator. */
-export function Topbar({
-  kbVersion,
-  updatedAt,
-}: {
-  kbVersion: string;
-  updatedAt: string;
-}) {
+export function Topbar({ kbVersion }: { kbVersion: string }) {
   const pathname = usePathname();
   const group = NAV_GROUPS.find((g) =>
     g.items.some((i) => isActive(pathname, i.href))
@@ -38,7 +32,6 @@ export function Topbar({
         <span className="rule-fade ml-1 hidden flex-1 sm:block" aria-hidden />
 
         <p className="eyebrow ml-auto flex shrink-0 items-center gap-3 sm:ml-0">
-          <span className="hidden sm:inline">갱신 {updatedAt}</span>
           <span className="text-gilt">KB {kbVersion}</span>
         </p>
       </div>
